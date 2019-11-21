@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ie盒模型</title>
+	<style>
+		.father{
+			width: 300px;
+			height: 100px;
+			border: 1px solid #000;
+		}
+		.father div{
+			box-sizing: border-box;
+			display: inline-block;
+			width: 100px;
+			height: 100px;
+
+		}
+		.son1{
+			background: #f00;
+		}
+		.son2{
+			background: #0f0;
+			padding: 10px;
+			border: 5px solid;
+		}
+		.son3{
+			background: #00f;
+		}
+	</style>
+</head>
+<body>
+<div class="father">
+	<div class="son1"></div><div class="son2"></div><div class="son3"></div></div>
+</body>
+</html>

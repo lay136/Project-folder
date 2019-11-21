@@ -1,0 +1,224 @@
+/*共用属性*/
+/*top开始区域*/
+	.container{
+		width: 1226px;
+		margin-right: auto;
+		margin-left: auto;
+		/*background-color: blue;*/
+	}
+	a{
+		text-decoration: none;
+		font-size: 12px;
+		color:#b0b0b0;
+	}
+	a:hover{
+		color: #fff;
+	}
+	.trl{
+		color:#393d42;
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+	.clearfix:after{ 
+		content: ".";  /* 搭配after伪类选择器，内容为空*/
+		display: block;
+		height: 0; 
+		clear: both; 
+		visibility: hidden;  
+	}
+	.clearfix{
+		*zoom: 1;  /*兼容IE浏览器*/
+	}
+/*top结束区域*/
+/*抽取的公共样式*/
+		.topg{
+		height: 80px;
+		width: 100%;
+	}
+	.topg h2{
+		float: left;
+		color: #333;
+		font-size: 22px;
+		margin-top: 40px;
+	}
+	.more1,.more11{
+		float: right;
+		margin-top: 40px;
+		color: #424242;
+	} 
+	.more11 span{
+		margin-left: 16px;
+		cursor: pointer;  
+		padding-bottom: 4px;
+		transition: color 200ms;
+	}
+	.more1:hover span:nth-child(1){
+		color: #ff6700;
+	}
+	.more11 span:hover{
+		color: #ff6700;
+		border-bottom: 2px solid #ff6700;
+	}
+	.more1:hover span:nth-child(2){
+		background-color: #ff6700;
+	}
+	.more1 span,.more11 span{
+		float: left;
+		box-sizing: border-box;
+	}
+	.more1 span:nth-child(1),.more11 span{
+		font-size: 16px;
+		margin-right: 10px;
+	}
+	.more1 span:nth-child(2){
+		color: #fffefb;
+		width: 22px;
+		height: 22px;	
+		background-color: #b0b0b0;
+		font-size: 14px;
+		border-radius: 11px;
+		line-height: 22px;
+		text-align: center;
+	}
+	.cor1{
+		float: left;
+		width: 234px;
+	}
+	.cor11{        /* cor11:左边仅有1张图，cor12为两张图*/
+		height: 614px;
+	} 
+	.cor12{
+		width: 234px;
+	}
+	.cor12 img:nth-child(1){
+		margin-bottom: 10px;
+	}
+	.cor12x{
+		transition: transform 500ms, box-shadow 500ms;
+	}
+	.cor1x img{      /*cor1x 图片效果*/
+		width: 100%;
+		height: 100%;
+		transition: transform 500ms, box-shadow 500ms;
+	}
+	.cor1x img:hover,.cor3x:hover,.cor12x:hover{        /* cor3x: 图像效果;*/
+		transform:translateY(-5px);
+		box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.1);
+	}
+	.cor2{
+		float: right;
+		width: 978px;
+	}
+	.cor2x li:nth-child(1){     /* cor2x: 右边8张图片的排列;*/
+		margin-left: 0px;
+	}
+	.cor2x li:nth-child(5){
+		margin-left: 0px;
+	}
+	.cor3{
+		float: left;
+		width: 234px;
+		margin-left: 14px;
+		margin-bottom: 14px; 
+	}
+	.cor3x{
+		position: relative;
+		height: 300px;
+		transition: all 500ms;
+		background-color: #fff;
+	}
+	.cor3x img{
+		width: 132px;
+		height: 142px;
+		margin-top: 26px;
+		margin-left: 56px;
+		cursor: pointer; 
+	}
+	.ad{
+		height: 120px;
+		margin-top: 41px;
+		cursor: pointer;
+	}
+	.ad img{
+		width: 100%;
+		height: 100%;
+	}
+	.pl{
+		overflow: hidden;
+	}
+	.pl:hover .pinglun{
+		/*transform: translateY(-78px);*/
+		bottom: 0px;
+	}
+	.pinglun{
+		position: absolute;
+		width: 100%;
+		height: 78px;
+		background-color: #ff6700;
+		bottom: -78px;
+		/*transition: transform 1s;*/
+		transition: bottom 300ms linear;
+		cursor: pointer;
+	}
+	.pinglun p{
+		font-size: 12px;
+		margin-top: 6px;
+		margin-right: 30px;
+		margin-left: 30px;
+	}
+	.pinglun p:nth-child(1){
+		color: #fff;
+	}
+	.pinglun p:nth-child(2){
+		color: #ffc299;
+	}
+	.xinping{
+		position: absolute;
+		top: 0px;
+		left: 50%;
+		margin-left: -32px;
+		width: 64px;
+		height: 20px;
+		font-size: 12px;
+		color: #fff;
+		text-align: center;
+		line-height: 20px;
+	}
+	.xingreen{
+		background-color: #83c44e;
+	}
+	.xinred{
+		background-color: #e53935;
+	}
+	.sh-text{
+		/*width: 190px;*/
+		margin-left: auto;
+		margin-right: auto;
+		color: #202020;
+		overflow: hidden;    /*  溢出省略并显示省略号*/
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		margin-bottom: 10px;
+		text-align: center;
+	}
+	.sh-text1{
+		margin-top: 20px;
+		font-size: 13px;
+		cursor: pointer; 
+	}
+	.sh-text2{
+		margin-top: 10px;
+		font-size: 11px;
+		color: #adadad;
+	}
+	.sh-text3{
+		margin-top: 15px;
+		font-size: 13px;
+	}
+	.cor3 span{
+		color: #fa6509;
+		margin-right: 10px;
+	}
+	.cor3 del{
+		color: #adadad;
+	}

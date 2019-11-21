@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>优先级-单一直接选中</title>
+	<style>
+		/* p{
+			color: red;
+		} 
+		.txt1{
+			color: green;
+		}
+		#txt2{
+			color: gray;
+		}优先级的先后顺序：ID选择器>类选择器>标签选择器>通用选择器>继承间接选中>浏览器默认的样式，优先级越高 越容易被最先解析。
+		*/
+		/* ul li{
+			color: red;
+		} */
+		
+		ul p{
+			color: yellow;
+		}
+		li p{
+			color: green;
+		}
+	</style>
+</head>
+<!--<body>
+	<p class="txt1" id="txt2">这是一段话！</p>
+</body>-->
+<body>
+	<ul>
+		<li>
+			<p>这是一段话！</p>
+		</li>
+	</ul>
+</body>
+</html>

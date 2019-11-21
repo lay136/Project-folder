@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>盒模型分类</title>
+	<style>
+		div{
+			width: 100px;
+			height: 100px;
+			padding: 10px;
+			border: 10px solid;
+		}
+		.son1{
+			box-sizing: content-box;
+			background-color: green;
+			margin-bottom: 50px;
+		}
+		.son2{
+			box-sizing: border-box;
+			background-color: blue;
+		}
+	</style>
+</head>
+<body>
+	<div class="son1"></div>
+	<div class="son2"></div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>093-用百分比创建动画.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}	
+		.box1{
+			width: 600px;
+			height: 600px;
+			border: 1px solid;
+			margin: 50px auto;		
+		}
+		.box2{
+			width: 100px;
+			height: 100px;
+			background: red;
+			position: relative;
+			top: 0px;
+			left: 0px;
+			animation-name: sport;
+			animation-duration: 2s;
+			animation-iteration-count: infinite;/*告诉系统动画需要执行几次*/
+			animation-direction: normal;/*告诉系统是否需要执行往返动画
+            取值:
+            normal, 默认的取值, 执行完一次之后回到起点继续执行下一次
+            alternate, 往返动画, 执行完一次之后往回执行下一次 */
+		}
+		@keyframes sport{
+		/*创建动画的属性*/	
+			0%{
+				left: 0px;
+				top: 0px;
+			}
+			25%{
+				left: 500px;
+				top: 0px;
+			}
+			75%{
+				left: 0px;
+				top: 500px;
+			}
+			50%{
+				left: 500px;
+				top: 500px;
+			}
+			100%{
+				left: 0px;
+				top: 0px;
+			}
+		} 
+	</style>
+</head>
+<body>
+	<div class="box1">
+		<div class="box2"></div>
+	</div>
+</body>
+</html>

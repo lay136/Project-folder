@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js的引用-外部样式</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		div{
+			width: 100px;
+			height: 100px;
+			background: red;
+			border: 1px solid gray;
+			margin: auto;
+			margin: auto;
+			margin-top: 100px;
+		}
+	</style>
+</head>
+<body>
+	<div id="box"></div>
+	<div class="box"
+		id="box" 
+		onmouseover='toBig()'
+		onmouseout='toSmall()' >
+	</div>
+		<script  src="js/005.js"></script>
+</body>
+</html>

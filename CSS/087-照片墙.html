@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>087-照片墙.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		/*p{
+			font-size: 36px;
+			font-family: 微软雅黑;
+		}*/
+		ul{
+			width: 100%;/*设置背景的显示宽度为浏览器的100%宽度*/
+			height: 500px;/*设置显示的宽度为500像素*/
+			background: skyblue;/*设置背景颜色为天空蓝色*/
+			margin-top: 100px;/*设置距离浏览器顶部100个像素*/
+			text-align: center;/*设置内容水平居中显示*/
+		}
+		ul li{
+			display: inline-block;/*将元素改变为行内块状元素*/
+			position: relative;/*规定元素的定位类型，relative是相对定位元素*/
+			width: 300px;
+			height: 200px;
+			/* background: red;*/
+			margin-top: 125px;
+			margin-right: 50px;
+			border: 5px solid #fff;
+			transition:  all 2s;
+			/*设置过渡元素的名称和过渡时间，这是一个简写，它有四个属性*/
+		}
+		ul:hover li{
+			opacity: 0.5; 
+			/*鼠标轻触到li标签时，透明度新增透明度，变成0.5*/
+		}
+		ul li:hover {
+			opacity: 1;
+			/* transform: rotate(0deg); 
+			transform: scale(1.3);*/
+			transform:scale(1.2);
+			z-index: 999;
+		}
+		li:nth-child(1){
+			transform: rotate(10deg) ;
+		}
+		li:nth-child(2){
+			transform: rotate(-10deg);
+		}
+		li:nth-child(3){
+			transform: rotate(15deg);
+		}
+		li:nth-child(4){
+			transform: rotate(-15deg);
+		}
+		img{
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<!-- <p>一禅小和尚</p> -->
+		<li><img src="img/001.jpg"></li>
+		<li><img src="img/002.jpg"></li>
+		<li><img src="img/003.jpg"></li>
+		<li><img src="img/004.jpg"></li>
+	</ul>
+</body>
+</html>
+

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>091-动画的复合样式.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			width: 200px;
+			height: 200px;
+			background: red;
+			margin-top: 50px;
+			animation-name: sport;
+			/* animation-duration: 1s; */
+			/* animation-delay: 2s; */ 	/*延迟两秒执行*/
+			/* animation-iteration-count: infinite; *//*执行动画的次数*/
+			animation: sport 10s running 0s 5 ;
+			/*动画的复合样式写法 animation:
+			动画的名称 动画的执行时间 动画的速度 延迟时间 动画的执行次数 是否执行往返动画;*/
+
+		}
+		
+		@keyframes sport{
+			from{
+				width: 200px;
+			}
+			to{
+				width: 800px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+	
+</body>
+</html>

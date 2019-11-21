@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>盒子模型-百分比</title>
+	<style>
+		.father{
+			width: 400px;
+			height: 400px;
+			margin:100px auto;
+			background-color: black;
+		}
+		.son{
+			width: 50%;
+			height: 50%;
+			background-color: white;
+			text-align: center;
+			font-size: 48px;
+			margin:100px auto;
+			border:100px solid #000;
+		}
+		.first{
+			width: 50%;
+			height: 50%;
+			font-color: white;
+			background-color: black;
+			text-align: center;
+			margin:50px auto;
+			border:-100px solid #000;
+		}
+		.third{
+			width: 50%;
+			height: 50%;
+			background-color: white;
+			margin:25px auto;
+			border:25px solid #000;
+		}
+	</style>
+</head>
+<body>
+	<div class="father">
+		<div class="son">
+			<div class="first">
+				<div class="third">
+					<a href="img/001.jpg"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+

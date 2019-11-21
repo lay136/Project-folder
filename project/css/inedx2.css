@@ -1,0 +1,786 @@
+.shan-top{
+		position: relative;
+		float: left;
+		width: 100%;
+		height: 62px;
+		/*background: #f5f5f5;*/
+		/*z-index: 10;*/
+		line-height: 62px;
+	}
+.shan-top h2{
+		float: left;
+		/*line-height: 64px;
+		font-size: 22px;
+		color: #333;*/
+		float: left;
+		font-size: 22px;
+	}
+.shan-top .mores{
+		float: right;
+	}
+.shan-top .mores span{
+		float: left;
+		border: 1px solid #e0e0e0;
+		width: 36px;
+		height: 24px;
+		margin-top: 20px;
+		text-align: center;
+		line-height: 24px;
+		box-sizing: border-box;
+		cursor: pointer; 
+	}
+.shan-top .mores span:hover i{
+		color: #ff6700;
+	}
+.shan-top .mores span:nth-child(2){
+		border-left: none;
+	}
+.shan-top .mores.view a{
+	margin-top: 28px;
+	display: block;
+	float: left;
+	width: 36px;
+	height: 24px;
+	line-height: 24px;
+	border: 1px solid #e0e0e0;
+	box-sizing: border-box;
+	text-align: center;
+	font-size: 18px;
+}
+.shan-top .more.move a:hover{
+	color: #ff6700;
+}
+.shan-top .more.move a:first-child{
+	border-right: none;
+}
+.shan-top .mores.view{
+	font-size: 15px;
+	float: right;
+	color: #42424242;
+}
+/*.shan-top .more.view span{
+	display: inline-block;
+	width: 21px;
+	height: 21px;
+	line-height: 21px;
+	text-align: center;
+	background: #b0b0b0;
+	border-radius: 50%;
+	color: #fff;
+	margin-left: 8px;
+	}*/
+.shan-top .more.view:hover{
+	color: #ff6700;
+	}
+
+
+
+	.bd .product-item{
+		width: 234px;
+		float: left;
+		margin-left: 14px;
+		background: #fff;
+		position: relative;
+		text-align: center;
+	}
+	.bd .product-item:nth-child(1),
+	.bd .product-item:nth-child(5){
+		margin-left: 0px;
+	}
+	.bd .product-item-b{
+		height: 340px;
+	}
+	.bd .product-item-m{
+		height: 300px;
+		margin-bottom: 14px;
+	}
+	.bd .product-item-s{
+		height: 143px;
+		margin-bottom: 14px;
+		position: relative;
+	}
+	.bd .product-item.product-item-s .product-img{
+		position: absolute;
+		top: 40px;
+		right: 30px;
+		width: 80px;
+		height: 80px;
+	}
+	.bd .product-item.product-item-s .product-name{
+		position: absolute;
+		top: 40px;
+		left: 30px;
+		font-size: 12px;
+		color: #333;
+	}
+	.bd .product-item.product-item-s .product-price{
+		font-size: 12px;
+		position: absolute;
+		top: 65px;
+		left: 30px;
+		color: #ff6700;
+	}
+	.bd .product-item.product-item-s .look-more{
+		position: absolute;
+		top: 40px;
+		left: 30px;
+		font-size: 16px;
+		color: #333;
+	}
+	.bd .product-item.product-item-s .look-hot{
+		font-size: 12px;
+		position: absolute;
+		left: 30px;
+		top: 65px;
+		font-size: 12px;
+		color: #757575;
+	}
+	.bd .product-item.product-item-s i{
+		position: absolute;
+		top: 40px;
+		right: 30px;
+		font-size: 48px;
+		color: #ff6700;
+	}
+	.bd .col1 .product-item-m{
+		margin-left: 0px;
+	}
+	.bd .col1 .product-item-m img{
+		width: 100%;
+		height: 100%;
+	}
+	.bd .product-item .product-img{
+		width: 160px;
+		height: 160px;
+	}
+	.bd .product-item-b .product-img{
+		margin-bottom: 30px;
+		margin-top: 45px;
+	}
+	.bd .product-item-m .product-img{
+		margin-bottom: 15px;
+		margin-top: 25px;
+	}
+	.bd .product-item .product-name{
+		font-size: 12px;
+		color:#202020;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		margin-bottom: 10px;
+	}
+	.bd .product-item .product-desc{
+		font-size: 11px;
+		color:#adadad;
+		margin-bottom: 20px;
+	}
+	.bd .product-item .product-price span{
+		font-size: 14px;
+		color:#ff6700;
+	}
+	.bd .product-item .product-price del{
+		font-size: 14px;
+		color:#adadad;
+	}
+
+/*头部区域开始*/
+	.top{
+		width: 100%;
+		/*height: 40px;*/
+		background: #333333;
+	}
+	.top .nav{
+		width: 700px;
+		height: 40px;/*必须设置高度，因为它的父元素container是没有高度的*/
+		/*background: red;*/
+		float: left;
+	}
+	.top .nav-item{
+		float: left;
+		line-height: 40px;
+	}
+	.top .nav-item .vertical{
+		/*height: 17px;   继承了nav-item的高度*/
+		margin-left: 5px;
+		margin-right: 5px;
+		color: #40403b;
+	}
+	.top .cart{
+		float: right;
+		width: 120px;
+		height: 40px;
+		background: #424242;/*购物车部分的背景颜色*/
+		color: #b0b0b0;
+		line-height: 40px;
+		text-align: center;/*字体居中*/
+	}
+	.top .cart:hover,  /*当鼠标滑过购物车部分的时候变颜色*/
+	.top .cart a:hover{
+		background: #fff;
+		color: #ff6700;
+	}
+	.top .cart a{
+		display: inline-block;/*转化为块状元素*/
+		width: 100%;
+		height: 100%;
+	}
+	.top .cart .iconfont{
+		font-size: 20px;
+		/*text-align: bottom;*/
+		/*margin-left: 5px;*/
+		margin-right: 3px;
+	}
+	.top .cart span{
+		vertical-align: 4px;/*设置购物车的垂直对齐方式。取值可以为text-top/像素/百分比。*/
+		/*font-size: 12px;   系统默认的为12px。*/
+	}
+	.top .user-info{
+		float: right;
+		width: 160px;
+		height: 40px;/*必须设置高度，因为它的父元素container是没有高度的*/
+		/*background: yellow;*/
+	}
+	/*.top .user-info .user-cart{
+		float: left;
+		line-height: 40px;
+		color: #40403b;
+	}*/   
+	/*nav和user-info的样式一样，简化代码只写一遍。*/
+	/*.top .user-info .user-cart .vertical{
+		margin-left: 5px;
+		margin-right: 5px;
+		color: #40403b;
+	}*/
+/*焦点区域开始*/
+	.focus{
+		width: 100%;/*继承父元素的高度*/
+		height: 770px;
+		background: #fff;
+	}
+	.focus .header{
+		/*继承父元素的高度，不用设置高度*/
+		height: 100px;
+		/*background: red;*/
+	}
+	.focus .header .logo{
+		float: left;
+		width: 100px;
+		height: 100px;
+		/*background: red;*/
+	}
+	.focus .header .logo-icon{
+		float: left;
+		width: 55px;
+		height: 55px;
+		cursor: pointer; /*鼠标放上时变成手的形状*/
+		margin-top: 22px;
+		background-image: url(../images/logo-mi.png);/*引用背景图片*/
+		background-position: left;
+	}
+	.header .logo-icon:hover{
+		background-position: right;
+	}
+	.focus .header .header-nav{
+		float: left;
+		width: 660px;
+		height: 100px;
+		line-height: 100px;
+		margin-left: 134px;
+	}
+	.focus .header .header-nav li{
+		float: left;
+		margin-right: 20px;
+	}
+	.focus .header .header-nav li:hover>a{
+		color: #ff6700;
+	}
+	.focus .header .header-nav a{
+		color: #333;
+		font-size: 16px;
+	}
+/*搜索框区域开始*/
+	.focus .header .search{
+		float: right;
+		width: 296px;
+		height: 50px;
+		/*background: yellow;*/
+		margin-top: 25px;
+		position: relative;
+	}
+	.focus .header .search:hover .search-text,
+	.focus .header .search:hover .iconfont{
+		border-color: #b0b0b0;
+		/*transform: all 2s;*/
+	}
+	.focus .header .search:hover{
+		border: 0.1px solid  #b0b0b0;
+	}
+	.focus .header .search .iconfont:hover{
+		background-color: #ff6700; 
+		color: #fff;
+		border: none; 
+	}
+	.focus .header .search .search-text{
+		float: left;
+		width: 244px;
+		height: 50px;
+		border: 1px solid #e0e0e0;
+		box-sizing:border-box;
+		/*border-right: none;*/
+		padding-left: 10px; /*输入内容时，光标距离边框有10px。*/
+		outline: none;
+	}
+	/*.focus .header .search input:focus ~ .search-list{
+		display: block;
+		border-color: #ff6700;
+	}
+	.focus .header .search input:focus,
+	.focus .header .search input:focus+.search-span{
+		border-color: #ff6700;
+	}*/
+	.focus .header .search .search-text:focus{
+		border-color: #ff6700;
+		/*border-right: none;*/
+	}
+	.focus .header .search .search-text:focus ~ .search-span{
+		border-color: #ff6700;
+	}
+	.focus .header .search .search-text:focus~.search-color{
+		display: none;   /* display 属性设置元素如何显示。*/
+	}
+	.focus .header .search .search-text:focus~.search-list{
+		display: block;    /* 转换为块级元素*/
+	}
+	.focus .header .search .iconfont{
+		float: left;
+		width: 52px;
+		height: 50px;
+		line-height: 50px;
+		text-align: center;
+		border: 1px solid #e0e0e0;
+		color: #616161;
+		font-size: 24px;
+		border-left: none;
+		cursor: pointer;   /*鼠标放上时变成手的形状*/
+		box-sizing:border-box;
+	}
+	.focus .header .search .search-color{
+		position: absolute;
+		font-size: 12px;
+		text-align:center;
+		color: #757575;
+	}
+	.focus .header .search .search-color-se1{
+		position: absolute;
+		/*float: left;*/
+		top:16px;
+		left: 127px;
+		width: 41px;
+		height: 18px;
+		background-color: #eee;
+	}
+	.focus .header .search .search-color-se2{
+		position: absolute;
+		top:16px;
+		left: 173px;
+		width: 60px;
+		height: 18px;
+		background-color: #eee;
+	}
+	.focus .header .search .search-color-se2:hover,
+	.focus .header .search .search-color-se1:hover{
+		background-color: #ff6700;
+		color: #fff;
+	}
+	.focus .header .search .search-list{
+		display: none;   /*display 属性设置元素如何显示。*/
+		position: absolute;    /*绝对定位*/
+		top: 50px;
+		left: 0px;
+		width: 244px;
+		height: 301px;
+		border: 1px solid #ff6700;
+		background-color: #fff;
+		box-sizing: border-box;  /*IE盒模型*/
+		border-top: none;/*解决下拉搜索边框的重合*/
+		z-index: 10;
+	}
+	.focus .header .search .search-list li{
+		box-sizing: border-box;  /*IE盒模型*/
+		
+	}
+	.focus .header .search .search-list li a{
+		line-height: 30px;
+		margin-left: 10px;
+		color:#333;
+	}
+	.focus .header .search .search-list li:hover {
+		background-color: #eee;
+		color: #fff;d
+	}
+/*搜索框区域结束*/
+	/*.focus{
+		position:absolute; 
+		/*padding-bottom: 42px;
+	}*/
+/*轮播图右半部分开始区域*/
+	.focus .focus-content{
+		width: 100%;
+		height: 460px;
+		cursor: 100%; 
+	}
+	.focus .focus-content .lun-lu{
+		position: absolute;
+		float: left;
+		background-color: rgba(0,0,0,0.4);
+		width: 234px;
+		height: 420px;
+		padding: 20px 0px;
+		z-index: 60;
+	}
+	.focus .focus-content{
+		height: 460px;
+		/*background: gray;*/
+		margin-bottom: 20px;
+	}
+	.focus .focus-content .cate-box{
+		/*width: 234px;
+		height: 460px;*/
+		/*background: #9e9b9e;*/
+	}
+	.focus .focus-content .cate-box li{
+		padding-left: 30px;
+		padding-right: 20px;
+		line-height: 40px;
+		cursor: pointer;   /*鼠标放上时变成手的形状*/
+	}
+	.focus .focus-content .cate-box li:hover{
+		background:  #ff6700;
+	}
+	.focus .focus-content .cate-box li a{
+		font-size: 14px;
+		color: #fff;
+	}
+	.focus .focus-content .cate-box li a i{
+		float: right;
+		color: #fff;;
+	}
+/*轮播图右半部分结束区域*/
+
+/*轮播图引用样式开始*/
+	.focus .focus-content .lun-con{
+		position: relative;
+		width: 1226px;
+		height: 460px;
+	}
+	.focus .focus-content .lun-con img{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
+	.focus .focus-content .lun-con .lun-icon{
+		position: absolute;
+		width: 42px;
+		height: 68px;
+		color: #d2d5d1;
+		cursor: pointer;   /*鼠标放上时变成手的形状*/
+	}
+	.focus .focus-content .lun-con i{
+		font-size: 28px;
+		line-height: 68px;
+		margin-left: 10px;
+		color: #fff;
+	}
+	.focus .focus-content .lun-con .lun-icon-left{
+		top: 200px;
+		left: 234px;
+		border-top-right-radius: 3px;
+		border-bottom-right-radius: 3px;
+	}
+	.focus .focus-content .lun-con .lun-icon-left:hover{
+		background-color: #70767b;
+		color: #fff;
+	}
+	.focus .focus-content .lun-con .lun-icon-right{
+		top: 205px;
+		right: 0px;
+		border-top-left-radius: 3px;
+		border-bottom-left-radius: 3px;
+	}
+	.focus .focus-content .lun-con .lun-icon-right:hover{
+		background-color: #70767b;
+		color: #fff;
+	}
+	.focus .focus-content .lun-dian{
+		position: absolute;
+		right: 30px;
+		bottom: 10px;
+		width: 80px;
+		height: 10px;
+		cursor: pointer;   /*鼠标放上时变成手的形状*/
+	}
+	.focus .focus-content .lun-dian .btn-item{
+		width: 10px;
+		height: 10px;
+		border-radius: 5px;
+		float: left;
+		margin-right: 10px;
+		background-color: #7d8c98;
+		border: 2px solid #a4afb7;
+		box-sizing: border-box;
+	}
+	.focus .focus-content .lun-dian .btn-item.active{
+		background-color: #fff;
+	}
+	.focus .focus-content .lun-dian .btn-item:hover{
+		background-color: #e3f4fd;
+		border-color: #889298;
+	}
+/*轮播图引用结束*/
+
+/*小米秒杀/企业团购F码通道部分开始 */
+	.focus .hot{
+		height: 170px;
+		/*background: yellow;*/
+		/*margin-bottom: 34px;*/
+	}
+	.focus .hot .hot-ul{
+		float: left;
+		width: 234px;
+		background-color: #5f5750;
+	}
+	.focus .hot .hot-ul li.hot-shu:after {
+		content: '';
+		position: absolute;
+		right: 0px;
+		top: -18px;
+		width: 1px;
+		height: 80px;
+		background-color: #665e57;
+	}
+	.focus .hot .hot-ul li.hot-heng:before {
+		content: '';
+		position: absolute;
+		right: 8px;
+		top: -20px;
+		width: 65px;
+		height: 1px;
+		background-color: #665e57;
+	}
+	.focus .hot .hot-ul li{
+		position: relative;
+		float: left;
+		width: 78px;
+		height: 40px;
+		text-align: center;
+		color: #cac6c4;
+		margin-top: 20px;
+		margin-bottom: 25px;
+
+	}
+	.focus .hot .hot-ul li a{
+		font-size: 12px;
+		margin-bottom: 25px;
+
+	}
+	.focus .hot .hot-ul li i{
+		/*margin-top: 20px;*/
+		display: block;
+		font-size: 24px;
+		/*transform: color 1s;*/
+	}
+	.focus .hot .hot-gao{
+		float: right;
+		width: 978px;
+	}
+	.focus .hot .hot-gao li{
+		float: left;
+		width: 316px;
+		height: 170px;
+	}
+	.focus .hot .hot-gao li:hover{
+		box-shadow: 0 5px 30px rgba(0,0,0,0.3);
+	}
+	.focus .hot .hot-gao li:nth-child(2){
+		margin-right: 15px;
+		margin-left: 15px;
+	}
+	.focus .hot .hot-gao li img{
+		width: 100%;
+		height: 100%;
+	}
+/*焦点区域结束*/
+
+/*主要区域开始*/
+	.main{
+		width: 100%;
+		height: 6035px;
+		background: #f5f5f5;
+	}
+	
+	/*.main .shan-top .mores span:nth-child(1),
+	.main .shan-top .mores span:nth-child(2) i{
+		/*color: #e0e0e2;*/
+	}*/
+	.main .shan-header{
+		width: 100%；
+		height: 340px;
+		/*background: yellow;*/
+	}
+	.main .shan-header .col1{
+		position: relative;
+		float: left;
+		height: 340px;
+		width: 234px;
+		text-align: center;
+		background: #f1eded;
+		border-top: 1px solid #ef3a57;
+		box-sizing: border-box; 
+	}
+	.main .shan-header .timer div:nth-child(1){
+		font-size: 20px;
+		margin-top: 63px;
+		margin-bottom:30px;
+		color: #ef3a57;
+	}
+	.main .shan-header .timer div:nth-child(3){
+		font-size: 13px;
+		margin-top: 20px;
+		margin-bottom:20px;
+		color: #6f6d6d;
+	}
+	.main .shan-header .timer div:nth-child(4){
+		color: #ffffff;
+		line-height: 46px;
+		font-size: 17px; 
+	}
+	.main .shan-header .timer-time .timer-num {
+		display: inline-block;
+		width: 46px;
+		height: 46px;
+		background: #605751;
+	}
+	.main .shan-header .timer-time .timer-fh{
+		color: #605751;
+	}
+	.main .shan-header .col2 .product-item{
+		float: left;
+		height: 340px;
+		width: 234px;
+		margin-left: 14px;
+		position: relative;
+		box-sizing: border-box;
+		/*background: blue;*/
+	}
+	.main .shan-header .col2 .product-item:after{
+		position: absolute;
+		top: 0px;
+		left: 50%;
+		content: '五折';
+		display: block;
+		width: 64px;
+		height: 20px;
+		text-align: center;
+		background: #e13834;
+		color: #fafafa;
+		margin-left: -34px;
+	}
+	.main .shan-header .col2 .product-item:nth-child(1){
+		margin-right: 0px;
+		border-top: 1px solid green;
+	}
+	.main .shan-header .col2 .product-item:nth-child(2){
+		margin-right: 0px;
+		border-top: 1px solid orange;
+	}
+	.main .shan-header .col2 .product-item:nth-child(3){
+		margin-right: 0px;
+		border-top: 1px solid blue;
+	}
+	.main .shan-header .col2 .product-item:nth-child(4){
+		margin-right: 0px;
+		border-top: 1px solid pink;
+	}
+	.main .shan-header .col2 .product-list li{
+		background: #fafafa;
+		
+	}
+	.main .shan-header .col2 .product-list .product-item{
+		text-align: center;
+	}
+	/*.main .shan-header .col2 .product-item .product-img{
+		width: 
+	}*/
+	.main .shan-header .col2  .product-item .product-name{
+		font-size: 14px;
+		margin-top: 35px;
+		margin-bottom: 11px;
+		text-align: center;
+		width: 100%;
+		white-space:nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	.main .shan-header .col2 .product-item .product-img{
+		margin-top: 30px;
+		width: 160px;
+		height: 160px;
+	}
+	.main .shan-header .col2 .product-item .product-desc{
+		font-size: 11px;
+		color: #adadad;
+		margin-bottom: 15px;
+	}
+	.main .shan-header .col2 .product-item .product-price{
+		color: #f67000;
+
+	}
+	.main .shan-header .col2 .product-item .mask{
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		background: rgba(0,0,0,0.05);
+	}
+	.main .shan-header .ad{
+		height: 120px;
+		margin-top: 22px;
+		margin-bottom: 40px;
+	}
+	.main .shan-header .ad img{
+		width: 100%;
+		height: 100%;
+	}
+	.main .phone{
+		float: left;
+		width: 100%;
+		height: 62px;
+		/*background: yellow;*/
+	}
+	.main .phone .shan-top h2{
+		cursor: pointer; 
+	}
+	.main .phone .mores.view:hover i{
+		color: #ff6700;
+		cursor: pointer; 
+	}
+ 	.main .phone .col1{
+ 		height: 614px;
+ 		width: 234px;
+		float: left;
+ 		background: red;
+ 	}
+ 	.main .phone .col2{
+ 		width: 978px;
+ 	}
+/*主要区域结束*/
+
+/*底部内容区域开始*/
+	.footer{
+		width: 100%;
+		height: 522px;
+		background: black;
+	}
+/*底部内容区域结束*/
+

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>布局练习-保留.html</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        .conternain{
+            width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        header.conternain{
+            position: fixed;
+            top: 40px;
+            left: 50%;
+            margin-left: -400px;
+            height: 60px;
+            z-index: 999;  /*设置元素的堆叠顺序,值越高优先级越高*/
+        }
+        header ul li{
+            float: left;
+            width: 20%;
+            text-align: center;
+            line-height: 60px;
+            background-color: #aaa;
+        }
+        header ul .item{
+            background-color: red;
+            position: relative;
+        }
+        /* header ul .item img{
+            position: absolute;
+            top: -19px;
+            left: 59px;
+        } */
+        .carousel{
+            position: relative;
+            height: 400px;
+            margin-top: 120px;
+            margin-bottom: 20px;
+        }
+        .carousel img{
+            width: 100%;
+            height: 100%;
+        }
+        .btn{
+            position: absolute;
+            top: 50%;
+            cursor: pointer;
+            margin-top: -40px;
+            width: 50px;
+            height: 80px;
+            background-color: rgba(0,0,0,0.6);
+            font-size: 30px;
+            color:#fff;
+            /* cursor: pointer; */
+        }
+        .btn:hover{
+            background-color: rgba(0,0,0,0.8);
+        }
+        .carousel .right-btn{
+            right:0;
+        }
+        .carousel ul{
+            position: absolute;
+            right: 10px;
+            bottom: 20px;
+        }
+        .carousel ul li{
+            float: left;
+            width: 30px;
+            height: 30px;
+            background-color: #bbb;
+            margin-left: 10px;
+            text-align: center;
+            line-height: 30px; /* 行高*/
+            color:#fff;     /*圆点字体颜色*/
+            border-radius: 50%;
+        }
+        .content{
+            height: 1000px;
+            background-color: gray;
+            /* background-color: blue; */
+        }
+        .ad{
+            position: fixed;
+            top: 40%;
+            margin-top: -50px;
+            width: 100px;
+            height: 200px;
+            cursor: pointer;
+            text-align: center;
+            background-color: red;
+        }
+        .left-ad{
+            left: 0;
+        }
+        .right-ad{
+            right: 0;
+        }
+        .back-top{
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background-color: #ccc;
+            text-align: center;
+            line-height: 100px;
+           /*  cursor: pointer;*/
+        } 
+        .back-top a{
+            text-decoration: none;
+            font-size: 22px;
+            color:#fff;
+        }
+    </style>
+</head>
+<body>
+    <header class="conternain">
+        <ul>
+            <li>天猫会员</li>
+            <li>品牌街</li>
+            <li class="item">
+                电器城
+            <!--<img src="" alt="">-->
+            </li>
+            <li>营业厅</li>
+            <li>魅力惠</li>
+        </ul>
+    </header>
+    <section class="carousel conternain">
+        <button class="left-btn btn">&lt;</button>
+        <img src="img/003.jpg" alt="">
+        <button class="right-btn btn">&gt;</button>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    </section>
+    <section class="content conternain">
+         
+    </section>
+    <div class="left-ad ad">你好！</div>
+    <div class="right-ad ad">你好！</div>
+    <div class="back-top">
+        <a href="#">返回顶部</a>
+    </div>
+</body>
+</html>

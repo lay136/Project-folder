@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>042-元素的水平居中2.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		/* body{
+			padding-right: 759px;
+			padding-left: 759px;
+			
+		}方法一,设置父元素的padding值 
+		*/
+		div{
+			width: 400px;
+			height: 400px;
+			border: 1px solid;
+			margin: 0 auto;
+			/* box-sizing: border-box;
+		IE盒模型，控制整个盒子，防止设置padding值,导致页面布局变大。
+			 */
+		}
+		.son{
+			width: 100px;
+			height: 100px;
+			border: 0 solid;
+			background-color: green;
+			/* margin-left: 150px; 
+			margin-right: 150px; */
+			margin-bottom: 150px;
+			margin-top: 150px;
+	</style>
+</head>
+<body>
+	<div class="father">
+		<div class="son"></div>
+	</div>
+</body>
+</html>

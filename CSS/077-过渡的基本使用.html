@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>过渡的基本使用</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			width: 400px;
+			height: 400px;
+			cursor: pointer;
+			background-color: red;
+			transition-property: width,background;
+			transition-duration: 1s,2s;
+		}
+		.box:hover{
+			width: 800px;
+			background: green;
+		}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>086-倒地照片.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			width: 500px;
+			height: 600px;
+			border: 1px solid;/*设置边框的宽度为1个像素，实线，默认黑色*/
+			margin: 50px auto;/*设置盒子居中显示，居顶部50个像素*/
+			border-radius: 5px;/*设置盒子的边框角度圆角为5个像素*/
+			perspective: 500px;/*设置透视距离*/
+		}
+		.box img{
+			width: 100%;/*设置图片的宽度为百分百*/
+			height: 100%;/*设置图片的高度为百分百*/
+			border-radius: 5px;/*边框的角度*/
+			/* border-top-left-radius: 5px; */
+			/* border-top-left-radius: 5px; */
+			transition:  1s;/*过渡时间*/
+			transform-origin: center bottom; 
+			/*修改旋转基点，水平方向移动距离 垂直方向移动距离;
+			默认情况下所有的元素都是以自己的中心点作为参考来旋转的 */
+		}
+		.box:hover img{
+			transform: rotateX(90deg);
+			/*触碰到外边的边框之后，修改旋转角度，沿x轴旋转90度*/
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<!-- <img src="img/单一样式图片.jpg" alt=""> -->
+		<img src="img/cluo.jpg"><!-- 引入图片 -->
+	</div>
+</body>
+</html>

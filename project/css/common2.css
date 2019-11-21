@@ -1,0 +1,24 @@
+/*公共样式*/
+.container{
+	width: 1226px;
+	margin-right: auto;
+	margin-left: auto;
+	}/*设置水平居中的样式，将container属性添加给每部分*/
+.cleanfix:after{ /* 清楚浮动给页面布局带来的影响*/
+	content: "";  /* 搭配after伪类选择器，内容为空*/
+	display: block;
+	height: 0px; 
+	clear: both; 
+	visibility: hidden;  
+	}
+.clearfix{
+		*zoom: 1; /*兼容IE浏览器*/
+	}
+a{
+	color: #b0b0b0;
+	font-size: 11px;
+	text-decoration: none;
+}
+a:hover{
+	color: #fff;
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>定位流案例</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.nav{
+
+			/* box-sizing:border-box; */
+			width: 1200px;
+			/* height: 80px; */
+			/* background: red; */
+			margin: 50px auto;
+			text-align: center;
+			border: 1px solid;
+			/* display: inline-block; */
+			line-height: 80px;
+			font-weight: bold;
+			/*font-family: 微软雅黑;*/
+
+		}
+		.bian{
+			/* box-sizing:border-box; */
+			/* border: 1px solid; */
+			/* height: 80px; */
+			line-height: 80px;
+			width:240px;
+		}
+		.box1{
+			background: gray;
+			float: left;
+
+		}
+		.box2{
+			background: gray;
+			float: right;
+		} 
+		.box3{
+			background: gray;
+			float: right;
+		}
+		.box4{
+			background: red;
+			float: right;
+			/* border: 0.1px solid
+			background-image: url(img/天猫头像.jpg); */
+		}
+		.box5{
+			background: gray;
+			float: right;
+		}
+		.gd{
+			box-sizing:border-box;
+			width: 100px;
+			height: 200px;
+			border: 1px solid;
+			position: fixed;
+			bottom: 500px;
+			background-color: red;
+			line-height: 48px;
+			text-align: center;
+			white-space:nowrap; 	/*空白区域，文本不会换行*/
+		  	overflow: hidden;	/*空白区域内容溢出时，会被修剪，并且其余内容是不可见的*/
+		  	text-overflow: clip;	/*空白区域内容溢出时修剪文本*/
+		}
+		.left{
+			/* top: 50px; */
+			left: 50px;
+			/* right: 50px; */
+		}
+		.right{
+			/* top: 50px; */
+			right: 50px;
+		}
+		/* .content{
+			width: 500px;
+		} */
+		.content{
+			/* top: 200px; */
+			/* left: 170px; */
+			margin-left: 430px; 
+			margin-top: 130px;
+			/* position: fixed; */
+			/* margin-bottom: 10px; */
+			/* box-sizing:border-box
+			border-right: auto; */
+			/* margin-left: auto; */
+			
+			/* margin-left: auto; */
+			/* margin-right: auto; */
+			/* margin-left: auto; */
+
+		}
+		.footer{
+			width: 1200px;
+			height: 100px;
+			background-color: blue;
+			position: fixed;
+			bottom: 100px;
+			left: 380px;
+		}
+	</style>
+</head>
+<body>
+	<div class="nav">
+		<div class="box1  bian">天猫会员</div>
+		<div class="box2  bian">魅力惠</div>
+		<div class="box3  bian">营业厅</div>
+		<div class="box4  bian">电器城</div>
+		<div class="box5  bian">品牌街</div>
+	</div>
+		<div class="left gd">
+			<p>双十一</p>
+			<p>魅力惠</p>
+			<p>提前预定</p>
+			<p>点我预定</p>
+		</div>
+		<div class="right gd">
+			<p><a href="#">双十一</a></p>
+			<p><a href="#">魅力惠</a></p>
+			<p><a href="#">提前预定</a></p>
+			<p><a href="#">点我预定</a></p>
+		</div>
+	<div class="content">
+		<img src="img/001.jpg" />
+		<!--style="margin-left:24%" -->
+		
+	</div>
+
+	<div class="footer">我是内容</div>
+
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>088-旋转菜单.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		li{
+			list-style:none;/*清除li标签之前的小圆点*/
+		}
+		p{
+			font: 24px;
+		}
+		.wrap{
+			width: 500px;
+			/* height: 800px; */
+			/* background: red; */
+			margin:50px auto;
+		}
+		.wrap .first{
+			height: 40px;
+			background-color: gray;/*顶部的背景颜色*/
+			cursor:pointer;  /*设置鼠标的光标的呈现的状态 */
+		}
+		.wrap .first>li{
+			float: left;
+			width: 100px;
+			height: 100%;
+			margin-left: 50px; /*左边距50个像素 */
+			background-color: yellow; /* 二级菜单的背景颜色 */
+			text-align: center; /*文字居中显示 */
+			line-height: 40px; /*行高为40个像素 */
+			/*cursor:hand;*/
+		
+		}
+		.wrap .first>li>p:hover~.second li{
+			/*通用兄弟选择器*/
+
+			opacity: 1;	/*元素的不透明度*/
+			/*cursor:pointer; */
+			/*cursor:pointer; */
+			transform: rotateY(0deg);/*设置旋转的角度，沿y轴旋转0度*/
+		}
+		/* .wrap .first>li>p:hover{
+			transition-delay: 0ms;
+		} */
+		.wrap .first>li>p:hover{
+			transition-delay: 200ms;  /* 延迟时间为200ms */
+		}
+
+
+		.first .second li:nth-child(1){
+			transition-delay: 600ms;
+		}
+		.first .second li:nth-child(2){
+			transition-delay: 400ms;
+		}
+		.first .second li:nth-child(3){
+			transition-delay: 200ms;
+		}
+		.first .second li:nth-child(4){
+			transition-delay: 0ms;
+		}
+		/* 每个二级标签的延迟时间 */
+		.wrap .second>li{
+			width: 100%;
+			height: 100%;
+			background-color: pink;/* 二级标签的背景颜色 */
+			opacity: 0;  /*透明度为0，即没有颜色*/
+			transition: all 1s;	/*触发的执行时间*/
+			transform: rotateY(180deg);  /*旋转角度为180度，*/
+		}
+		.content{
+			height: 600px;
+			background: purple;  /*底部内容的背景颜色*/
+		}
+	</style>
+</head>
+<body>
+<div class="wrap">
+	<ul class="first">
+		<li>
+			<p>一级菜单1</p>
+			<ul class="second">
+				<li>二级菜单1</li>
+				<li>二级菜单1</li>
+				<li>二级菜单1</li>
+				<li>二级菜单1</li>
+			</ul>
+		</li>
+		<li>
+			<p>一级菜单2</p>
+			<ul class="second">
+				<li>二级菜单2</li>
+				<li>二级菜单2</li>
+				<li>二级菜单2</li>
+				<li>二级菜单2</li>
+			</ul>
+		</li>
+		<li>
+			<p>一级菜单3</p>
+			<ul class="second">
+				<li>二级菜单3</li>
+				<li>二级菜单3</li>
+				<li>二级菜单3</li>
+				<li>二级菜单3</li>
+			</ul>
+		</li>
+	</ul>
+	<div class="content">
+		内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内
+	</div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+			
+

@@ -1,0 +1,2698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="小米商城直营小米公司旗下所有产品，包括小米手机系列小米CC9、小米9、小米MIX 3，Redmi 红米系列Redmi K20 Pro、Redmi Note 7，小米电视、笔记本、米家智能家居等，同时提供小米客户服务及售后支持。" />
+    <meta name="keywords" content="小米,小米9,小米cc9,Redmi K20,Redmi Note 7,小米MIX3,小米商城" />
+    <title>88-小米官网</title>
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="fonts/font.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="shortcut icon" href="images/mi.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../JavaScript/JavaScript-基础/CSS/mi-Loading.css">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+        }
+        /*顶部区*/
+        .top{
+            width: 100%;
+            height: 40px;
+            background: #333333;
+        }
+        .top .top-nav{
+            width: 1226px;
+            height: 100%;
+            margin: 0 auto;
+        }
+        .top .top-nav .line{
+            font-size: 10px;
+            color: #40403b;
+        }
+        .top .top-nav ul{
+            float: left;
+        }
+        .top .top-nav ul li{
+            display: inline-block;
+        }
+        .top .top-nav ul li a{
+            color: #b0b0b0;
+            line-height: 40px;
+            font-size: 10px;
+        }
+        .top .top-nav .top-news{
+            width: 260px;
+            height: 40px;
+            float: right;
+        }
+        .top .top-nav .top-news ul{
+            margin-left: 22px;
+        }
+        .top .top-nav .top-news>a{
+            position: relative;
+            float: right;
+            text-align: center;
+            display: inline-block;
+            width: 100px;
+            height: 40px;
+            background: #424242;
+            color: #b0b0b0;
+            line-height: 40px;
+            font-size: 10px;
+        }
+        .top .top-nav a:hover{
+            color: white;
+        }
+        .top .top-nav .top-car:hover{
+            background: #fff;
+        }
+        .top .top-nav .car-box{
+            position: absolute;
+            top: 40px;
+            right: 0;
+            width: 300px;
+            z-index: 998;
+            box-shadow: 0 5px 5px #ccc;
+            /*position: relative;*/
+        }
+        .top .top-nav .car-box .tips{
+            text-align: center;
+            font-size: 14px;
+            color: #333;
+            display: none;
+            line-height: 90px;
+        }
+        /*内容区 - 轮播图*/
+        .content-1{
+            width: 1226px;
+            height: 600px;
+            margin: 20px auto;
+        }
+        .content-1 .content-1-top{
+            position: relative;
+            width: 100%;
+        }
+        .content-1 .content-1-top:after{
+            display: block;
+            content: "";
+            height: 0;
+            clear: both;
+            visibility: hidden; /*属性规定元素是否可见*/
+        }
+        .content-1 .content-1-top img{
+            width: 55px;
+            height: 55px;
+            float: left;
+            margin-top: 2.5px;
+        }
+        .content-1 .content-1-top ul{
+            margin-left: 170px;
+        }
+        .content-1 .content-1-top .link{
+            float: left;
+            line-height: 50px;
+            margin-left: 10px;
+            color: #333333;
+            font-size: 16px;
+        }
+        .content-1 .content-1-top .link:hover{
+            color: #ff6700;
+        }
+        .content-1 .content-1-top .search{
+            position: absolute;
+            top: 8px;
+            right: 0;
+            width: 50px;
+            border: 1px solid #e0e0e0;
+            text-align: center;
+            line-height: 48px;
+            transition: all 0.3s;
+            border-left: none;
+        }
+        .content-1 .content-1-top .search:hover{
+            background: #ff6700;
+            cursor: pointer;
+        }
+        .content-1 .content-1-top .search:hover .fas{
+            color: #fff;
+        }
+        .content-1 .content-1-top .search .fas{
+            font-size: 18px;
+            color: #636165;
+        }
+        .content-1 .content-1-top .ipt{
+            position: absolute;
+            top: 8px;
+            right: 51px;
+            width: 243px;
+            height: 48px;
+            border: 1px solid #e0e0e0;
+            font-size: 10px;
+            /*去除选中状态边框*/
+            outline: none;
+            transition: all 0.3s;
+        }
+        /*focus 获取焦点*/
+        .content-1 .content-1-top .ipt:focus{
+            border: 1px solid #ff6700;
+        }
+        .content-1 .content-1-top .ipt:focus~.link-sp {
+            display: none;
+        }
+        .content-1 .content-1-top .ipt:focus~.search{
+            border: 1px solid #ff6700;
+        }
+        .content-1 .content-1-top .ipt:focus~.ipt-ul{
+            display: block;
+            border-color: #ff6700;
+        }
+        .content-1 .content-1-top .link-sp{
+            font-size: 12px;
+            color: #757575;
+        }
+        .content-1 .content-1-top .sp:hover{
+            background: #ff6700;
+            color: #fff;
+        }
+        .content-1 .content-1-top .sp{
+            display: inline-block;
+            background: rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+        .content-1 .content-1-top .ipt-sp1{
+            position: absolute;
+            top: 26px;
+            right: 120px;
+        }
+        .content-1 .content-1-top .ipt-sp2{
+            position: absolute;
+            top: 26px;
+            right: 65px;
+        }
+        .content-1 .content-1-top .ipt-ul{
+            width: 245px;
+            height: 300px;
+            border: 1px solid #000;
+            position: absolute;
+            top: 58px;
+            right: 51px;
+            z-index: 1060;
+            border-top: none;
+            padding-left: 10px;
+            box-sizing: border-box;
+            display: none;
+            transition: all 0.3s;
+        }
+        .content-1 .content-1-top .ipt-ul li{
+            line-height: 25px;
+        }
+        .content-1 .content-1-top .ipt-ul .link-li{
+            font-size: 12px;
+            color: rgba(0,0,0,0.8);
+        }
+        /* 下拉菜单 - JS */
+        .hideBox{
+            position: absolute;
+            top: 138px;
+            width: 100%;
+            background: #fff;
+            box-shadow: 0 3px 5px #ccc;
+            z-index: 1050;
+        }
+        .hideBox .hidePhone{
+            width: 1226px;
+            margin: 0 auto;
+            display: none;
+        }
+        .hideBox .hidePhone .phone-ul .active{
+            width: 200px;
+            float: left;
+            margin-right: 5px;
+            text-align: center;
+        }
+        .hideBox .hidePhone .phone-ul .active:last-child{
+            margin-right: 0;
+        }
+        .hideBox .hidePhone .phone-ul .active .link-box .line{
+            width: 200px;
+            height: 140px;
+            border-right: 1px solid #ccc;
+        }
+        .hideBox .hidePhone .phone-ul .active:last-child .link-box:last-child>.line{
+            border-right: none;
+        }
+        .hideBox .hidePhone .phone-ul .active .link-box .name{
+            color: #333;
+            font-size: 14px;
+        }
+        .hideBox .hidePhone .phone-ul .active .link-box .price{
+            font-size: 14px;
+            color: #ff6700;
+            margin-top: 3px;
+        }
+        .content-1 .center{
+            position: relative;
+            width: 100%;
+            height: 460px;
+            margin-top: 20px;
+        }
+        .content-1 .center .itemBox{
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        .content-1 .center .itemBox .hide-right{
+            position: absolute;
+            top: 0;
+            left: 234px;
+            min-width: 516px;
+            height: 100%;
+            background: #fff;
+            box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+            padding: 10px 20px;
+            box-sizing: border-box;
+            z-index: 1040;
+            display: none;
+        }
+        .content-1 .center .itemBox .hide-right .hideImg{
+            width: 60px;
+            height: 60px;
+            vertical-align: middle;
+        }
+        .content-1 .center .itemBox .hide-right .product{
+            font-size: 14px;
+            color: #333;
+        }
+        .content-1 .center .carouselImg{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 1226px;
+            height: 460px;
+            transition: all 1s;
+        }
+        .content-1 .center .iconfont:hover{
+            background: rgba(0,0,0,0.5);
+            color: #fff;
+        }
+        .content-1 .center .iconfont{
+            display: inline-block;
+            width: 41px;
+            height: 69px;
+            font-size: 30px;
+            text-align: center;
+            line-height: 69px;
+            color: #ced4da;
+            z-index: 1020;
+        }
+        .content-1 .center .ico1{
+            position: absolute;
+            top: 50%;
+            margin-top: -34.5px;
+            left: 234px;
+            border-bottom-right-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+        .content-1 .center .ico2{
+            position: absolute;
+            top: 50%;
+            margin-top: -34.5px;
+            right: 0;
+            border-bottom-left-radius: 5px;
+            border-top-left-radius: 5px;
+        }
+        .content-1 .center .center-left{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 234px;
+            height: 100%;
+            background: black;
+            padding-top: 20px;
+            padding-bottom: 30px;
+            box-sizing: border-box;
+            opacity: 0.7;
+            z-index: 1000;
+        }
+        .content-1 .center .center-left ul li{
+            width: 100%;
+            height: 42px;
+            font-size: 14px;
+            line-height: 42px;
+            padding-left: 20px;
+            padding-right: 20px;
+            box-sizing: border-box;
+        }
+        .content-1 .center .center-left ul li:hover{
+            background: orangered;
+        }
+        .content-1 .center .center-left ul li a{
+            color: #f0f2f3;
+        }
+        .content-1 .center .center-left .fas{
+            float: right;
+            line-height: 34px;
+            margin-top: 5px;
+        }
+        .content-1 .center .center-spot
+        {
+            position: absolute;
+            bottom: 25px;
+            right: 20px;
+            z-index: 1010;
+        }
+        .content-1 .center .center-spot .item:first-child{
+            border: 2px solid #b8afaf;
+            background: #fff;
+        }
+        .content-1 .center .center-spot li{
+            width: 6px;
+            height: 6px;
+            border: 2px solid #b8afaf;
+            border-radius: 50%;
+            float: left;
+            margin-right: 10px;
+            background: #988c8c;
+        }
+        .content-1 .center .center-spot li.active{
+            background-color: #e3f4fe;
+            border-color: #889298;
+        }
+        .content-1 .center .center-spot li:hover{
+            background: #fff;
+            cursor: pointer;
+        }
+        .content-1 .bottom{
+            width: 100%;
+            height: 150px;
+            margin-top: 15px;
+        }
+        .content-1 .bottom .bottom-ul img{
+            width: 316px;
+            height: 170px;
+        }
+        .content-1 .bottom .bottom-ul .bottom-ul_li{
+            float: left;
+            transition: all 0.5s;
+        }
+        .content-1 .bottom .bottom-ul .bottom-ul_li:nth-child(1){
+            width: 234px;
+            height: 170px;
+            background: #5f5750;
+        }
+        .content-1 .bottom .bottom-ul .bottom-ul_li:hover{
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+        .content-1 .bottom .bottom-ul .bottom-ul_li:nth-child(1)>ul{
+            margin-left: 1px;
+        }
+        .content-1 .bottom .bottom-ul .bottom-ul_li:nth-child(1)>ul>.li-box{
+            width: 77px;
+            height: 84px;
+            float: left;
+            text-align: center;
+            font-size: 12px;
+            color: #cfcdcb;
+        }
+        .content-1 .bottom .bottom-ul .bottom-ul_li:nth-child(1)>ul>.li-box:hover{
+            color: white;
+            /*变成小手指*/
+            cursor: pointer;
+        }
+        .content-1 .bottom .bottom-ul .bottom-ul_li:nth-child(1)>ul>.li-box:nth-child(1){
+            border-right: 1px solid #665e57;
+            border-bottom: 1px solid #665e57;
+        }
+        .content-1 .bottom .bottom-ul .bottom-ul_li:nth-child(1)>ul>.li-box:nth-child(2){
+            border-right: 1px solid #665e57;
+            border-bottom: 1px solid #665e57;
+        }
+        .content-1 .bottom .bottom-ul .bottom-ul_li:nth-child(1)>ul>.li-box:nth-child(3){
+            border-bottom: 1px solid #665e57;
+        }
+        .content-1 .bottom .bottom-ul .bottom-ul_li:nth-child(1)>ul>.li-box .fas{
+            display: block;
+            font-size: 18px;
+            color: white;
+            margin-top: 20px;
+        }
+        .content-1 .bottom .bottom-ul .bottom-ul_li:nth-child(2){
+            width: 316px;
+            height: 170px;
+            margin-left: 15px;
+        }
+        .content-1 .bottom .bottom-ul .bottom-ul_li:nth-child(3){
+            width: 316px;
+            height: 170px;
+            margin-left: 15px;
+        }
+        .content-1 .bottom .bottom-ul .bottom-ul_li:nth-child(4){
+            width: 316px;
+            height: 170px;
+            margin-left: 14px;
+        }
+        /*内容区 - 小米闪购*/
+        .content-2{
+            position: relative;
+            width: 1226px;
+            height: 500px;
+            margin: 0 auto;
+            margin-top: 140px;
+            margin-bottom: 20px;
+        }
+        .content-2 .cont2-top{
+            position: relative;
+            width: 100%;
+            height: 50px;
+        }
+        .content-2 .cont2-top span{
+            font-size: 20px;
+            line-height: 50px;
+            color: #333333;
+        }
+        .content-2 .cont2-top .iconfont{
+            width: 25px;
+            height: 20px;
+            border: 1px solid #e0e0e0;
+            font-size: 14px;
+            text-align: center;
+            line-height: 20px;
+        }
+        .content-2 .cont2-top .ico1{
+            position: absolute;
+            right: 0;
+            bottom: 6px;
+            color: #b0b3b9;
+        }
+        .content-2 .cont2-top .ico2{
+            position: absolute;
+            right: 26px;
+            bottom: 6px;
+            color: #e0e0e1;
+        }
+        .content-2 .cont2-top .iconfont:hover,.content-Recommend-top .iconfont:hover{
+            color: #ff6700;
+            cursor: pointer;
+        }
+        /* 闪购部分交互功能 CSS */
+        .content-2 .ulBox{
+            width: 992px;
+            overflow: hidden;
+            position: absolute;
+            top: 50px;
+            right: 0;
+        }
+        .content-2 .cont2-ul{
+            width: 2500px;
+        }
+        .content-2 .cont2-ul li{
+            position: relative;
+            width: 234px;
+            height: 300px;
+            float: left;
+            margin-left: 14px;
+        }
+        .content-2 .cont2-timer .countDown{
+            position: absolute;
+            bottom: 158px;
+            left: 35px;
+        }
+        .content-2 .cont2-timer  span{
+            display: inline-block;
+            text-align: center;
+            margin-right: 8px;
+            background: #605750;
+            color: #fff;
+        }
+        .content-2 .cont2-timer .hour{
+            width: 45px;
+            height: 45px;
+            line-height: 45px;
+        }
+        .content-2 .cont2-timer .minute{
+            width: 45px;
+            height: 45px;
+            line-height: 45px;
+        }
+        .content-2 .cont2-timer .second{
+            width: 45px;
+            height: 45px;
+            line-height: 45px;
+        }
+        /* 闪购部分交互功能结束 CSS */
+        .content-2 .footer{
+            width: 1226px;
+            height: 120px;
+            margin-top: 90px;
+            cursor: pointer;
+        }
+        .content-2 .cont2-ul li img{
+            width: 234px;
+            height: 340px;
+        }
+        .content-2 .cont2-ul li:nth-child(2){
+            margin-left: 14px;
+            cursor: pointer;
+        }
+        .content-2 .cont2-ul li:nth-child(3){
+            margin-left: 14px;
+            cursor: pointer;
+        }
+        .content-2 .cont2-ul li:nth-child(4){
+            margin-left: 14px;
+            cursor: pointer;
+        }
+        .content-2 .cont2-ul li:nth-child(5){
+            margin-left: 14px;
+            cursor: pointer;
+        }
+        /*内容区 - 手机*/
+       .content-phone{
+           width: 1226px;
+           height: 700px;
+           margin: 0 auto;
+           margin-top: 120px;
+       }
+        .content-phone .phone-top-left{
+            width: 100%;
+            height: 50px;
+            font-size: 20px;
+            line-height: 50px;
+            color: #333333;
+        }
+        .content-phone .phone-top-right{
+            height: 100%;
+            color: #333333;
+            float: right;
+        }
+        .content-phone .phone-top-right:hover{
+            cursor: pointer;
+        }
+        .content-phone .phone-top-right .iconfont{
+            background: #b0b0b0;
+            color: #fffffd;
+            vertical-align: middle;
+            border-radius: 50%;
+            font-size: 24px;
+        }
+        .content-phone .center-left{
+            width: 234px;
+            height: 614px;
+            float: left;
+            transition: all 0.3s;
+        }
+        .content-phone .center-left:hover{
+            transform: scale(1.001);
+            box-shadow: 0 0 20px gray;
+            cursor: pointer;
+        }
+        .content-phone .center-left img{
+            width: 234px;
+            height: 614px;
+        }
+        .content-phone .center-right{
+            width: 992px;
+            height: 614px;
+            float: right;
+        }
+        .content-phone .center-right .center-ul li{
+            width: 234px;
+            height: 300px;
+            float: left;
+            margin-left: 14px;
+            margin-bottom: 14px;
+            transition: all 0.4s;
+        }
+        .content-phone .center-right .center-ul>li:hover{
+            transform: scale(1.05);
+            box-shadow: 0 10px 10px rgba(0,0,0,0.3);
+            cursor: pointer;
+        }
+        .phone-footer{
+            width: 1226px;
+            height: 120px;
+            margin: 10px auto;
+        }
+        .phone-footer img{
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+        /*内容区 - 家电*/
+        .content-electrical .elec-top{
+            position: relative;
+            width: 1226px;
+            height: 50px;
+            margin: 10px auto;
+        }
+        .content-electrical .elec-top span{
+            float: left;
+            color: #424242;
+            font-size: 20px;
+            line-height: 50px;
+        }
+        .content-electrical .elec-top .elec-ul{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 500px;
+        }
+        .content-electrical .elec-top .elec-ul li{
+            margin-left: 28px;
+            float: right;
+        }
+        .content-electrical .elec-top .elec-ul li .link{
+            color: #424242;
+            font-size: 18px;
+            padding-bottom: 4px;
+        }
+        .content-electrical .elec-top .elec-ul .elec-li .link.elecLink{
+            color: #ff6700;
+            border-bottom: 2px solid #ff6700;
+        }
+        .content-electrical .elec-top .elec-ul li .actives{
+            color: #ff6700;
+            border-bottom: 2px solid #ff6700;
+            font-size: 18px;
+        }
+        .content-electrical .center{
+            width: 1226px;
+            height: 614px;
+            margin: 0 auto;
+        }
+        .content-electrical .center .center-left{
+            width: 234px;
+            height: 100%;
+            float: left;
+        }
+        .content-electrical .center .center-left .com{
+            transition: all 0.4s;
+        }
+        .content-electrical .center .center-left .com img{
+            width: 234px;
+            height: 300px;
+        }
+        .content-electrical .center .center-left .com:hover{
+            transform: scale(1.05);
+            box-shadow: 0 10px 10px rgba(0,0,0,0.3);
+            cursor: pointer;
+        }
+        .content-electrical .center .center-left .left-top{
+            width: 234px;
+            height: 300px;
+            margin-bottom: 14px;
+        }
+        .content-electrical .center .center-left .left-bottom{
+            width: 234px;
+            height: 300px;
+        }
+        .content-electrical .center .center-right{
+            width: 992px;
+            height: 100%;
+            float: right;
+        }
+        .content-electrical .center .center-ul li{
+            width: 234px;
+            height: 300px;
+            float: left;
+            margin-left: 14px;
+            position: relative;
+            text-align: center;
+            transition: all 0.4s;
+        }
+        .content-electrical .center .center-ul .pub:hover{
+            transform: scale(1.05);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+            cursor: pointer;
+        }
+        .content-electrical .center .center-ul li .new{
+            display: inline-block;
+            width: 64px;
+            height: 20px;
+            color: #ffffff;
+            background: #83c44e;
+            text-align: center;
+            line-height: 20px;
+            font-size: 12px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            margin-left: -32px;
+        }
+        .content-electrical .center .center-ul li .seck{
+            background: #e53935;
+        }
+        .content-electrical .center .center-ul li .cut{
+            background: #e53935;
+        }
+        .content-electrical .center .center-ul li img{
+            width: 150px;
+            height: 150px;
+            display: block;
+            margin: 0 auto;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+        .content-electrical .center .center-ul li p{
+            font-size: 14px;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+        .content-electrical .center .center-ul li .price{
+            font-size: 14px;
+            color: #ff6752;
+        }
+        .content-electrical .center .center-ul li del{
+            color: #b0b0b0;
+            font-size: 14px;
+            text-decoration: line-through;
+        }
+        .content-electrical .center .center-ul li .cment{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 0px;
+            background: #ff6700;
+            padding-left: 30px;
+            padding-right: 30px;
+            text-align: left;
+            box-sizing: border-box;
+            opacity: 0;
+            transition: all 0.3s;
+        }
+        .content-electrical .center .center-ul li:hover .cment{
+            height: 80px;
+            opacity: 1;
+        }
+        .content-electrical .center .center-ul li .cment .cment-p1{
+            font-size: 12px;
+            color: #fff;
+            margin-top: 10px;
+        }
+        .content-electrical .center .center-ul li .cment .cment-p2{
+            font-size: 12px;
+            color: rgba(255,255,255,0.6);
+            margin-top: -15px;
+        }
+        .content-electrical .center .center-ul li:nth-child(1){
+            margin-bottom: 14px;
+        }
+        .center-ul li:nth-child(2){
+            margin-bottom: 14px;
+        }
+        .center-ul li:nth-child(3){
+            margin-bottom: 14px;
+        }
+        .center-ul li:nth-child(4){
+            margin-bottom: 14px;
+        }
+        .center-ul li:last-child div{
+            width: 100%;
+            height: 143px;
+        }
+        .center-ul li:last-child .top{
+            position: relative;
+            margin-bottom: 14px;
+            background: #ffffff;
+            transition: all 0.4s;
+        }
+        .center-ul li:last-child .top:hover{
+            transform: scale(1.05);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+            cursor: pointer;
+        }
+        .center-ul li:last-child .top .para{
+            width: 100px;
+            display: inline-block;
+            position: absolute;
+            top: 35px;
+            left: 12px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        .center-ul li:last-child .top img{
+            width: 80px;
+            height: 80px;
+            display: inline-block;
+            float: right;
+            position: absolute;
+            top: 0;
+            right: 20px;
+        }
+        .center-ul li:last-child .top .price{
+            display: inline-block;
+            position: absolute;
+            top: 60px;
+            left: 25px;
+        }
+        .center-ul li:last-child .bottom{
+            transition: all 0.4s;
+        }
+        .center-ul li:last-child .bottom:hover{
+            transform: scale(1.05);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+            cursor: pointer;
+        }
+        .center-ul li:last-child .bottom{
+            position: relative;
+        }
+        .center-ul li:last-child .bottom .para{
+            font-size: 22px;
+            color: #333333;
+            position: absolute;
+            top: 35px;
+            left: 25px;
+        }
+        .center-ul li:last-child .bottom span{
+            font-size: 12px;
+            color: #757575;
+            position: absolute;
+            top: 68px;
+            left: 25px;
+        }
+        .center-ul li:last-child .bottom .iconfont{
+            font-size: 48px;
+            color: #ff6700;
+            position: absolute;
+            top: 35px;
+            right: 20px;
+        }
+        .content-electrical .footer{
+            width: 1226px;
+            height: 120px;
+            margin: 20px auto;
+        }
+        .content-electrical .footer img{
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+        /*内容区 - 为你推荐*/
+        .content-Recommend-top{
+            position: relative;
+            width: 1226px;
+            height: 50px;
+            margin: 0 auto;
+        }
+        .content-Recommend-top h3{
+            font-size: 20px;
+            line-height: 50px;
+            color: #424242;
+        }
+        .content-Recommend-top .iconfont{
+            width: 25px;
+            height: 20px;
+            border: 1px solid #e0e0e0;
+            font-size: 14px;
+            text-align: center;
+            line-height: 20px;
+        }
+        .content-Recommend-top .ico1{
+            position: absolute;
+            right: 0;
+            bottom: 6px;
+            color: #b0b3b9;
+        }
+        .content-Recommend-top .ico2{
+            position: absolute;
+            right: 26px;
+            bottom: 6px;
+            color: #e0e0e1;
+        }
+        .content-Recommend-bottom{
+            width: 1226px;
+            height: 300px;
+            margin: 10px auto;
+        }
+        .content-Recommend-bottom .Recommend-bottom-ul li{
+            width: 234px;
+            height: 300px;
+            float: left;
+            margin-right: 14px;
+            text-align: center;
+            transition: all 0.2s linear;
+        }
+        .content-Recommend-bottom .Recommend-bottom-ul li:hover{
+            box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+            transform: translateY(-3px);
+        }
+        .content-Recommend-bottom .Recommend-bottom-ul li:last-child{
+            margin-right: 0px;
+        }
+        .content-Recommend-bottom .Recommend-bottom-ul li .link{
+            color: #333333;
+        }
+        .content-Recommend-bottom .Recommend-bottom-ul li .link img{
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        .content-Recommend-bottom .Recommend-bottom-ul li .link .link-sp{
+            width: 200px;
+            display: block;
+            font-size: 14px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            margin: 0 auto;
+            margin-bottom: 8px;
+        }
+        .content-Recommend-bottom .Recommend-bottom-ul li .price{
+            color: #ff6700;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+        .content-Recommend-bottom .Recommend-bottom-ul li .cment{
+            color: #757575;
+            font-size: 14px;
+        }
+        /*内容区 - 热评产品*/
+        .content-hot{
+            width: 1226px;
+            height: 415px;
+            margin: 10px auto;
+        }
+        .content-hot .hot-ul li{
+            width: 296px;
+            height: 415px;
+            float: left;
+            margin-right: 14px;
+            text-align: center;
+            transition: all 0.2s linear;
+        }
+        .content-hot .hot-ul li:hover{
+            box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+            transform: translateY(-3px);
+        }
+        .content-hot .hot-ul li:last-child{
+            margin-right: 0;
+        }
+        .content-hot .hot-ul li img{
+            width: 296px;
+            height: 220px;
+        }
+        .content-hot .hot-ul li .link1{
+            font-size: 14px;
+            color: #333333;
+        }
+        .content-hot .hot-ul li .link1 .link-cment{
+            text-align: left;
+            margin-top: 25px;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+        .content-hot .hot-ul li .author{
+            font-size: 12px;
+            color: #b0b0b0;
+            text-align: left;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            padding-left: 25px;
+        }
+        .content-hot .hot-ul li .link2{
+            font-size: 14px;
+            color: #333333;
+            margin-left: -12px;
+        }
+        .content-hot .hot-ul li .line{
+            font-size: 14px;
+            color: #ece5e0;
+        }
+        .content-hot .hot-ul li .price{
+            font-size: 14px;
+            color: #ff6700;
+        }
+       /* 内容区 - 内容 */
+        .content-cnt{
+            width: 1226px;
+            height: 50px;
+            margin: 10px auto;
+            line-height: 50px;
+            font-size: 20px;
+            color: #424242;
+        }
+        .cnt-bottom{
+            width: 1226px;
+            height: 420px;
+            margin: 0 auto;
+        }
+        .cnt-bottom .bottom-ul li{
+            position: relative;
+            width: 296px;
+            height: 420px;
+            margin-right: 14px;
+            float: left;
+            text-align: center;
+            transition: all 0.2s linear;
+        }
+        .cnt-bottom .bottom-ul li:last-child{
+            margin-right: 0;
+        }
+        .cnt-bottom .bottom-ul li .link{
+            display: block;
+        }
+        .cnt-bottom .bottom-ul li h3{
+            font-size: 16px;
+            color: #ffac13;
+            margin-top: 45px;
+        }
+        .cnt-bottom .bottom-ul li .link:nth-child(2){
+            font-size: 20px;
+            color: #333333;
+            margin-top: 20px;
+        }
+        .cnt-bottom .bottom-ul li .link:nth-child(3){
+            font-size: 12px;
+            color: #b0b0b0;
+            margin-top: 6px;
+        }
+        .cnt-bottom .bottom-ul li .link:nth-child(4){
+            font-size: 14px;
+            color: #333;
+            margin-top: 30px;
+        }
+        .cnt-bottom .bottom-ul li .pte{
+            display: block;
+            margin: 30px auto;
+        }
+        .cnt-bottom .bottom-ul .bottom-ul-Dot{
+            position: absolute;
+            left: 50%;
+            margin-left: -24.5px;
+        }
+        .cnt-bottom .bottom-ul .bottom-ul-Dot li{
+            width: 5px;
+            height: 5px;
+            border: 1px solid #b0b0b0;
+            border-radius: 50%;
+            background: #b0b0b0;
+        }
+        .cnt-bottom .bottom-ul .bottom-ul-Dot li:nth-child(1){
+            transform: scale(1.5);
+            border-color: #ff6700;
+            background: #fff;
+        }
+        .cnt-bottom .bottom-ul li .iconfont{
+            opacity: 0;
+            width: 20px;
+            height: 48px;
+            background: #b0b0b0;
+        }
+        .cnt-bottom .bottom-ul li .ico1{
+            position: absolute;
+            left: 0;
+            top: 50%;
+            margin-top: -24px;
+            text-align: center;
+            line-height: 48px;
+            color: #fff;
+        }
+        .cnt-bottom .bottom-ul li .ico2{
+            position: absolute;
+            right: 0;
+            top: 50%;
+            margin-top: -24px;
+            text-align: center;
+            line-height: 48px;
+            color: #fff;
+        }
+        .cnt-bottom .bottom-ul>li:nth-child(1){
+            border-top: 1px solid red;
+        }
+        .cnt-bottom .bottom-ul>li:nth-child(2){
+            border-top: 1px solid blue;
+        }
+        .cnt-bottom .bottom-ul>li:nth-child(3){
+            border-top: 1px solid greenyellow;
+        }
+        .cnt-bottom .bottom-ul>li:nth-child(4){
+            border-top: 1px solid deeppink;
+        }
+        .cnt-bottom .bottom-ul li:hover{
+            box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+            transform: translateY(-3px);
+        }
+        .cnt-bottom .bottom-ul li:hover .iconfont{
+            opacity: 1;
+        }
+        /* 内容区 - 视频 */
+        .content-video .video-top{
+            width: 1226px;
+            height: 50px;
+            margin: 10px auto;
+        }
+        .content-video .video-top h3{
+            display: inline-block;
+            font-size: 20px;
+            color: #333333;
+            line-height: 50px;
+        }
+        .content-video .video-top span{
+            font-size: 16px;
+            color: #424242;
+            float: right;
+            margin-top: 15px;
+        }
+        .content-video .video-top span .iconfont{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #b0b0b0;
+            color: #fefffe;
+            text-align: center;
+            line-height: 20px;
+            font-size: 12px;
+        }
+        .content-video .video-bottom{
+            width: 1226px;
+            height: 285px;
+            margin: 0 auto;
+        }
+        .content-video .video-bottom .video-ul{
+            width: 1226px;
+            margin: 0 auto;
+        }
+        .content-video .video-bottom .video-ul li{
+            position: relative;
+            width: 296px;
+            height: 285px;
+            float: left;
+            margin-left: 14px;
+            text-align: center;
+            transition: all 0.2s linear;
+        }
+        .content-video .video-bottom .video-ul li:hover{
+            box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+            transform: translateY(-3px);
+            cursor: pointer;
+        }
+        .content-video .video-bottom .video-ul li .botn{
+            z-index: 999;
+            display: inline-block;
+            width: 30px;
+            height: 20px;
+            background: rgba(0,0,0,0.5);
+            color: #fefffe;
+            border: 2px solid #fefffe;
+            border-radius: 12px;
+            font-size: 30px;
+            text-align: center;
+            line-height: 20px;
+            position: absolute;
+            top: 145px;
+            left: 15px;
+        }
+        .content-video .video-bottom .video-ul li .botn:hover{
+            background: #ff6700;
+            border-color: #ff6700;
+        }
+        .content-video .video-bottom .video-ul li img{
+            margin-bottom: 10px;
+        }
+        .content-video .video-bottom .video-ul li .link{
+            font-size: 14px;
+            color: #333;
+        }
+        .content-video .video-bottom .video-ul li .para{
+            font-size: 12px;
+            color: #b0b0b0;
+            margin-top: 8px;
+        }
+        .content-video .video-bottom .video-ul li:first-child{
+            margin-left: 0;
+        }
+        /* 底部区 - 预约 */
+        .bottom-order{
+            width: 1226px;
+            height: 100px;
+            margin: 20px auto;
+        }
+        .bottom-order .order-ul li{
+            width: 20%;
+            height: 100px;
+            float: left;
+            text-align: center;
+            line-height: 100px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .bottom-order .link{
+            display: inline-block;
+            width: 100%;
+            height: 20px;
+            line-height: 20px;
+            font-size: 18px;
+            color: #616161;
+            border-right: 1px solid #e0e0e0;
+            box-sizing: border-box;
+        }
+        .bottom-order .link:hover{
+            color: #ff6700;
+        }
+        .bottom-order .lstLink{
+            border-right: none;
+        }
+        /* 底部区 - 帮助中心 */
+        .bottom-help{
+            width: 1226px;
+            height: 150px;
+            margin: 50px auto;
+        }
+        .bottom-help .help-ul .help-ul_li{
+            width: 160px;
+            height: 150px;
+            float: left;
+        }
+        .bottom-help .help-ul .help-ul_li .para{
+            font-size: 16px;
+            color: #424242;
+            margin-bottom: 20px;
+        }
+        .bottom-help .help-ul_li .help-ul_ul li .link{
+            font-size: 14px;
+            color: #757575;
+        }
+        .bottom-help .help-ul_li .help-ul_ul li .link:hover{
+            color: #ff6700;
+        }
+        .bottom-help .man-made{
+            width: 252px;
+            height: 150px;
+            float: right;
+            text-align: center;
+            border-left: 1px solid #e0e0e0;
+        }
+        .bottom-help .man-made .para1{
+            font-size: 22px;
+            color: #ff6700;
+            margin-bottom: 3px;
+        }
+        .bottom-help .man-made .para2{
+            font-size: 14px;
+            color: #616161;
+        }
+        .bottom-help .man-made .para3{
+            font-size: 14px;
+            color: #616161;
+            margin-bottom: 20px;
+        }
+        .bottom-help .man-made .link-man{
+            display: inline-block;
+            width: 120px;
+            height: 30px;
+            border: 1px solid #ff6700;
+            font-size: 14px;
+            color: #ff6700;
+            text-align: center;
+            line-height: 30px;
+            transition: all 0.3s;
+        }
+        .bottom-help .man-made .link-man:hover{
+            background: #ff6700;
+            color: #fff;
+        }
+        /* 内容区 - 网站信息 */
+        .bottom-info{
+            width: 1226px;
+            height: 200px;
+            margin: 20px auto;
+        }
+        .bottom-info .box-img{
+            width: 60px;
+            height: 100%;
+            display: inline-block;
+            float: left;
+            margin-top: 10px;
+        }
+        .bottom-info .box-ul{
+            width: 1100px;
+            height: 100%;
+        }
+        .bottom-info .info-ul li{
+            display: inline-block;
+        }
+        .bottom-info .info-ul li .link-info,
+        .bottom-info .info-ul .line
+        {
+            font-size: 9px;
+            color: #757575;
+        }
+        .bottom-info .box-ul .para{
+            font-size: 9px;
+            line-height: 18px;
+            color: #b0b0b0;
+        }
+        .bottom-info .box-ul .para .link-relate{
+            color: #b0b0b0;
+        }
+        .bottom-info .box-ul .box-ul-footer .first-img{
+            width: 83px;
+            height: 28px;
+        }
+        .bottom-info .box-ul .probe{
+            width: 1226px;
+            text-align: center;
+            font-size: 18px;
+            color: #c6c6c6;
+            margin-top: 20px;
+        }
+        .bottom-info .info-ul li .link-info:hover,
+        .bottom-info .box-ul .para .link-relate:hover{
+            color: #ff6700;
+        }
+    </style>
+
+
+</head>
+<body>
+<!--顶部区-->
+<div class="top">
+    <div class="top-nav">
+    <ul>
+        <li><a href="#">小米商城</a></li>
+        <span class="line">|</span>
+        <li><a href="#">MIUI</a></li>
+        <span class="line">|</span>
+        <li><a href="#">IoT</a></li>
+        <span class="line">|</span>
+        <li><a href="#">云服务</a></li>
+        <span class="line">|</span>
+        <li><a href="#">金融</a></li>
+        <span class="line">|</span>
+        <li><a href="#">有品</a></li>
+        <span class="line">|</span>
+        <li><a href="#">小爱开放平台</a></li>
+        <span class="line">|</span>
+        <li><a href="#">企业团购</a></li>
+        <span class="line">|</span>
+        <li><a href="#">资质证照</a></li>
+        <span class="line">|</span>
+        <li><a href="#">协议规则</a></li>
+        <span class="line">|</span>
+        <li><a href="#">下载app</a></li>
+        <span class="line">|</span>
+        <li><a href="#">Select Region</a></li>
+    </ul>
+        <div class="top-news">
+            <ul>
+                <li><a href="#">登录</a></li>
+                <span class="line">|</span>
+                <li><a href="#">注册</a></li>
+                <span class="line">|</span>
+                <li><a href="#">消息通知</a></li>
+            </ul>
+            <a href="#" class="top-car"><i class="fas">&#xf07a;</i> 购物车(0)
+                <div class="car-box">
+                    <div class="loadBox">
+                    <div class="load"></div>
+                    </div>
+                    <span class="tips">购物车中还没有商品, 赶紧选购吧</span>
+                </div>
+            </a>
+
+        </div>
+    </div>
+</div>
+<!--内容区 - 轮播图-->
+<div class="content-1">
+    <div class="content-1-top">
+        <a href="#">
+            <img src="images/Mllogo.png" alt="">
+        </a>
+        <ul>
+            <li><a href="javascript:" class="link">小米手机</a></li>
+            <li><a href="javascript:" class="link">Redmi 红米</a></li>
+            <li><a href="javascript:" class="link">电视</a></li>
+            <li><a href="javascript:" class="link">笔记本</a></li>
+            <li><a href="javascript:" class="link">家电</a></li>
+            <li><a href="javascript:" class="link">路由器</a></li>
+            <li><a href="javascript:" class="link">智能硬件</a></li>
+            <li><a href="javascript:" class="link">服务</a></li>
+            <li><a href="javascript:" class="link">社区</a></li>
+        </ul>
+        <input type="text" class="ipt">
+        <div class="search">
+            <a href="javascript:"><i class="fas">&#xf002</i></a>
+        </div>
+        <a href="javascript:" class="link-sp"><span class="ipt-sp1 sp">小米9</span></a>
+        <a href="javascript:" class="link-sp"><span class="ipt-sp2 sp">小米9 SE</span></a>
+        <ul class="ipt-ul">
+            <li>
+                <a href="javascript:" class="link-li">笔记本Pro</a>
+            </li>
+            <li>
+                <a href="javascript:" class="link-li">笔记本Pro</a>
+            </li>
+            <li>
+                <a href="javascript:" class="link-li">笔记本Pro</a>
+            </li>
+            <li>
+                <a href="javascript:" class="link-li">笔记本Pro</a>
+            </li>
+            <li>
+                <a href="javascript:" class="link-li">笔记本Pro</a>
+            </li>
+            <li>
+                <a href="javascript:" class="link-li">笔记本Pro</a>
+            </li>
+            <li>
+                <a href="javascript:" class="link-li">笔记本Pro</a>
+            </li>
+            <li>
+                <a href="javascript:" class="link-li">笔记本Pro</a>
+            </li>
+            <li>
+                <a href="javascript:" class="link-li">笔记本Pro</a>
+            </li>
+            <li>
+                <a href="javascript:" class="link-li">笔记本Pro</a>
+            </li>
+        </ul>
+    </div>
+        <div class="center">
+            <img src="images/love.jpg" alt="" class="carouselImg">
+            <img src="images/carousel2.jpg" alt="" class="carouselImg">
+            <img src="images/carousel3.jpg" alt="" class="carouselImg">
+            <a href="javascript:"><i class="iconfont ico1 left-btn">&#xe627;</i></a>
+            <a href="javascript:"><i class="iconfont ico2 right-btn">&#xe622;</i></a>
+            <div class="itemBox">
+                <div class="center-left">
+                <ul>
+                    <li>
+                        <a href="#">手机 电话卡
+                            <i class="fas">&#xf054</i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">电视 盒子
+                            <i class="fas">&#xf054</i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">笔记本 平板
+                            <i class="fas">&#xf054</i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">家电 插线板
+                            <i class="fas">&#xf054</i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">出行 穿戴
+                            <i class="fas">&#xf054</i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">智能 路由器
+                            <i class="fas">&#xf054</i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">电源 配件
+                            <i class="fas">&#xf054</i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">健康 儿童
+                            <i class="fas">&#xf054</i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">耳机 音箱
+                            <i class="fas">&#xf054</i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">生活 箱包
+                            <i class="fas">&#xf054</i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+                <div class="hide-right"></div>
+            </div>
+            <ul class="center-spot">
+                <li class="item"><a href="javascript:"></a></li>
+                <li class="item"><a href="javascript:"></a></li>
+                <li class="item"><a href="javascript:"></a></li>
+            </ul>
+        </div>
+    <div class="bottom">
+        <ul class="bottom-ul">
+            <li class="bottom-ul_li">
+                <ul>
+                    <li class="li-box"><i class="fas">&#xf017</i>小米秒杀</li>
+                    <li class="li-box"><i class="fas">&#xf06b</i>企业团购</li>
+                    <li class="li-box"><i class="fas">&#xf5ab</i>F码通道</li>
+                </ul>
+                <ul>
+                    <li class="li-box"><i class="fas">&#xf7c4</i>米粉卡</li>
+                    <li class="li-box"><i class="fas">&#xf0ac</i>以旧换新</li>
+                    <li class="li-box"><i class="fas">&#xf570</i>话费充值</li>
+                </ul>
+            </li>
+            <li class="bottom-ul_li">
+                <img src="images/red7mi.jpg" alt="">
+            </li>
+            <li class="bottom-ul_li">
+                <img src="images/mi3.jpg" alt="">
+            </li>
+            <li class="bottom-ul_li">
+                <img src="images/mi4.jpg" alt="">
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="hideBox">
+    <div class="hidePhone">
+        <ul class="phone-ul">
+            <li class="active">
+                <a href="javascript:" class="link-box">
+                    <div class="line">
+                        <img src="images/tuijian1.jpg" alt="">
+                    </div>
+                    <p class="name">小米CC9</p>
+                    <p class="price">1799元起</p>
+                </a>
+            </li>
+            <li class="active">
+                <a href="javascript:" class="link-box">
+                    <div class="line">
+                        <img src="images/tuijian1.jpg" alt="">
+                    </div>
+                    <p class="name">小米CC9</p>
+                    <p class="price">1799元起</p>
+                </a>
+            </li>
+            <li class="active">
+                <a href="javascript:" class="link-box">
+                    <div class="line">
+                        <img src="images/tuijian1.jpg" alt="">
+                    </div>
+                    <p class="name">小米CC9</p>
+                    <p class="price">1799元起</p>
+                </a>
+            </li>
+            <li class="active">
+                <a href="javascript:" class="link-box">
+                    <div class="line">
+                        <img src="images/tuijian1.jpg" alt="">
+                    </div>
+                    <p class="name">小米CC9</p>
+                    <p class="price">1799元起</p>
+                </a>
+            </li>
+            <li class="active">
+                <a href="javascript:" class="link-box">
+                    <div class="line">
+                        <img src="images/tuijian1.jpg" alt="">
+                    </div>
+                    <p class="name">小米CC9</p>
+                    <p class="price">1799元起</p>
+                </a>
+            </li>
+            <li class="active">
+                <a href="javascript:" class="link-box">
+                    <div class="line">
+                        <img src="images/tuijian1.jpg" alt="">
+                    </div>
+                    <p class="name">小米CC9</p>
+                    <p class="price">1799元起</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--内容区 - 小米闪购-->
+<div class="content-2">
+    <div class="cont2-top">
+        <span>小米闪购</span>
+        <i class="iconfont ico1">&#xe623;</i>
+        <i class="iconfont ico2">&#xe628;</i>
+    </div>
+    <div class="cont2-timer">
+        <img src="images/miaosha.jpg" alt="">
+            <div class="countDown">
+                <span class="hour">00</span>
+                <span class="minute">00</span>
+                <span class="second">00</span>
+            </div>
+    </div>
+    <div class="ulBox">
+        <ul class="cont2-ul">
+            <li>
+                <img src="images/miaosha3.jpg" alt="">
+            </li>
+            <li>
+                <img src="images/miaosha4.jpg" alt="">
+            </li>
+            <li>
+                <img src="images/miaosha5.jpg" alt="">
+            </li>
+            <li>
+                <img src="images/miaosha6.png" alt="">
+            </li>
+            <li>
+                <img src="images/miaosha3.jpg" alt="">
+            </li>
+            <li>
+                <img src="images/miaosha4.jpg" alt="">
+            </li>
+            <li>
+                <img src="images/miaosha5.jpg" alt="">
+            </li>
+            <li>
+                <img src="images/miaosha6.png" alt="">
+            </li>
+        </ul>
+    </div>
+
+
+    <img src="images/poster1.jpg" alt="" class="footer">
+</div>
+<!--内容区 - 手机-->
+<div class="content-phone">
+    <div class="phone-top-left">
+        手机
+    <span class="phone-top-right">
+        查看全部 <i class="iconfont">&#xe615;</i>
+    </span>
+    </div>
+    <div class="center-left">
+        <img src="images/phnoe-1.jpg" alt="">
+    </div>
+    <div class="center-right">
+        <ul class="center-ul">
+            <li><img src="images/phone2.jpg" alt=""></li>
+            <li><img src="images/phone2.jpg" alt=""></li>
+            <li><img src="images/phone2.jpg" alt=""></li>
+            <li><img src="images/phone2.jpg" alt=""></li>
+        </ul>
+        <ul class="center-ul">
+            <li><img src="images/phone2.jpg" alt=""></li>
+            <li><img src="images/phone2.jpg" alt=""></li>
+            <li><img src="images/phone2.jpg" alt=""></li>
+            <li><img src="images/phone2.jpg" alt=""></li>
+        </ul>
+    </div>
+</div>
+<div class="phone-footer">
+        <img src="images/phone3.jpg" alt="">
+    </div>
+<!--内容区 - 家电-->
+<div class="content-electrical">
+    <div class="elec-top">
+        <span>家电</span>
+        <ul class="elec-ul">
+            <li class="elec-li"><a href="#" class="link">家居</a></li>
+            <li class="elec-li"><a href="#" class="link">电脑</a></li>
+            <li class="elec-li"><a href="#" class="link">电视影音</a></li>
+            <li class="elec-li"><a href="#" class="link elecLink">热门</a></li>
+        </ul>
+    </div>
+    <div class="center">
+        <div class="center-left">
+        <div class="left-top com">
+            <img src="images/jiadian1.jpg" alt= "">
+        </div>
+        <div class="left-bottom com">
+            <img src="images/jiadian2.jpg" alt= "">
+        </div>
+        </div>
+        <div class="center-right">
+        <ul class="center-ul">
+            <!--
+            <li class="pub">
+                <span class="new">新品</span>
+                <img src="images/jiadian3.jpg" alt="">
+                <p>小米壁画电视65英寸</p>
+                <span class="price">6999元</span>
+                <del>7999元</del>
+                <a href="javascript:" class="cment">
+                    <p class="cment-p1">画质清晰, 超薄质量好</p>
+                    <p class="cment-p2">来自 火星人 的评价</p>
+                </a>
+            </li>
+            <li class="pub">
+                <span class="new seck">秒杀</span>
+                <img src="images/jiadian3.jpg" alt="">
+                <p>小米壁画电视65英寸</p>
+                <span class="price">6999元</span>
+                <del>7999元</del>
+                <a href="javascript:" class="cment">
+                    <p class="cment-p1">画质清晰, 超薄质量好</p>
+                    <p class="cment-p2">来自 火星人 的评价</p>
+                </a>
+            </li>
+            <li class="pub">
+                <span class="new">新品</span>
+                <img src="images/jiadian3.jpg" alt="">
+                <p>小米壁画电视65英寸</p>
+                <span class="price">6999元</span>
+                <del>7999元</del>
+                <a href="javascript:" class="cment">
+                    <p class="cment-p1">画质清晰, 超薄质量好</p>
+                    <p class="cment-p2">来自 火星人 的评价</p>
+                </a>
+            </li>
+            <li class="pub">
+                <span class="new seck">秒杀</span>
+                <img src="images/jiadian3.jpg" alt="">
+                <p>小米壁画电视65英寸</p>
+                <span class="price">6999元</span>
+                <del>7999元</del>
+                <a href="javascript:" class="cment">
+                    <p class="cment-p1">画质清晰, 超薄质量好</p>
+                    <p class="cment-p2">来自 火星人 的评价</p>
+                </a>
+            </li>
+            <li class="pub">
+                <span class="new">新品</span>
+                <img src="images/jiadian3.jpg" alt="">
+                <p>小米壁画电视65英寸</p>
+                <span class="price">6999元</span>
+                <del>7999元</del>
+                <a href="javascript:" class="cment">
+                    <p class="cment-p1">画质清晰, 超薄质量好</p>
+                    <p class="cment-p2">来自 火星人 的评价</p>
+                </a>
+            </li>
+            <li class="pub">
+                <span class="new">新品</span>
+                <img src="images/jiadian3.jpg" alt="">
+                <p>小米壁画电视65英寸</p>
+                <span class="price">6999元</span>
+                <del>7999元</del>
+                <a href="javascript:" class="cment">
+                    <p class="cment-p1">画质清晰, 超薄质量好</p>
+                    <p class="cment-p2">来自 火星人 的评价</p>
+                </a>
+            </li>
+            <li class="pub">
+                <span class="new seck">秒杀</span>
+                <img src="images/jiadian3.jpg" alt="">
+                <p>小米壁画电视65英寸</p>
+                <span class="price">6999元</span>
+                <del>7999元</del>
+                <a href="javascript:" class="cment">
+                    <p class="cment-p1">画质清晰, 超薄质量好</p>
+                    <p class="cment-p2">来自 火星人 的评价</p>
+                </a>
+            </li>
+            -->
+            <!--
+            <li>
+                <div class="top">
+                    <p class="para">小米盒子4c</p>
+                    <span class="price">199元</span>
+                    <img src="images/jiadian4.jpg" alt="">
+                </div>
+                <div class="bottom">
+                    <p class="para">浏览更多</p>
+                    <span>电视影音</span>
+                    <i class="iconfont">&#xe615;</i>
+                </div>
+            </li>
+             -->
+        </ul>
+        </div>
+    </div>
+    <div class="footer">
+        <img src="images/jiadian5.jpg" alt="">
+    </div>
+</div>
+<!--内容区 - 智能-->
+<div class="content-electrical">
+    <div class="elec-top">
+        <span>智能</span>
+        <ul class="elec-ul">
+            <li><a href="#" class="link">路由器</a></li>
+            <li><a href="#" class="link">酷玩</a></li>
+            <li><a href="#" class="link">健康</a></li>
+            <li><a href="#" class="link">出行</a></li>
+            <li><a href="#" class="link">热门</a></li>
+        </ul>
+    </div>
+    <div class="center">
+        <div class="center-left">
+            <div class="left-top com">
+                <img src="images/zhineng1.jpg" alt= "">
+            </div>
+            <div class="left-bottom com">
+                <img src="images/zhineng2.jpg" alt= "">
+            </div>
+        </div>
+        <div class="center-right">
+            <ul class="center-ul">
+                <li class="pub">
+                    <span class="new">新品</span>
+                    <img src="images/zhineng3.jpg" alt="">
+                    <p>米兔积木机器人 履带机甲</p>
+                    <span class="price">469元</span>
+                    <del>499元</del>
+                    <a href="javascript:;" class="cment">
+                        <p class="cment-p1">给侄子买的, 挺好的</p>
+                        <p class="cment-p2">来自 火星人 的评价</p>
+                    </a>
+                </li>
+                <li class="pub">
+                    <span class="new">新品</span>
+                    <img src="images/zhineng3.jpg" alt="">
+                    <p>米兔积木机器人 履带机甲</p>
+                    <span class="price">469元</span>
+                    <del>499元</del>
+                    <a href="javascript:;" class="cment">
+                        <p class="cment-p1">给侄子买的, 挺好的</p>
+                        <p class="cment-p2">来自 火星人 的评价</p>
+                    </a>
+                </li>
+                <li class="pub">
+                    <span class="new">新品</span>
+                    <img src="images/zhineng3.jpg" alt="">
+                    <p>米兔积木机器人 履带机甲</p>
+                    <span class="price">469元</span>
+                    <del>499元</del>
+                    <a href="javascript:;" class="cment">
+                        <p class="cment-p1">给侄子买的, 挺好的</p>
+                        <p class="cment-p2">来自 火星人 的评价</p>
+                    </a>
+                </li>
+                <li class="pub">
+                    <span class="new">新品</span>
+                    <img src="images/zhineng3.jpg" alt="">
+                    <p>米兔积木机器人 履带机甲</p>
+                    <span class="price">469元</span>
+                    <del>499元</del>
+                    <a href="javascript:;" class="cment">
+                        <p class="cment-p1">给侄子买的, 挺好的</p>
+                        <p class="cment-p2">来自 火星人 的评价</p>
+                    </a>
+                </li>
+                <li class="pub">
+                    <span class="new">新品</span>
+                    <img src="images/zhineng3.jpg" alt="">
+                    <p>米兔积木机器人 履带机甲</p>
+                    <span class="price">469元</span>
+                    <del>499元</del>
+                    <a href="javascript:;" class="cment">
+                        <p class="cment-p1">给侄子买的, 挺好的</p>
+                        <p class="cment-p2">来自 火星人 的评价</p>
+                    </a>
+                </li>
+                <li class="pub">
+                    <span class="new">新品</span>
+                    <img src="images/zhineng3.jpg" alt="">
+                    <p>米兔积木机器人 履带机甲</p>
+                    <span class="price">469元</span>
+                    <del>499元</del>
+                    <a href="javascript:;" class="cment">
+                        <p class="cment-p1">给侄子买的, 挺好的</p>
+                        <p class="cment-p2">来自 火星人 的评价</p>
+                    </a>
+                </li>
+                <li class="pub">
+                    <span class="new">新品</span>
+                    <img src="images/zhineng3.jpg" alt="">
+                    <p>米兔积木机器人 履带机甲</p>
+                    <span class="price">469元</span>
+                    <del>499元</del>
+                    <a href="javascript:;" class="cment">
+                        <p class="cment-p1">给侄子买的, 挺好的</p>
+                        <p class="cment-p2">来自 火星人 的评价</p>
+                    </a>
+                </li>
+                <li>
+                    <div class="top">
+                        <p class="para">小米米家小白智能摄像机增强版</p>
+                        <span class="price">399元</span>
+                        <img src="images/zhineng4.jpg" alt="">
+                    </div>
+                    <div class="bottom">
+                        <p class="para">浏览更多</p>
+                        <span>酷玩</span>
+                        <i class="iconfont">&#xe615;</i>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer">
+        <img src="images/zhineng5.jpg" alt="">
+    </div>
+</div>
+<!--内容区 - 搭配-->
+<div class="content-electrical">
+    <div class="elec-top">
+        <span>搭配</span>
+        <ul class="elec-ul">
+            <li><a href="#" class="link">电池充电器</a></li>
+            <li><a href="#" class="link">电源</a></li>
+            <li><a href="#" class="link">耳机音箱</a></li>
+            <li><a href="#" class="link">热门</a></li>
+        </ul>
+    </div>
+    <div class="center">
+        <div class="center-left">
+            <div class="left-top com">
+                <img src="images/dapei1.jpg" alt= "">
+            </div>
+            <div class="left-bottom com">
+                <img src="images/dapei2.jpg" alt= "">
+            </div>
+        </div>
+        <div class="center-right">
+            <ul class="center-ul">
+                <li class="pub">
+                    <span class="new seck">秒杀</span>
+                    <img src="images/dapei3.jpg" alt="">
+                    <p>小米运动蓝牙耳机mini</p>
+                    <span class="price">159元</span>
+                    <del>169元</del>
+                    <a href="javascript:;" class="cment">
+                        <p class="cment-p1">今天试了, 非常不错</p>
+                        <p class="cment-p2">来自 火星人 的评价</p>
+                    </a>
+                </li>
+                <li class="pub">
+                    <span class="new">新品</span>
+                    <img src="images/dapei3.jpg" alt="">
+                    <p>小米运动蓝牙耳机mini</p>
+                    <span class="price">159元</span>
+                    <del>169元</del>
+                    <a href="javascript:;" class="cment">
+                        <p class="cment-p1">今天试了, 非常不错</p>
+                        <p class="cment-p2">来自 火星人 的评价</p>
+                    </a>
+                </li>
+                <li class="pub">
+                    <span class="new seck">秒杀</span>
+                    <img src="images/dapei3.jpg" alt="">
+                    <p>小米运动蓝牙耳机mini</p>
+                    <span class="price">159元</span>
+                    <del>169元</del>
+                    <a href="javascript:;" class="cment">
+                        <p class="cment-p1">今天试了, 非常不错</p>
+                        <p class="cment-p2">来自 火星人 的评价</p>
+                    </a>
+                </li>
+                <li class="pub">
+                    <span class="new">新品</span>
+                    <img src="images/dapei3.jpg" alt="">
+                    <p>小米运动蓝牙耳机mini</p>
+                    <span class="price">159元</span>
+                    <del>169元</del>
+                    <a href="javascript:;" class="cment">
+                        <p class="cment-p1">今天试了, 非常不错</p>
+                        <p class="cment-p2">来自 火星人 的评价</p>
+                    </a>
+                </li>
+                <li class="pub">
+                    <span class="new">新品</span>
+                    <img src="images/dapei3.jpg" alt="">
+                    <p>小米运动蓝牙耳机mini</p>
+                    <span class="price">159元</span>
+                    <del>169元</del>
+                    <a href="javascript:;" class="cment">
+                        <p class="cment-p1">今天试了, 非常不错</p>
+                        <p class="cment-p2">来自 火星人 的评价</p>
+                    </a>
+                </li>
+                <li class="pub">
+                    <span class="new">新品</span>
+                    <img src="images/dapei3.jpg" alt="">
+                    <p>小米运动蓝牙耳机mini</p>
+                    <span class="price">159元</span>
+                    <del>169元</del>
+                    <a href="javascript:;" class="cment">
+                        <p class="cment-p1">今天试了, 非常不错</p>
+                        <p class="cment-p2">来自 火星人 的评价</p>
+                    </a>
+                </li>
+                <li class="pub">
+                    <span class="new">新品</span>
+                    <img src="images/dapei3.jpg" alt="">
+                    <p>小米运动蓝牙耳机mini</p>
+                    <span class="price">159元</span>
+                    <del>169元</del>
+                    <a href="javascript:;" class="cment">
+                        <p class="cment-p1">今天试了, 非常不错</p>
+                        <p class="cment-p2">来自 火星人 的评价</p>
+                    </a>
+                </li>
+                <li>
+                    <div class="top">
+                        <p class="para">小米小钢炮蓝牙音箱</p>
+                        <span class="price">129元</span>
+                        <img src="images/dapei4.jpg" alt="">
+                    </div>
+                    <div class="bottom">
+                        <p class="para">浏览更多</p>
+                        <span>耳机音箱</span>
+                        <i class="iconfont">&#xe615;</i>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer">
+        <img src="images/dapei5.jpg" alt="">
+    </div>
+</div>
+<!--内容区 - 配件-->
+<div class="content-electrical">
+    <div class="elec-top">
+        <span>配件</span>
+        <ul class="elec-ul">
+            <li><a href="#" class="link">其他配件</a></li>
+            <li><a href="#" class="link">贴膜</a></li>
+            <li><a href="#" class="link">保护套</a></li>
+            <li><a href="#" class="link">热门</a></li>
+        </ul>
+    </div>
+    <div class="center">
+        <div class="center-left">
+            <div class="left-top com">
+                <img src="images/peijian1.jpg" alt= "">
+            </div>
+            <div class="left-bottom com">
+                <img src="images/peijian2.jpg" alt= "">
+            </div>
+        </div>
+        <div class="center-right">
+            <ul class="center-ul">
+                <li class="pub">
+                    <span class="new">新品</span>
+                    <img src="images/peijian3.png" alt="">
+                    <p>悦米机械键盘</p>
+                    <span class="price">299元</span>
+                    <del>289元</del>
+                    <a href="javascript:;" class="cment">
+                        <p class="cment-p1">很喜欢很给力, 希望大家支持!</p>
+                        <p class="cment-p2">来自 火星人 的评价</p>
+                    </a>
+                </li>
+                <li class="pub">
+                    <span class="new cut">减 20 元</span>
+                    <img src="images/peijian3.png" alt="">
+                    <p>悦米机械键盘</p>
+                    <span class="price">299元</span>
+                    <del>289元</del>
+                    <a href="javascript:;" class="cment">
+                        <p class="cment-p1">很喜欢很给力, 希望大家支持!</p>
+                        <p class="cment-p2">来自 火星人 的评价</p>
+                    </a>
+                </li>
+                <li class="pub">
+                    <span class="new">新品</span>
+                    <img src="images/peijian3.png" alt="">
+                    <p>悦米机械键盘</p>
+                    <span class="price">299元</span>
+                    <del>289元</del>
+                    <a href="javascript:;" class="cment">
+                        <p class="cment-p1">很喜欢很给力, 希望大家支持!</p>
+                        <p class="cment-p2">来自 火星人 的评价</p>
+                    </a>
+                </li>
+                <li class="pub">
+                    <span class="new seck">秒杀</span>
+                    <img src="images/peijian3.png" alt="">
+                    <p>悦米机械键盘</p>
+                    <span class="price">299元</span>
+                    <del>289元</del>
+                    <a href="javascript:;" class="cment">
+                        <p class="cment-p1">很喜欢很给力, 希望大家支持!</p>
+                        <p class="cment-p2">来自 火星人 的评价</p>
+                    </a>
+                </li>
+                <li class="pub">
+                    <span class="new">新品</span>
+                    <img src="images/peijian3.png" alt="">
+                    <p>悦米机械键盘</p>
+                    <span class="price">299元</span>
+                    <del>289元</del>
+                    <a href="javascript:;" class="cment">
+                        <p class="cment-p1">很喜欢很给力, 希望大家支持!</p>
+                        <p class="cment-p2">来自 火星人 的评价</p>
+                    </a>
+                </li>
+                <li class="pub">
+                    <span class="new seck">秒杀</span>
+                    <img src="images/peijian3.png" alt="">
+                    <p>悦米机械键盘</p>
+                    <span class="price">299元</span>
+                    <del>289元</del>
+                    <a href="javascript:;" class="cment">
+                        <p class="cment-p1">很喜欢很给力, 希望大家支持!</p>
+                        <p class="cment-p2">来自 火星人 的评价</p>
+                    </a>
+                </li>
+                <li class="pub">
+                    <span class="new">新品</span>
+                    <img src="images/peijian3.png" alt="">
+                    <p>悦米机械键盘</p>
+                    <span class="price">299元</span>
+                    <del>289元</del>
+                    <a href="javascript:;" class="cment">
+                        <p class="cment-p1">很喜欢很给力, 希望大家支持!</p>
+                        <p class="cment-p2">来自 火星人 的评价</p>
+                    </a>
+                </li>
+                <li>
+                    <div class="top">
+                        <p class="para">小米二合一数据线100cm</p>
+                        <span class="price">24.9元</span>
+                        <img src="images/peijian4.jpg" alt="">
+                    </div>
+                    <div class="bottom">
+                        <p class="para">浏览更多</p>
+                        <span>其他配件</span>
+                        <i class="iconfont">&#xe615;</i>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer">
+        <img src="images/peijian5.jpg" alt="">
+    </div>
+</div>
+<!--内容区 - 周边-->
+<div class="content-electrical">
+    <div class="elec-top">
+        <span>周边</span>
+        <ul class="elec-ul">
+            <li><a href="#" class="link">箱包</a></li>
+            <li><a href="#" class="link">生活周边</a></li>
+            <li><a href="#" class="link">居家</a></li>
+            <li><a href="#" class="link">出行</a></li>
+            <li><a href="#" class="link">热门</a></li>
+        </ul>
+    </div>
+    <div class="center">
+        <div class="center-left">
+            <div class="left-top com">
+                <img src="images/zhoubian1.jpg" alt= "">
+            </div>
+            <div class="left-bottom com">
+                <img src="images/zhoubian2.jpg" alt= "">
+            </div>
+        </div>
+        <div class="center-right">
+            <ul class="center-ul">
+                <li class="pub">
+                    <span class="new">新品</span>
+                    <img src="images/zhoubian3.jpg" alt="">
+                    <p>米家飞行员太阳镜 Pro</p>
+                    <span class="price">189元</span>
+                    <del>199元</del>
+                    <a href="javascript:;" class="cment">
+                        <p class="cment-p1">非常的cool! 下次还会来买哈哈</p>
+                        <p class="cment-p2">来自 火星人 的评价</p>
+                    </a>
+                </li>
+                <li class="pub">
+                    <span class="new seck">秒杀</span>
+                    <img src="images/zhoubian3.jpg" alt="">
+                    <p>米家飞行员太阳镜 Pro</p>
+                    <span class="price">189元</span>
+                    <del>199元</del>
+                    <a href="javascript:;" class="cment">
+                        <p class="cment-p1">非常的cool! 下次还会来买哈哈</p>
+                        <p class="cment-p2">来自 火星人 的评价</p>
+                    </a>
+                </li>
+                <li class="pub">
+                    <span class="new">新品</span>
+                    <img src="images/zhoubian3.jpg" alt="">
+                    <p>米家飞行员太阳镜 Pro</p>
+                    <span class="price">189元</span>
+                    <del>199元</del>
+                    <a href="javascript:;" class="cment">
+                        <p class="cment-p1">非常的cool! 下次还会来买哈哈</p>
+                        <p class="cment-p2">来自 火星人 的评价</p>
+                    </a>
+                </li>
+                <li class="pub">
+                    <img src="images/zhoubian3.jpg" alt="">
+                    <p>米家飞行员太阳镜 Pro</p>
+                    <span class="price">189元</span>
+                    <del>199元</del>
+                    <a href="javascript:;" class="cment">
+                        <p class="cment-p1">非常的cool! 下次还会来买哈哈</p>
+                        <p class="cment-p2">来自 火星人 的评价</p>
+                    </a>
+                </li>
+                <li class="pub">
+                    <span class="new">新品</span>
+                    <img src="images/zhoubian3.jpg" alt="">
+                    <p>米家飞行员太阳镜 Pro</p>
+                    <span class="price">189元</span>
+                    <del>199元</del>
+                    <a href="javascript:;" class="cment">
+                        <p class="cment-p1">非常的cool! 下次还会来买哈哈</p>
+                        <p class="cment-p2">来自 火星人 的评价</p>
+                    </a>
+                </li>
+                <li class="pub">
+                    <span class="new cut">减 20 元</span>
+                    <img src="images/zhoubian3.jpg" alt="">
+                    <p>米家飞行员太阳镜 Pro</p>
+                    <span class="price">189元</span>
+                    <del>199元</del>
+                    <a href="javascript:;" class="cment">
+                        <p class="cment-p1">非常的cool! 下次还会来买哈哈</p>
+                        <p class="cment-p2">来自 火星人 的评价</p>
+                    </a>
+                </li>
+                <li class="pub">
+                    <span class="new seck">秒杀</span>
+                    <img src="images/zhoubian3.jpg" alt="">
+                    <p>米家飞行员太阳镜 Pro</p>
+                    <span class="price">189元</span>
+                    <del>199元</del>
+                    <a href="javascript:;" class="cment">
+                        <p class="cment-p1">非常的cool! 下次还会来买哈哈</p>
+                        <p class="cment-p2">来自 火星人 的评价</p>
+                    </a>
+                </li>
+                <li>
+                    <div class="top">
+                        <p class="para">小米小背包</p>
+                        <span class="price">29元</span>
+                        <img src="images/zhoubian4.png" alt="">
+                    </div>
+                    <div class="bottom">
+                        <p class="para">浏览更多</p>
+                        <span>箱包</span>
+                        <i class="iconfont">&#xe615;</i>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer">
+        <img src="images/zhoubian5.jpg" alt="">
+    </div>
+</div>
+<!--内容区 - 为你推荐-->
+<div class="content-Recommend-top">
+    <h3>为你推荐</h3>
+    <a href="javascript:;">
+        <i class="iconfont ico1">&#xe623;</i>
+    </a>
+    <a href="javascript:;">
+        <i class="iconfont ico2">&#xe628;</i>
+    </a>
+</div>
+<div class="content-Recommend-bottom">
+    <ul class="Recommend-bottom-ul">
+        <li>
+            <a href="javascript:;" class="link">
+                <img src="images/tuijian1.jpg" alt="">
+                <span class="link-sp">黑鲨游戏机2 Pro 12GB+128GB运行内存</span>
+            </a>
+                <p class="price">
+                    <span class="price-sp">2999</span>元
+                </p>
+                <p class="cment">
+                    <span class="cment-sp">587</span>人好评
+                </p>
+        </li>
+        <li>
+            <a href="javascript:;" class="link">
+                <img src="images/tuijian1.jpg" alt="">
+                <span class="link-sp">黑鲨游戏机2 Pro 12GB+128GB运行内存</span>
+            </a>
+            <p class="price">
+                <span class="price-sp">2999</span>元
+            </p>
+            <p class="cment">
+                <span class="cment-sp">587</span>人好评
+            </p>
+        </li>
+        <li>
+            <a href="javascript:;" class="link">
+                <img src="images/tuijian1.jpg" alt="">
+                <span class="link-sp">黑鲨游戏机2 Pro 12GB+128GB运行内存</span>
+            </a>
+            <p class="price">
+                <span class="price-sp">2999</span>元
+            </p>
+            <p class="cment">
+                <span class="cment-sp">587</span>人好评
+            </p>
+        </li>
+        <li>
+            <a href="javascript:;" class="link">
+                <img src="images/tuijian1.jpg" alt="">
+                <span class="link-sp">黑鲨游戏机2 Pro 12GB+128GB运行内存</span>
+            </a>
+            <p class="price">
+                <span class="price-sp">2999</span>元
+            </p>
+            <p class="cment">
+                <span class="cment-sp">587</span>人好评
+            </p>
+        </li>
+        <li>
+            <a href="javascript:;" class="link">
+                <img src="images/tuijian1.jpg" alt="">
+                <span class="link-sp">黑鲨游戏机2 Pro 12GB+128GB运行内存</span>
+            </a>
+            <p class="price">
+                <span class="price-sp">2999</span>元
+            </p>
+            <p class="cment">
+                <span class="cment-sp">587</span>人好评
+            </p>
+        </li>
+    </ul>
+</div>
+<!--内容区 - 热评产品-->
+<div class="content-Recommend-top">
+    <h3>热评产品</h3>
+</div>
+<div class="content-hot">
+    <ul class="hot-ul">
+        <li>
+            <a href="javascript:;" class="link1">
+                <img src="images/reping1.jpg" alt="">
+                <p class="link-cment">黑色K20做工精细，分量足，外形手感俱佳，系统流畅，续航给力。。。总之一句话，非常不错！</p>
+            </a>
+            <p class="author">来自 火星人 的评价</p>
+            <a href="javascript:;" class="link2">Redmi K20 Por 全网通版...</a>
+            <span class="line">|</span>
+            <span class="price">2599<span>元</span></span>
+        </li>
+        <li>
+            <a href="javascript:;" class="link1">
+                <img src="images/reping1.jpg" alt="">
+                <p class="link-cment">黑色K20做工精细，分量足，外形手感俱佳，系统流畅，续航给力。。。总之一句话，非常不错！</p>
+            </a>
+            <p class="author">来自 火星人 的评价</p>
+            <a href="javascript:;" class="link2">Redmi K20 Por 全网通版...</a>
+            <span class="line">|</span>
+            <span class="price">2599<span>元</span></span>
+        </li>
+        <li>
+            <a href="javascript:;" class="link1">
+                <img src="images/reping1.jpg" alt="">
+                <p class="link-cment">黑色K20做工精细，分量足，外形手感俱佳，系统流畅，续航给力。。。总之一句话，非常不错！</p>
+            </a>
+            <p class="author">来自 火星人 的评价</p>
+            <a href="javascript:;" class="link2">Redmi K20 Por 全网通版...</a>
+            <span class="line">|</span>
+            <span class="price">2599<span>元</span></span>
+        </li>
+        <li>
+            <a href="javascript:;" class="link1">
+                <img src="images/reping1.jpg" alt="">
+                <p class="link-cment">黑色K20做工精细，分量足，外形手感俱佳，系统流畅，续航给力。。。总之一句话，非常不错！</p>
+            </a>
+            <p class="author">来自 火星人 的评价</p>
+            <a href="javascript:;" class="link2">Redmi K20 Por 全网通版...</a>
+            <span class="line">|</span>
+            <span class="price">2599<span>元</span></span>
+        </li>
+    </ul>
+</div>
+<!--内容区 - 内容-->
+<div class="content-cnt">
+    <h3>内容</h3>
+</div>
+<div class="cnt-bottom">
+    <ul class="bottom-ul">
+        <li>
+            <h3>图书</h3>
+            <a href="javascript:;" class="link">展现你的存在</a>
+            <a href="javascript:;" class="link">一本职场人的演说指导书</a>
+            <a href="javascript:;" class="link">5.99<span>元</span></a>
+            <img src="images/neirong1.png" alt="" class="pte">
+            <ul class="bottom-ul-Dot">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <i class="iconfont ico1">&#xe628;</i>
+            <i class="iconfont ico2">&#xe623;</i>
+        </li>
+        <li>
+            <h3>图书</h3>
+            <a href="javascript:;" class="link">展现你的存在</a>
+            <a href="javascript:;" class="link">一本职场人的演说指导书</a>
+            <a href="javascript:;" class="link">5.99<span>元</span></a>
+            <img src="images/neirong1.png" alt="" class="pte">
+            <ul class="bottom-ul-Dot">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <i class="iconfont ico1">&#xe628;</i>
+            <i class="iconfont ico2">&#xe623;</i>
+        </li>
+        <li>
+            <h3>图书</h3>
+            <a href="javascript:;" class="link">展现你的存在</a>
+            <a href="javascript:;" class="link">一本职场人的演说指导书</a>
+            <a href="javascript:;" class="link">5.99<span>元</span></a>
+            <img src="images/neirong1.png" alt="" class="pte">
+            <ul class="bottom-ul-Dot">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <i class="iconfont ico1">&#xe628;</i>
+            <i class="iconfont ico2">&#xe623;</i>
+        </li>
+        <li>
+            <h3>图书</h3>
+            <a href="javascript:;" class="link">展现你的存在</a>
+            <a href="javascript:;" class="link">一本职场人的演说指导书</a>
+            <a href="javascript:;" class="link">5.99<span>元</span></a>
+            <img src="images/neirong1.png" alt="" class="pte">
+            <ul class="bottom-ul-Dot">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <i class="iconfont ico1">&#xe628;</i>
+            <i class="iconfont ico2">&#xe623;</i>
+        </li>
+    </ul>
+</div>
+<!--内容区 - 视频-->
+<div class="content-video">
+    <div class="video-top">
+        <h3>视频</h3>
+        <span>查看全部 <i class="iconfont">&#xe623;</i></span>
+    </div>
+    <div class="video-bottom">
+        <ul class="video-ul">
+            <li>
+                <img src="images/shipin2.jpg" alt="">
+                <i class="iconfont botn">&#xe601;</i>
+                <a href="javascript:;" class="link">黑鲨游戏手机2 Pro</a>
+                <p class="para">指尖主宰 发布会</p>
+            </li>
+            <li>
+                <img src="images/shipin2.jpg" alt="">
+                <i class="iconfont botn">&#xe601;</i>
+                <a href="javascript:;" class="link">黑鲨游戏手机2 Pro</a>
+                <p class="para">指尖主宰 发布会</p>
+            </li>
+            <li>
+                <img src="images/shipin2.jpg" alt="">
+                <i class="iconfont botn">&#xe601;</i>
+                <a href="javascript:;" class="link">黑鲨游戏手机2 Pro</a>
+                <p class="para">指尖主宰 发布会</p>
+            </li>
+            <li>
+                <img src="images/shipin2.jpg" alt="">
+                <i class="iconfont botn">&#xe601;</i>
+                <a href="javascript:;" class="link">黑鲨游戏手机2 Pro</a>
+                <p class="para">指尖主宰 发布会</p>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--底部区 - 预约-->
+<div class="bottom-order">
+    <ul class="order-ul">
+        <li>
+            <a href="javascript:;" class="link"><i class="iconfont">&#xe634;</i> 预约维修服务</a>
+        </li>
+        <li>
+            <a href="javascript:;" class="link"><i class="iconfont">&#xe634;</i> 预约维修服务</a>
+        </li>
+        <li>
+            <a href="javascript:;" class="link"><i class="iconfont">&#xe634;</i> 预约维修服务</a>
+        </li>
+        <li>
+            <a href="javascript:;" class="link"><i class="iconfont">&#xe634;</i> 预约维修服务</a>
+        </li>
+        <li>
+            <a href="javascript:;" class="link lstLink"><i class="iconfont">&#xe634;</i> 预约维修服务</a>
+        </li>
+    </ul>
+</div>
+<!--底部区 - 帮助中心-->
+<div class="bottom-help">
+    <ul class="help-ul">
+        <li class="help-ul_li">
+        <p class="para">帮助中心</p>
+        <ul class="help-ul_ul">
+            <li><a href="javascript:;" class="link">账户管理</a></li>
+            <li><a href="javascript:;" class="link">购物指南</a></li>
+            <li><a href="javascript:;" class="link">订单操作</a></li>
+        </ul>
+    </li>
+        <li class="help-ul_li">
+            <p class="para">帮助中心</p>
+            <ul class="help-ul_ul">
+                <li><a href="javascript:;" class="link">账户管理</a></li>
+                <li><a href="javascript:;" class="link">购物指南</a></li>
+                <li><a href="javascript:;" class="link">订单操作</a></li>
+            </ul>
+        </li>
+        <li class="help-ul_li">
+            <p class="para">帮助中心</p>
+            <ul class="help-ul_ul">
+                <li><a href="javascript:;" class="link">账户管理</a></li>
+                <li><a href="javascript:;" class="link">购物指南</a></li>
+                <li><a href="javascript:;" class="link">订单操作</a></li>
+            </ul>
+        </li>
+        <li class="help-ul_li">
+            <p class="para">帮助中心</p>
+            <ul class="help-ul_ul">
+                <li><a href="javascript:;" class="link">账户管理</a></li>
+                <li><a href="javascript:;" class="link">购物指南</a></li>
+                <li><a href="javascript:;" class="link">订单操作</a></li>
+            </ul>
+        </li>
+        <li class="help-ul_li">
+            <p class="para">帮助中心</p>
+            <ul class="help-ul_ul">
+                <li><a href="javascript:;" class="link">账户管理</a></li>
+                <li><a href="javascript:;" class="link">购物指南</a></li>
+                <li><a href="javascript:;" class="link">订单操作</a></li>
+            </ul>
+        </li>
+        <li class="help-ul_li">
+            <p class="para">帮助中心</p>
+            <ul class="help-ul_ul">
+                <li><a href="javascript:;" class="link">账户管理</a></li>
+                <li><a href="javascript:;" class="link">购物指南</a></li>
+                <li><a href="javascript:;" class="link">订单操作</a></li>
+            </ul>
+        </li>
+    </ul>
+    <div class="man-made">
+        <p class="para1">
+            400-100-5678
+        </p>
+        <p class="para2">
+            周一至周日 8:00-18:00
+        </p>
+        <p class="para3">
+            （仅收市话费）
+        </p>
+        <a href="javascript:;" class="link-man">
+            <i class="iconfont">&#xe600;</i>人工客服
+        </a>
+    </div>
+</div>
+<!--底部区 - 网站信息-->
+<div class="bottom-info">
+    <div class="box-img">
+        <img src="images/Mllogo.png" alt="">
+    </div>
+    <div class="box-ul">
+    <ul class="info-ul">
+        <li><a href="javascript:;" class="link-info">小米商城</a></li>
+        <span class="line">|</span>
+        <li><a href="javascript:;" class="link-info">MIUI</a></li>
+        <span class="line">|</span>
+        <li><a href="javascript:;" class="link-info">米家</a></li>
+        <span class="line">|</span>
+        <li><a href="javascript:;" class="link-info">米聊</a></li>
+        <span class="line">|</span>
+        <li><a href="javascript:;" class="link-info">多看</a></li>
+        <span class="line">|</span>
+        <li><a href="javascript:;" class="link-info">游戏</a></li>
+        <span class="line">|</span>
+        <li><a href="javascript:;" class="link-info">路由器</a></li>
+        <span class="line">|</span>
+        <li><a href="javascript:;" class="link-info">米粉卡</a></li>
+        <span class="line">|</span>
+        <li><a href="javascript:;" class="link-info">政企服务</a></li>
+        <span class="line">|</span>
+        <li><a href="javascript:;" class="link-info">小米天猫店</a></li>
+        <span class="line">|</span>
+        <li><a href="javascript:;" class="link-info">隐私政策</a></li>
+        <span class="line">|</span>
+        <li><a href="javascript:;" class="link-info">商城用户协议</a></li>
+        <span class="line">|</span>
+        <li><a href="javascript:;" class="link-info">账号协议</a></li>
+        <span class="line">|</span>
+        <li><a href="javascript:;" class="link-info">问题反馈</a></li>
+        <span class="line">|</span>
+        <li><a href="javascript:;" class="link-info">廉正举报</a></li>
+        <span class="line">|</span>
+        <li><a href="javascript:;" class="link-info">诚信合规</a></li>
+        <span class="line">|</span>
+        <li><a href="javascript:;" class="link-info">Select Region</a></li>
+    </ul>
+        <p class="para">
+            <a href="javascript:;" class="link-relate">© mi.com </a>
+            京ICP证110507号
+            <a href="javascript:;" class="link-relate">京ICP备10046444号 </a>
+            <a href="javascript:;" class="link-relate"> 京公网安备11010802020134号</a>
+            <a href="javascript:;" class="link-relate">京网文[2017]1530-131号</a>
+            <br>
+            <a href="javascript:;" class="link-relate">（京）网械平台备字（2018）第00005号</a>
+            <a href="javascript:;" class="link-relate"> 互联网药品信息服务资格证 (京) -非经营性-2014-0090</a>
+            <a href="javascript:;" class="link-relate">营业执照 医疗器械公告 </a>
+            <br>
+            <a href="javascript:;" class="link-relate">增值电信业务许可证</a>
+            网络食品经营备案（京）【2018】WLSPJYBAHF-12
+            <a href="javascript:;" class="link-relate"> 食品经营许可证 </a>
+            <br>
+            违法和不良信息举报电话：185-0130-1238
+            <a href="javascript:;" class="link-relate"> 知识产权侵权投诉</a>
+            本网站所列数据，除特殊说明，所有数据均出自我司实验室测试
+        </p>
+        <div class="box-ul-footer">
+            <a href="javascript:;">
+                <img src="images/xinxi1.png" alt="" class="first-img">
+            </a>
+            <a href="javascript:;">
+                <img src="images/xinxi2.png" alt="">
+            </a>
+            <a href="javascript:;">
+                <img src="images/xinxi3.png" alt="">
+            </a>
+            <a href="javascript:;">
+                <img src="images/xinxi4.png" alt="">
+            </a>
+            <a href="javascript:;">
+                <img src="images/xinxi5.png" alt="">
+            </a>
+        </div>
+        <div class="probe">
+            探索黑科技, 小米为发烧而生!
+        </div>
+    </div>
+</div>
+</body>
+<script src="JS/data.js"></script>
+<script src="JS/03-JS-util.js"></script>
+<script src="JS/mi-JS.js"></script>
+</html>

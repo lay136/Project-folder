@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>078-过渡的延迟.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		ul{
+			width: 1500px;
+			height: 600px;
+			border: 1px solid;
+			margin: 50px auto;
+			list-style: none;
+		}
+		ul li{
+			width: 150px;
+			/*height: 50px;*/ 
+			margin-top: 30px;
+			line-height: 50px;
+			text-align: center;
+			background-color: yellow;
+			/*transition-timing-function:linear;*/
+			transition-property: margin-left;
+			transition-duration: 5s;
+		}
+		ul li:nth-child(1){
+			transition-timing-function:ease;
+		}
+		ul li:nth-child(2){
+			transition-timing-function:linear;
+		}
+		ul li:nth-child(3){
+			transition-timing-function:ease-in;
+		}
+		ul li:nth-child(4){
+			transition-timing-function:ease-out;
+		}
+		ul li:nth-child(5){
+			transition-timing-function:ease-in-out;
+		}
+		ul li:nth-child(6){
+			transition-timing-function:cubic-bezier(0,0,1,1);
+		}
+		ul:hover li{
+		 	margin-left: 1350px;
+		 }  
+		/* .box{
+			width: 400px;
+			height: 400px;
+			cursor: pointer;
+			background-color: red;
+		} */
+		/* .box:hover{
+			width: 800px;
+			background: green;
+		
+		} */
+	</style>
+</head>
+<body>
+	<ul>
+		<li>默认</li>
+		<li>小阳-ease</li>
+		<li>小明-linear</li>
+		<li>小威-ease-in</li>
+		<li>小辉-ease-out</li>
+		<li>小燕-ease-in-out</li>
+		<li>小雨-cubic-bezier</li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>手风琴案例</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			width: 800px;
+			height: 400px;
+			border: 1px solid;
+			margin: 100px auto;
+			/* background-color: red; */
+			overflow: hidden;
+		}
+		/* ul li{
+			float: left;
+			width: 200px;
+			height: 600px;
+			background: red;
+			list-style: none;
+		} */
+		/* ul li img{
+			width: 100%;
+			
+			background: green;
+		} */
+		li{
+			float: left;
+			list-style: none;
+			width: 20%;
+			height: 100%;
+			transition: width 2s;
+			/* overflow: hidden; */
+		}
+		div ul li:hover{
+			width: 600px;
+
+		}
+		ul:hover li{
+			width: 50px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<ul>
+			<li><img src="img/001.jpg" alt=""></li>
+			<li><img src="img/002.jpg" alt=""></li>
+			<li><img src="img/003.jpg" alt=""></li>
+			<li><img src="img/004.jpg" alt=""></li>
+			<li><img src="img/005.jpg" alt=""></li>
+
+		</ul>
+	</div>
+</body>
+</html>

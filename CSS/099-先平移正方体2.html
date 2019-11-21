@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>099-正方体2.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			perspective: 500px; 
+			 /*定义3D元素距视图的距离
+			 当为元素定义perspective属性时，其子元素会获得透视效果，而不是元素本身*/
+		}
+		ul{
+			position: relative;
+			width: 200px;
+			height: 200px;
+			border: 1px solid;
+			margin: 100px auto;
+			/*去除li标签之前的小圆点*/
+			transform-style: preserve-3d;
+			transform: rotateX(45deg) rotateY(45deg);
+		}
+		li{
+			position: absolute; /*绝对定位之后，一定要写top值和left值 */
+			top: 0px;
+			left: 0px;
+			width: 200px;
+			height: 200px;
+			list-style: none;
+			text-align: center;
+			font-size: 48PX;
+			line-height: 200px;
+			float: left;
+			/* background-color: #fc072a; */
+		}
+		li:nth-child(1){
+			background-color: yellow;
+			transform: translateX(100px) rotateY(90deg);
+		}
+		li:nth-child(2){
+			background-color: #1c057c;
+			transform: translateY(-100px) rotateX(90deg);
+		}
+		li:nth-child(3){
+			background-color: #9209ab;
+			transform: translateX(-100px) rotateY(-90deg);
+		}
+		li:nth-child(4){
+			background-color: #059590;
+			transform: translateY(100px) rotateX(-90deg);
+		}
+		li:nth-child(5){
+			background-color: #067640;
+			transform: translateZ(100PX);
+		}
+		li:nth-child(6){
+			background-color: #edd403;
+			transform: translateZ(-100PX)  rotateY(180deg);
+		}
+
+	</style>
+</head>
+<body>
+	<ul>
+		
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+	</ul><!-- -->
+</body>
+</html>

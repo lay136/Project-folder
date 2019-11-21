@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>097-正方体案例.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		ul{
+			width: 200px;
+			height: 200px;
+			margin: 100px auto;
+			/* border: 1px solid; */
+			position: relative;
+			transform-style: preserve-3d;
+			transform: rotateX(45deg) rotateY(45deg);
+			/* animation: sport 5s linear 0s infinite; */
+		}
+		li{
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width:200px;
+			height: 200px;
+			line-height: 200px;
+			font-size: 40px;
+			text-align: center;
+			list-style:none;/*清除li标签之前的小圆点*/
+		}
+		/* @keyframes sport{
+			from{
+				transform: rotateX(0deg);
+			}
+			to{
+				transform: rotateX(360deg);
+			}
+		} */
+		li:nth-child(1){
+			background-color: red;
+			transform: translateZ(-100PX) rotateY(180deg);
+		}
+		li:nth-child(2){
+			background-color: yellow;
+			transform: translateX(-100PX) rotateY(-90deg); 
+		}
+		li:nth-child(3){
+			background-color: orange; 
+			transform: translateY(-100PX) rotateX(90deg); 
+		}
+		li:nth-child(4){
+			background-color: green; 
+			transform: translateY(100PX) rotateX(-90deg); 
+		}
+		li:nth-child(5){
+			background-color: gray; 
+			transform: translateX(100PX) rotateY(90deg) ;
+		}
+		li:nth-child(6){
+			background-color: purple; 
+			transform:  translateZ(100px);
+		}
+	</style>
+</head>
+<body>
+	 <ul >
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+	<!---->
+	</ul> 
+</body>
+</html>

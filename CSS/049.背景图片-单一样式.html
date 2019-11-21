@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>背景图片-单一样式.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.father{
+			width: 1000px;
+			height: 500px;
+			border: 10px dotted;
+			margin: 50px auto; /*设置水平居中*/
+			background-color: green;/*设置背景颜色*/
+			/* background-clip: padding-box; 背景颜色从内边距开始显示 */
+			/* background-clip: border-box;  背景颜色从外边距开始显示 */
+			/* background-clip: content-box; 背景颜色从内容开始显示 */
+
+			/* background-image: url(img/单一样式图片.jpg); */	
+			/* background-repeat:repeat-y;   在垂直方向上平铺*/
+			/* background-repeat:repeat-x;
+			在水平方向平铺，也是默认的平铺方式*/
+			background-repeat: no-repeat;/*背景图片不水平和垂直平埔 */
+			/* background-position: center center; */ 
+			/*背景图片位置定位,移动的参考点是容器的左上点,具体的数值+px,
+			水平:right center left    垂直:top center bottom*/
+			
+			/* background-size: 50%;  
+			设置背景图片的宽高，
+			取值有：具体的像素、百分比(相对于容器)、auto(谁设置为auto把谁等比拉伸)*/
+
+			/* background-origin: padding-box;
+			背景图片默认值，从内边距开始显示*/
+			/* background-origin: border-box;  
+			背景图片从边框开始显示*/
+			/* background-origin: content-box; 
+			背景图片从内容区域开始显示*/
+			
+
+
+	</style>
+</head>
+<body>
+	<div class="father">nihao </div>
+</body>
+</html>

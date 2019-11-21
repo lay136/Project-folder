@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>绝对定位</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.top1{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			position: absolute;
+			top: 100px;
+			left: 100px;
+		}
+		.top2{
+			width: 300px;
+			height: 300px;
+			background-color: green;
+		}
+		span{
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			background: yellow;
+			top: 50px;
+			left: 50px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="top1"></div>
+	<div class="top2"></div>
+	<span>perfect</span>
+</body>
+</html>

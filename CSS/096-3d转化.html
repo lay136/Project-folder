@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>096-3d转化.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.father{
+			width: 600px;
+			height: 600px;
+			background: gray;
+			border: 1px solid;
+			margin: 100px auto;
+			perspective: 500px;
+			transform-style: preserve-3d; 
+			transform: rotateX(10deg) rotateY(30deg);
+		}
+		.son{
+			width: 200px;
+			height: 200px;
+			background: green;
+			transform: rotateY(30deg);
+			margin: 200px 200px;
+		}
+	</style>
+</head>
+<body>
+	<div class="father">
+		<div class="son"></div>
+	</div>
+</body>
+</html>

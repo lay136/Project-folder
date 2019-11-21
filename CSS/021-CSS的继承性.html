@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS的继承性</title>
+	<style>
+		/* p{
+		 	color: red;
+			font-size: 48px;	
+		 }在css中的继承不仅是儿子才可以继承,只要是后代就可以继承.
+		a标签不能继承来自父元素的颜色和下划线属性.
+		h标签不能继承来自父元素的的字体大小和加粗属性,但是字体的大小会随着父级元素大小的改变而改变
+		
+		一般情况下可以通过给body元素设置一些通用的样式来保持页面风格的统一
+		 */
+		li{
+			font-style: italic;
+			font-weight: bolder;
+			line-height: 16px;
+			font-size: 24px;
+			color: green;
+		}
+	</style>
+</head>
+<body>
+	<p>你好</p>
+	<div>你是谁?</div>
+	<h1>这是一段话</h1>
+	<a href="#">我是一段文字</a>
+	<div>
+		<ul>
+			<li>
+				<p>你好</p>
+				<div>hello！</div><br>
+				<a href="#">你是谁？</a>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

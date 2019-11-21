@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>浮动</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.son1{
+			width: 400px;
+			height: 400px;
+			border: 10px dashed;	
+			/*边框10个像素，呈现的是虚线dashed，solid是实线*/
+			margin: 50px auto;	/*外边距50个像素*/
+			padding: 30px; 	/*内边距30个像素*/
+		}
+		.son2{
+			width: 100px;
+			height: 100px;
+			background: red;
+			/* margin: 0 auto; */
+			float: right;
+		}
+		.son3{
+			width: 100px;
+			height: 100px;
+			background: orange;
+			float: left;
+		}
+	</style>
+</head>
+<body>
+	<div class="son1">
+		<div class="son2"></div>
+		<div class="son3"></div>
+	</div>
+	
+</body>
+</html>

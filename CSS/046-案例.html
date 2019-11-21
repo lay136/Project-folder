@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>案例</title>
+	<link rel="stylesheet" href="../CSS/css样式/restyle.css">
+	<style>
+		div {
+			width: 300px; /*宽度400px*/
+			border-bottom: 1px solid #c7c7c7;
+			padding-bottom: 6px;
+			text-overflow: ellipsis;
+		}
+		.news-part{
+			margin: 50px auto; /*水平居中离顶部50像素显示*/
+			border-top: 2px solid #c7c7c7;
+			/*新闻列表的头部上边框*/
+			border-bottom: 1px solid #ececec;
+		
+		}
+        .news-part:last-child{
+        	 border-bottom: none;/*去掉文本的最后一行的实线*/
+        }
+		h3{
+			width: 100px;   /*新闻两个字的宽度*/
+			padding-top: 10px;  /*新闻两个字距离上边框的距离*/
+			margin-top: -2px;   /*外边距设置为负值，会向上移*/
+			border-top: 2px solid #069;
+			color: #069;
+			font: normal bolder 20px 微软雅黑;
+			
+		}
+		h3 span{
+			display: block;
+			font: normal bolder 12px 微软雅黑;
+			color: #c7c7c7;
+			margin-top: -2px;
+			margin-bottom: 0;
+		}
+		div ul li{
+			line-height: 50px;	/*li标签的高度*/
+			border-bottom: 1px dotted #c7c7c7;	/*a链接下的点状线*/
+
+		}
+		ul li:last-child{
+			border-bottom: none;	/*去掉文本的最后一行的虚线*/
+		}
+		ul li:hover a{
+			text-decoration: underline; /*悬浮在为文字的上面的时候带下划线*/
+			color: #900;	/*悬浮在为文字的上面的时候颜色为红色*/
+		}
+		ul li:before{
+			display: inline-block;
+			width: 4px;
+			height: 4px;
+			background-color: #069;
+			content: '';
+			margin-right: 10px;
+			vertical-align: middle;
+		}
+		a{
+			text-decoration: none;	/*超链接下的下划线去除*/
+			font-size: 14px;	/*a链接下的字体的大小*/
+			color: #222;	/*a链接下的字体的颜色*/
+			
+		}
+	</style>
+</head>
+<body>
+	<div class="news-part">
+		<div class="hd-part">
+			<h3>
+			即时新闻
+				<span>INSTANT NEWS</span>
+			</h3>
+		</div>
+		<ul class="bd">
+			<li><a href="#">我国密码法明年1月1日起施</a></li>
+			<li><a href="#">青岛即墨公安为您守护平安</a></li>
+			<li><a href="#">玉虚宫被列为香港“法定古迹”</a></li>
+			<li><a href="#">深圳机场再迎“空中巨无霸”</a></li>
+			<li><a href="#">二七广场入围全国十大夜间CBD</a></li>
+			<li><a href="#">地铁内电子设备不得外放声音</a></li>
+			<li><a href="#">张家口怀安县发生3.2级地震</a></li>
+			<li><a href="#">甘肃本土电影来者何人今天首映</a></li>
+		</ul>
+	</div>	
+</body>
+</html>

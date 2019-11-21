@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>属性选择器</title>
+	<style>
+		/* [title*='www.baidu.com']{
+			color: red;
+		} 属性的值包括什么,找到所有包括该属性值的元素,是CSS3中的选择器
+		*/
+
+		/* [title^=baidu]{
+			color: red;
+		} 属性的值以什么开始,找到所有以属性值开始的元素,是CSS3中的选择器
+		*/
+		[title]{
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<p title="www.baidu.com">www.baidu.com</p>
+	<p title="baidu com">baidu com</p>
+	<p title="www.baidu com">www.baidu com</p>
+	<p></p>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>025-数据转换</title>
+</head>
+<body>
+	<input type="text" id="txt1">+
+	<input type="text" id="txt2">
+	<input type="button" value="求和" id="btn">
+	
+</body>
+<script>
+		var oTxt1 = document.getElementById('txt1');
+		var oTxt2 = document.getElementById('txt2');
+		var oBtn = document.getElementById('btn');
+		// alert(btn);
+		// console.log(btn);
+		// var oBtn = document.getElementById('btn');
+		oBtn.onclick = function(){
+			var val1 = parseInt(oTxt1.value);
+			var val2 = parseInt(oTxt2.value); 
+			alert(val1 + val2);
+			// console.log(val1);
+		}
+	</script>
+</html>
