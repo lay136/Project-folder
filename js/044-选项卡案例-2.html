@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>044-选项卡案例-2.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.btn-list{
+			overflow: hidden;
+			margin-bottom: 20px;
+		}
+		.btn-list li{
+			width: 100px;
+			float: left;
+			line-height: 100px;
+			text-align: center;
+			list-style: none;
+		}
+		.btn-list .active{
+			border-bottom: 2px solid #ff6700;
+			color: #fff;
+			background: #ff6700;
+		}
+		.content-list li{
+			width: 400px;
+			/*height: 400px;*/
+			line-height: 400px; 
+			border: 1px solid;
+			text-align: center;
+			font-size: 50px;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<ul class="btn-list">
+		<li class="active">热门</li>
+		<li>电视</li>
+		<li>音响</li>
+		<li>电脑</li>
+	</ul>
+	<ul class="content-list">
+		<li style="display: block;">1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+	</ul>
+</body>
+<script>
+	var oBtn = document.querySelectorAll('.btn-list li');
+	var oContent = document.querySelectorAll('.content-list li');
+	//获取到元素，打印出来
+	// console.log(oBtn);
+	// console.log(oContent);
+	for(var i = 0;i < oBtn.length;i++){
+		// console.log(oBtn[i]);
+		oBtn[i].index = i;
+		oBtn[i].onclick = function(){//添加点击事件
+			// alert(123);
+			for(var j=0;j<oBtn.length;j++){
+				//i值已经被加载过了
+				oBtn[j].className = '';//清除点过之后的样式
+				oContent[j].style.display = 'none';//清除下面的方框
+			}
+			this.className = 'active';//修改点过之后的样式
+			// console.log(index);
+			oContent[this.index].style.display = 'block';//显示出下面的方框
+		}
+		
+ 	}
+
+</script>
+
+</html>

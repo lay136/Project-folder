@@ -56,9 +56,6 @@
 			<li>12</li>
 		</ul>
 		<div class="content" id="plan">
-			<h2>一月</h2>
-			<p>睡觉</p>
-		</div>
 	</div>
 </body>
 <script>
@@ -66,18 +63,21 @@
 	// console.log(aLi);
 	var oContent =document.getElementById('plan');
 	// console.log(oContent);
+	var oPan = ['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月',];
+	//console.log(oPan[0]);//通过数组的下标获取数组的内容,获取月份对应的内容
+	oContent.innerHTML = '<h2>一月</h2><p>睡觉</p>';//清除掉下面标题内容的
 	for(var i = 0; i < aLi.length;i++){
 		// console.log(aLi[i]);
-
+		aLi[i].index = i;
 		aLi[i].onmouseover = function(){
 			// alert('123');
 			//1.改li的样式
 			for(var j = 0;j < aLi.length; j++){
-				this.className = '';
+				aLi[j].className = '';//循环清空li标签的内容
 			}
 			this.className = 'active';
 			// 2.改计划内容
-
+			oContent.innerHTML = '<h2>'+(this.index+1)+'月</h2><p>'+oPan[this.index]+'</p>';
 		}
 		// console.log(i);
 	}

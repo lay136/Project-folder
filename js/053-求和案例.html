@@ -7,14 +7,14 @@
 <body>
 	<script>
 		function sun(){
-			var result = 0;
+			var result = 0;//定义一个变量
 			for( var i = 0;i< arguments.length;i++){//不定参数,可以直接在下面写数字
-				result += arguments[i];//加等要和在一起写
+				result = result + arguments[i];//加等要合在一起写
 			}
-			console.log(result);
+			alert(result);//弹出打印的和
 		}
-console.log();
-		// sun(1,3,5);
+			// console.log();
+		sun(1,3,5,20,40,52);//不调用参数，函数不会生效
 	</script>
 </body>
 </html>
