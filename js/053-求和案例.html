@@ -6,15 +6,25 @@
 </head>
 <body>
 	<script>
-		function sun(){
+		/*简单的求和运算
+		function sum(n1,n2){//几个参数  传几个值，多传不会计算
+			alert(n1 + n2);
+		}
+		sum(1,2);
+		*/
+		
+
+		//每一个函数都有一个对应的数组
+		//arguments是sum()函数的数组，可以用来求和
+		function sum(){
 			var result = 0;//定义一个变量
-			for( var i = 0;i< arguments.length;i++){//不定参数,可以直接在下面写数字
+			for(var i = 0;i < arguments.length;i++){
+			//不定参数,可以直接在下面写数字
 				result = result + arguments[i];//加等要合在一起写
 			}
 			alert(result);//弹出打印的和
 		}
-			// console.log();
-		sun(1,3,5,20,40,52);//不调用参数，函数不会生效
+		sum(1,1,1,1,1,1);//不调用参数，函数不会生效
 	</script>
 </body>
 </html>

@@ -25,8 +25,13 @@
 	<div id="box1">你好</div>		
 </body>
 <script>
+	// function css(obj,attr,val){
+	// 	obj.style[attr] = val;
+	// }
+
 	function css(obj,attr,val){
-		obj.style[attr] = val;
+		obj.style[attr] = val;//val不能使用字符串，他是一个值。不能带引号
+	//	变量名    参数名 =  值
 	}
 
 	var oBtn1 = document.getElementById('btn1');
@@ -35,18 +40,16 @@
 	var oBox = document.getElementById('box');
 	var oBox1 = document.getElementById('box1');
 	oBtn1.onclick = function(){
-		// oBox.style.width = '400px';
 		css(oBox,'width','400px');
 		css(oBox1,'width','400px');
 	}
 	oBtn2.onclick = function(){
-		// oBox.style.height = '400px';
 		css(oBox,'height','400px');
 		css(oBox1,'height','400px');
 	}
 	oBtn3.onclick = function(){
-		css(oBox,'background','blue');
-		css(oBox1,'background','red');
+		css(oBox,'background','red');
+		css(oBox1,'background','blue');
 	}
 
 </script>
