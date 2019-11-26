@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>055-返回值.html</title>
+	<script>
+	// function css(obj,attr,val){
+	// 	obj.style[attr] = val;
+	// }
+	function sum(){
+		result = 0;
+		for(var i = 0;i <arguments.length;i++){
+			// return;
+			result = result + arguments[i];
+		}
+		 return result;
+		//return;//只有返回值，只能得到undefined；
+	}
+	var arr = sum(1,2,3);
+	console.log(arr);
+</script>
+</head>
+<body>
+	
+</body>
+</html>
+
+
+

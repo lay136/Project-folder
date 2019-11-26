@@ -29,8 +29,8 @@
 	// 	obj.style[attr] = val;
 	// }
 	function css(obj,attr,val){//参数
-		if (arguments == 2) {
-			alert(getComputedStyle(obj,false).attr);
+		if (arguments.length == 2) {
+			alert(getComputedStyle(obj,false)[attr]);
 		}else{
 			obj.style[attr] = val;
 		}
@@ -51,7 +51,8 @@
 	}
 	oBtn4.onclick = function(){
 		// alert(123);
-		console.log(getComputedStyle(oBox,false)['width']);
+		// console.log(getComputedStyle(oBox,false)['width']);
+		css(oBox,'background');
 	}
 
 </script>

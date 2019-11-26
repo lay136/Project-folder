@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>57-全局变量1.html</title>
+	<script>
+		var a = 1;
+		function fn1(){
+				console.log('fa1',a);
+				function fn2(){
+					console.log('fa2',a);
+					function fn3(){
+						console.log('fa3',a);
+					}
+					fn3();
+				}
+				fn2();
+		}
+		fn1();
+		console.log('global',a);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
+
+
+

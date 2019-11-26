@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>59-局部变量.html</title>
+	<script>
+		// function fn1(){
+		// 	var a = 2;
+		// 		console.log('fa1',a);
+		// 		function fn2(){
+		// 			var a = 3;
+		// 			console.log('fa2',a);
+		// 			function fn3(){
+		// 				console.log('fa3',a);
+		// 			}
+		// 			fn3();
+		// 		}
+		// 		fn2();
+		// }
+		// fn1();
+		// console.log('global1',a);3
+		//var a = 1;//全局变量，所有函数都能调用
+		function fa1(){
+			"use strict";//严格模式下，局部变量要var定义，不然会显示错去
+			a = 1;
+			console.log(a);d
+		}
+		fa1();
+		console.log(a);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
+
+
+
