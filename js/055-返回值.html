@@ -13,10 +13,13 @@
 			// return;
 			result = result + arguments[i];
 		}
+		//alert(result);
 		 return result;
-		//return;//只有返回值，只能得到undefined；
+		 //遇到return，函数就不会再往下解析，返回值就会返回出去
+		//return之后的结果要接受要在下面写一个变量，只有返回值，只能得到undefined
+		alert(result);
 	}
-	var arr = sum(1,2,3);
+	var arr = sum(1,2,3,5);//用一个变量接收返回值，不接收函数是没有返回值的
 	console.log(arr);
 </script>
 </head>

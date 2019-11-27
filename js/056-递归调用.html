@@ -4,12 +4,12 @@
 	<meta charset="UTF-8">
 	<title>056-递归调用.html</title>
 	<script>
-	function fact(n){
+	//函数是引用数据类型
+	function fact(n){//递归调用
 		if (n == 1) {
 			return 1;
 		}else{
 			// return n * fact(n-1);.
-			
 			return n * arguments.callee(n-1);
 		}
 	}
@@ -19,6 +19,9 @@
 	var fact2 = fact;
 	fact = 1;
 	console.log(fact2(5));
+	// fact = 1;
+	console.log(fact2(9));
+
 </script>
 </head>
 <body>

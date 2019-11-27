@@ -18,17 +18,31 @@
 		var oUl = document.getElementById('ul1');
 		//定义一个变量，不要少写引号，不写的话，就是一个字符串
 		var aEle = oUl.childNodes;
-		console.log(aEle);//获取文档的所有节点
 		var aLi = oUl.children;
-		console.log(aLi);//获取所有的元素节点
-		
-
 		var firstNode = oUl.firstChild;//获取文档的第一个节点
 		var lastNode = oUl.lastChild;//获取文档的最后一个节点
-		console.log(firstNode == aEle[0])
-		console.log(lastNode == aEle[aEle.length -1])
 		
+		var firstElementNode = oUl.firstElementChild;
+		var lastElementNode = oUl.lastElementChild;
+		//分别指向children中的第一个和最后一个
+
+		console.log(aEle);//获取文档的所有节点
+		console.log(aLi);//获取所有的元素节点
+		console.log(firstNode);//获取文本的第一个，包含文本节点
+		console.log(lastNode);//获取文本的最后一个，包含文本节点
+		console.log(firstNode == aEle[0]);
+		console.log(lastNode == aEle[aEle.length -1]);
+
+		console.log(firstElementNode == aLi[0]);
+		console.log(lastElementNode == aLi[aLi.length-1]);
+		//获取child的第一个和最后一个
+
 		
+		/*
+		console.log(aEle[0]);//打印出所有的文本节点
+		console.log(aLi[0]);//打印出元素节点，第0个下标的
+		console.log(aLi);//打印出文档的所有li元素的节点
+		*/
 	</script>
 </html>
 

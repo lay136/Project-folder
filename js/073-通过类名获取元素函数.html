@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>073-通过类名获取元素函数.html</title>
+</head>
+<body>
+	<ul id="ul1">
+		<li>1</li>
+		<li>2</li>
+		<li class="box">3</li>
+		<li>4</li>
+		<li class="box">5</li>
+		<li>6</li>
+		<li class="box">7</li>
+		<li>8</li>
+	</ul>
+
+	<div id="div1">
+		<div>1</div>
+		<div class="box1">2</div>
+		<div>3</div>
+		<div class="box1">4</div>
+		<div>5</div>
+		<div class="box1">6</div>
+		<div>7</div>
+		<div class="box1">8</div>
+	</div>
+</body>
+<script>
+
+	function getElementsByClass(oParent,oclass){
+	//第一个参数 从那个参数获取数组，第二个参数是类名
+			var aEle = oParent.children;
+			var result = [];
+			// console.log(aEle);
+			for(var i = 0;i < aEle.length;i++){
+				// console.log(aEle);
+				if(aEle[i].className == oclass){
+				//循环数组里面的值，而不是数组的类名
+					result.push(aEle[i]);//将循环的结果添加到数组中
+				}
+			}
+			return result;//return result出去的结果要用一个变量来接收
+	} 
+// 获取ul的类名
+	var oUl = document.getElementById('ul1');
+	var aBoxs = getElementsByClass(oUl,'box');
+	console.log(oUl);
+	console.log(aBoxs);
+
+//获取div的类名
+	var oDiv = document.getElementById('div1');
+	var aBox1s = getElementsByClass(div1,'box1');
+	console.log(oDiv);
+	console.log(aBox1s);
+</script>
+</html>

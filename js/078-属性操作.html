@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>078-属性操作.html</title>
+</head>
+<body>
+	<input type="text" id="txt">
+	<input type="button" id="btn" value="提交">
+	<textarea id="content" cols="30" rows="10"></textarea>	
+</body>
+<script>
+	var oTxt = document.getElementById('txt');
+	console.log(oTxt);
+	var oBtn = document.getElementById('btn');
+	console.log(oBtn);
+	var oContent = document.getElementById('content');
+	console.log(oContent);
+
+	oBtn.onclick = function(){
+		//第一种方法获取到输入框的值
+		// var val = oTxt.value;
+		// oContent.value = val;
+		
+		var val = oTxt['value'];
+		oContent[.]value = val;
+
+
+
+	}
+// .getAttribute
+</script>
+</html>

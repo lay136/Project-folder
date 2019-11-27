@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>074-无序列表鼠标移入高亮移出还原.html</title>
+
+</head>
+<body>
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+		<li>7</li>
+		<li>8</li>
+		<li>9</li>
+		<li>10</li>
+	</ul>
+</body>
+<script>
+	var aLi = document.querySelectorAll('li');
+	// console.log(oLi);
+	for(var i = 0; i < aLi.length; i++){
+		if( i%2 == 0){
+			aLi[i].style.background='green';
+		}else{
+			aLi[i].style.background='orange';
+		}
+		var color;//存鼠标移走时的颜色
+		aLi[i].onmouseover = function(){
+			color = this.style.backgroundColor;
+			this.style.backgroundColor = '';
+		} 
+		aLi[i].onmouseout = function(){
+			this.style.backgroundColor = color;//
+		} 
+		
+	}
+</script>
+</html>
