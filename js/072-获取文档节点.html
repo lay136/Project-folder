@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>072-获取文档节点.html</title>
+
+</head>
+<body>
+	<ul id="ul1">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+	</ul>
+</body>
+	<script>
+		var oUl = document.getElementById('ul1');
+		//定义一个变量，不要少写引号，不写的话，就是一个字符串
+		var aEle = oUl.childNodes;
+		console.log(aEle);//获取文档的所有节点
+		var aLi = oUl.children;
+		console.log(aLi);//获取所有的元素节点
+		
+
+		var firstNode = oUl.firstChild;//获取文档的第一个节点
+		var lastNode = oUl.lastChild;//获取文档的最后一个节点
+		console.log(firstNode == aEle[0])
+		console.log(lastNode == aEle[aEle.length -1])
+		
+		
+	</script>
+</html>
+
+
+

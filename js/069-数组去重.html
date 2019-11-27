@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>069-数组去重.html</title>
+	<script>
+		var arr = [5,1,5,2,8,2,6,9,6];
+		console.log('去重前',arr);//去重之前的数组
+
+		var result = [];//用来存储不重复的数组
+
+		for(var i = 0;i < arr.length;i++){//遍历数组
+			// console.log(arr);
+			// var isDup = '';
+			var isDup = false;
+			for(var j = 0;j < result.length;j++){//不重复数组result的长度
+					// console.log(result[j])
+				if(arr[i] == result[j]){
+					isDup = true;.
+					//如果有相等的值存在说明在原始数组中是重复值,则不添加该值
+					break;
+				}
+			}
+			if(!isDup){
+				result.push(arr[i]);
+			}
+			// console.log(result);
+		}
+		console.log('去重后',result);//去重后的数组；
+	</script>
+</head>
+<body>
+</body>
+</html>
+
+
+

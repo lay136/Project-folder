@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>070-数组去重-改进.html</title>
+	<script>
+		var arr = [5,1,5,2,8,2,6,9,6];//定义一个数组
+		console.log('去重前',arr);//去重之前的数组
+
+		function uniqueArray(arr){//遍历数组
+			var result = [];//用来存储不重复的数组
+			for(var i = 1;i < arr.length;i++){
+
+				if(result.indexOf(arr[i]) == -1){
+				//从数组未部开始向前查找,返回查找到全等匹配的数组的下标,如果没有找到返回-1
+				   result.push(arr[i]);//添加找到的数组，并添加到数组arr[i].
+				}
+			}
+			return result;//返回
+		}
+		var arr1 = uniqueArray(arr);//将arr的值赋给arr1
+		console.log('去重后',arr1);
+		//console.log('去重后',result);//去重后的数组；
+	</script>
+</head>
+<body>
+</body>
+</html>
+
+
+
