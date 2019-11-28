@@ -16,18 +16,22 @@
 	</ul>
 </body>
 <script>
-	var oUl = document.getElementById('ul1');
-	console.log(oUl);
 	var oLi3 = document.getElementById('li3');
 	console.log(oLi3);
+	var oUl = document.getElementById('ul1');
+	console.log(oUl);
+	var aEle = oUl.childNodes;
 
-	console.log(oLi3.nextSibling == oUl.childNodes[5]);
+	console.log(oLi3.previousSibling  ==aEle[4]);
+	console.log(oLi3.nextSibling ==aEle[5]);
 	console.log(oLi3.previousSibling  == oUl.childNodes[4]);
+	console.log(oLi3.nextSibling == oUl.childNodes[5]);
+	//前面这两个和后面这两个是一样的运行结果，只是赋的变量不一样
 
+	
+	console.log(oLi3.nextElementSibling);
+	console.log(oLi3.previousElementSibling);
 
-	console.log(oLi3.nextElementSibling == oUl.childNodes[2]);
-	console.log(oLi3.previousElementSibling  == oUl.childNodes[3]);
-
-	// .nextSibling
+	console.log();
 </script>
 </html>

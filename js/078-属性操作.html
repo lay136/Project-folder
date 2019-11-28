@@ -5,7 +5,7 @@
 	<title>078-属性操作.html</title>
 </head>
 <body>
-	<input type="text" id="txt">
+	<input type="text" id="txt" value="value">
 	<input type="button" id="btn" value="提交">
 	<textarea id="content" cols="30" rows="10"></textarea>	
 </body>
@@ -26,7 +26,23 @@
 		// var val = oTxt['value'];
 		// oContent['value'] = val;
 
-		
+
+		//第三种方法
+		var val = oTxt.getAttribute('value');
+		//必须input里面有值才可以获取的到，只能偶在节点上修改值，如果没有的话，是获取不到的
+		var val = oTxt.test;
+		var val = oTxt['test'];
+		console.log(val);
+
+
+
+		var val = oTxt["value"];
+		// oTxt.test = '123'
+		// oTxt['value'] = '123'
+		console.log(val);
+		oContent.setAttribute('value',val);//设置属性
+		//setAttribute只能够在节点上更改属性的值，但是不会显示出来
+		oTxt.removeAttribute('value')//删除属性
 
 
 
