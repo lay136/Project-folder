@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>084-克隆节点.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#son{
+			width: 100px;
+			height: 100px;
+			background: red;
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+	<input type="button" value="oNode.cloneNode(false)" id="btn1">
+	<input type="button" value="oNode.cloneNode(ture)" id="btn2">
+	<div id="son">123</div>
+</body>
+<script>
+	var oBtn1 = document.getElementById('btn1'); 
+	var oBtn2 = document.getElementById('btn2'); 
+	var oSon = document.getElementById('son'); 
+	console.log(oSon);
+	oBtn1.onclick = function(){
+		var NewSons = oSon.cloneNode(false);//不能克隆内容
+		console.log(NewSons);
+		document.body.appendChild(NewSons);
+	}
+	oBtn2.onclick = function(){
+		var NewSons = oSon.cloneNode(true);//可以克隆元素的内容
+		document.body.appendChild(NewSons);
+	}
+</script>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>083-插入到无序列表的后面并且可以删除该列表项.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			width: 300px;
+			margin:100px auto;
+		}
+		li{
+			border-bottom: 1px dashed #000;
+			height: 40px;
+			line-height: 40px;
+			list-style: none;
+		}
+		/*a{
+			margin-left: 200px;
+		}
+		*/
+	</style>
+</head>
+<body>
+	<div class="box">
+		<input id="txt">
+		<input type="button" id="btn" value="发布">
+		<ul id="ul1"></ul>
+	</div>
+</body>
+<script>
+	var oTxt = document.getElementById('txt');
+	var oBtn = document.getElementById('btn');
+	var oUl1 = document.getElementById('ul1');
+	// console.log(oTxt);
+	oBtn.onclick = function(){
+		// alert(0);
+		var val = oTxt.value;
+		var oLi = document.createElement('li');
+		var oA = document.createElement('a');
+
+		oLi.innerHTML = val;//li的值赋给val
+		oA.href = 'javascript:;'
+		oA.innerHTML = '删除';
+
+		oA.onclick = function(){
+			oUl1.removeChild(oLi)
+		}
+		oLi.appendChild(oA);
+		oUl1.insertBefore(oLi,oUl1.firstChild)
+		oTxt.value = '';
+	}
+</script>
+</html>

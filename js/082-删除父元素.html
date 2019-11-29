@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>082-删除父元素.html</title>
+</head>
+<body>
+	<ul id="ul">
+		<li>1<a href="#">删除</a></li>
+		<li>2<a href="#">删除</a></li>
+		<li>3<a href="#">删除</a></li>
+		<li>4<a href="#">删除</a></li>
+		<li>5<a href="#">删除</a></li>
+		<li>6<a href="#">删除</a></li>
+		<li>7<a href="#">删除</a></li>
+		<li>8<a href="#">删除</a></li>
+		<li>9<a href="#">删除</a></li>
+		<li>10<a href="#">删除</a></li>
+	</ul>
+</body>
+<script>
+	var aA = document.getElementsByTagName('a');
+	// console.log(aA);
+	// var oUl = document.getElementById('ul');
+	for(var i = 0;i < aA.length;i++){
+		aA[i].onclick = function(){
+			// this.parentNode.style.display = 'none';
+			//.parentNode,是获取子节点的父节点对象
+			this.parentNode.parentNode.removeChild(this.parentNode);
+		}
+	}
+
+</script>	
+</html>

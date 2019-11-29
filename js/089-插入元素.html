@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>089-插入元素.html</title>
+</head>
+<body>
+	<ul id="ul1">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+		<li>7</li>
+	</ul>
+	<input type="button" value="插入元素" id="btn">
+</body>
+<script>	
+	var oUl1 = document.getElementById('ul1');
+	// console.log(oUl1);
+	var oBtn = document.getElementById('btn');
+	// console.log(oBtn);
+	oBtn.onclick = function(){
+		var oLi = document.createElement('li');
+		//生成元素，创建的元素并不会插入到页面
+		oLi.innerHTML = '8';
+		// oUl1.insertBefore(oLi,oUl1.firstChild);//插入到元素的最前面
+		oUl1.appendChild(oLi);//插入到元素的最后面，也是追加元素。
+	}
+</script>
+</html>
