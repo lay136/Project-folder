@@ -2,9 +2,15 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>关闭浏览器</title>
 </head>
 <body>
-	
+	<button id="btn">关闭</button>
 </body>
+<script>
+	var oBtn = document.getElementById('btn');
+	oBtn.onclick = function(){
+		window.close()//该方法不能关闭用户打开的窗口,只能关闭程序打开的窗口
+	}
+</script>
 </html>

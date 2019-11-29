@@ -27,12 +27,14 @@
 	var oSon = document.getElementById('son'); 
 	console.log(oSon);
 	oBtn1.onclick = function(){
-		var NewSons = oSon.cloneNode(false);//不能克隆内容
+		var NewSons = oSon.cloneNode(false);
+		//不能克隆内容，浅克隆，括号里不传值的话，默认的就是false
 		console.log(NewSons);
 		document.body.appendChild(NewSons);
 	}
 	oBtn2.onclick = function(){
-		var NewSons = oSon.cloneNode(true);//可以克隆元素的内容
+		var NewSons = oSon.cloneNode(true);
+		//可以克隆元素的内容，深克隆
 		document.body.appendChild(NewSons);
 	}
 </script>

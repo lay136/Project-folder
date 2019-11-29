@@ -11,10 +11,11 @@
 	#box{
 		position: relative;
 		margin-left: 100px;
+		margin-top: 20px;
 	}
 	input{
 		margin-left: 100px;
-		margin-bottom: 50px;
+		/*margin-bottom: 50px;*/
 	}
 	.son{
 		width: 100px;
@@ -28,14 +29,26 @@
 	<input type="button" id="btn" value="动态添加">
 	<div id="box">
 		<div class="son"></div>
-		<div class="son"></div>
-		<div class="son"></div>
-		<div class="son"></div>
-		<div class="son"></div>
-		<div class="son"></div>
-		<div class="son"></div>
-		<div class="son"></div>
-		<div class="son"></div>
 	</div>
 </body>
+<script>
+	var oBox = document.getElementById('box');
+	var oBtn = document.getElementById('btn');
+	var oSon = document.getElementsByClassName('son');// 选择所有匹配的节点
+	var iHeight = 100;
+	var iWidth = 100;
+	var iMargin = 15;//
+	var allCol = 3;
+	// console.log(aDiv)
+	oBtn.onclick = function(){//添加点击事件
+		var oDiv = oSon[0].cloneNode();
+		oBox.appendChild(oDiv)
+		for(var i=0;i<oSon.length;i++){
+			var iCol = i % allCol;
+			var iRow = parseInt(i / allCol);
+			oSon[i].style.top = iRow * (iHeight + iMargin) +'px';//设置top值
+			oSon[i].style.left = iCol * (iWidth + iMargin) +'px';//设置marge值
+		}
+	}
+</script>
 </html>

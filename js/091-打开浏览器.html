@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>打开浏览器</title>
+</head>
+<body>
+	<input type="button" id="btn" value="打开">
+</body>
+<script>
+	var oBtn = document.getElementById('btn');
+	oBtn.onclick = function(){
+
+	//打开一个新窗口并返回新打开的窗口对象
+		var newWin = window.open('about:blank','_blank');
+		//（地址，打开方式）。地址取值：完整的url/本地页面/"about:blank",表示空白页面
+		//"_blank",空白页面打开,默认值
+		//"_self",当前窗口打开
+		console.log(newWin)
+	}
+</script>
+</html>
+
