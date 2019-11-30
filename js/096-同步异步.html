@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>096-同步异步.html</title>
+</head>
+<body>
+	<input type="button" value="关闭" id="btn">
+</body>
+<script>
+	var oBtn = document.getElementById('btn');
+	var i = 0;
+	
+	oBtn.onclick = function(){
+		i++;
+		console.log();
+	}
+
+	setTimeout(function(){
+		console.log(i);
+
+	},2000)
+
+	i++;
+</script>
+</html>
