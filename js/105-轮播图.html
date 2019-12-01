@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>轮播图</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		.carousel{
+			position: relative;
+			width: 1226px;
+			height: 460px;
+			margin:100px auto;
+		}
+		.carousel .carousel-imgs li{
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			transition: all 1s;
+		}
+		.carousel .carousel-imgs img{
+			width: 1226px;
+			height: 460px;
+		}
+		.carousel .btn{
+			position: absolute;
+			top: 230px;
+			margin-top: -35px;
+			width: 41px;
+			height: 69px;
+			line-height: 69px;
+			text-align: center;
+			font-size: 30px;
+			color:#757575;
+			cursor: pointer;
+			z-index: 999;
+			user-select: none;
+		}
+		.carousel .btn:hover{
+			background-color: rgba(0,0,0,0.6);
+			color:#fff;
+		}
+		.carousel .left-btn{
+			left: 0px;
+			border-top-right-radius: 3px;
+			border-bottom-right-radius: 3px;
+		}
+		.carousel .right-btn{
+			right: 0px;
+			border-top-left-radius: 3px;
+			border-bottom-left-radius: 3px;
+		}
+		.carousel .carousel-btns{
+			position: absolute;
+			bottom: 25px;
+			right: 35px;
+			z-index: 999;
+		}
+		.carousel .carousel-btns li{
+			float: left;
+			width: 10px;
+			height: 10px;
+			box-sizing: border-box;
+			border-radius: 50%;
+			background-color: #7b8a97;
+			margin-left: 10px;
+			border: 2px solid #a3adb6;
+			pointer:;
+
+		}
+		.carousel .carousel-btns li:hover,
+		.carousel .carousel-btns li.active{
+			background-color: #e3f4fe;
+			border-color: #889298;
+		}
+	</style>
+</head>
+<body>
+	<div class="carousel">
+		<ul class="carousel-imgs">
+			<li style="z-index: 2;"><a href="javascript:;"><img src="../CSS/img/001.jpg" alt=""></a></li>
+			<li><a href="javascript:;"><img src="../CSS/img/002.jpg" alt=""></a></li>
+			<li><a href="javascript:;"><img src="../CSS/img/003.jpg" alt=""></a></li>
+		</ul>
+		<span class="left-btn btn"><i class="iconfont">&lt;</i></span>
+		<span class="right-btn btn"><i class="iconfont">&gt;</i></span>
+		<ul class="carousel-btns">
+			<li class="active"></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+</body>
+<script>
+	//获取元素
+	var aLI = document.querySelectorAll('.carousel-imgs li');//选择li标签
+	var oLeftBtn = document.querySelector('.left-btn');
+	var oRightBtn = document.querySelector('.right-btn');
+	var aBtns = document.querySelectorAll('.carousel-btns li');
+	var oCarousel = document.querySelector('.carousel');
+	var now = 0;//显示默认下标
+	console.log(aLI);
+	// console.log(oLeftBtn);
+	// console.log(oRightBtn);
+	// console.log(aBtns);
+	// console.log(oCarousel);
+
+	//公共事件
+	function tab(){
+		for(var i =0;i < aLI.length;i++){
+			aLI[i].style.zIndex = '0';
+			aBtns[i].className = '';
+		}
+		aLI[now].style.zIndex = '20';
+		aBtns[now].className = 'active';
+	}
+
+	//添加下一张图片的事件
+	oRightBtn.onclick = function(){
+		now++;
+		if(now >aLI.length - 1){
+			now = 0;
+		}
+		tab();
+	}
+	//添加上一张图片的事件
+	oLeftBtn.onclick = function(){
+		now--;
+		if(now < 0){
+			now = aLI.length -1;
+		}
+		tab();
+	}
+	//添加底部按钮事件 
+	for(var i = 0;i < aBtns.length;i++){
+		aBtns[i].index = i;//存i值
+		aBtns[i].onclick = function(){
+			now = this.index;
+			tab();
+		}
+	}
+	//添加自动播放事件
+	timer = setInterval(function(){
+
+	},5000);
+
+</script>
+</html>

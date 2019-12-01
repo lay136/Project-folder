@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>101-数码时钟.html</title>
+	<title>102-数码时钟-图片版.html</title>
 	<style>
 		*{
 			margin: 0;
@@ -11,7 +11,7 @@
 		body{
 			background: #000;
 		}
-		#Timer{
+		#timer{
 			margin-top: 200px;
 			text-align: center;
 			font-size: 72px;
@@ -20,19 +20,15 @@
 	</style>
 </head>
 <body>
-	<div id="Timer">
+	<div id="timer">
+		20：20：20
 	</div>
 </body>
 <script>
-	var oTimer = document.getElementById('Timer');
+	var oTimer = document.getElementById('timer');
 	// console.log(oTimer);
-	function to2Str(num){
-		if(num < 10){
-			return '0'+num;
-		}else{
-			return ''+num;
-		}
-	}
+
+	
 
 	function handleTimer(){
 		var today = new Date();
@@ -44,7 +40,7 @@
 		// console.log(iHour);
 		// console.log(iMinute);
 		// console.log(iSecond);
-		oTimer.innerHTML = to2Str(iHour) + ':' + to2Str(iMinute) + ':' + to2Str(iSecond);
+		oTimer.innerHTML = iHour +' ：'+ iMinute +' ：'+ iSecond;
 	}
 	setInterval(handleTimer,1000);
 	handleTimer();

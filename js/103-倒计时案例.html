@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>103-倒计时案例.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			background: #000;
+		}
+		#timer{
+			text-align: center;
+			margin-top: 200px;
+			font-size: 60px;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<div id="timer">
+	<!-- 距离结束时间还有02小时02分02秒 -->
+	</div>
+</body>
+<script>
+
+//定义函数时分秒两位数显示
+	function to2Str(num){
+		if(num < 10){
+			return '0'+num;
+		}else{
+			return ''+num;
+		}
+	}
+
+	//1.获取目标时间
+	//2.获取目标时间和当前时间的差
+	//3.把差转换成时分秒，然后插入到内容中去
+	//4.让时间动态的取改变
+	// 5.如何停止时间，
+	var oTimer = document.getElementById('timer');//获取需要操作的对象
+	// console.log(oTimer);
+	var EndDate = new Date('2019-12-01 16:00:00').getTime();
+	//获取倒计时结束的时间  gettime获取毫秒数
+	// console.log(EndDate);
+	var nowTime = Date.now();//当前时间的毫秒数
+	// console.log(nowTime);
+	
+	// console.log(allTime);
+	var timer = 0;//不赋值也可以 赋值可以看出时整型数据类型
+
+	function handleTime(){
+		var allTime = parseInt((EndDate- Date.now())/1000);
+		//倒计时的毫秒数  再转化成秒  再取整
+		if(allTime<=0){
+			allTime = 0;
+			clearInterval(timer)
+		}
+		//转换成时分秒
+		var iHour = parseInt(allTime/3600);
+		var iMinute = parseInt((allTime%3600)/60);
+		var iSecond = (allTime%3600)%60;
+		// console.log(iHour);
+		// console.log(iMinute);
+		// console.log(iSecond);
+		oTimer.innerHTML = "距离活动结束还有"+to2Str(iHour)+"小时"+to2Str(iMinute)+"分钟"+to2Str(iSecond)+"秒";//插入到内容中去
+
+	}
+
+	timer = setInterval(handleTime,500);//接sh
+	handleTime();
+
+</script>
+</html>
