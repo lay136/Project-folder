@@ -57,7 +57,7 @@
 			position: absolute;
 			bottom: 25px;
 			right: 35px;
-			z-index: 999;
+			z-index: 99;
 		}
 		.carousel .carousel-btns li{
 			float: left;
@@ -102,7 +102,7 @@
 	var aBtns = document.querySelectorAll('.carousel-btns li');
 	var oCarousel = document.querySelector('.carousel');
 	var now = 0;//显示默认下标
-	console.log(aLI);
+	// console.log(aLI);
 	// console.log(oLeftBtn);
 	// console.log(oRightBtn);
 	// console.log(aBtns);
@@ -113,9 +113,14 @@
 		for(var i =0;i < aLI.length;i++){
 			aLI[i].style.zIndex = '0';
 			aBtns[i].className = '';
+
+			aLI[i].style.opacity = '0';
+
 		}
 		aLI[now].style.zIndex = '20';
 		aBtns[now].className = 'active';
+
+		aLI[now].style.opacity = '1';//添加蒙板
 	}
 
 	//添加下一张图片的事件
@@ -143,9 +148,18 @@
 		}
 	}
 	//添加自动播放事件
-	timer = setInterval(function(){
+	// timer = setInterval(function(){
+	// 		now = this.index;
+	// 		tab();
+	// },5000);
+	timer = setInterval(oRightBtn.onclick,3000);
+	oCarousel.onmouseover = function(){//清除循环定时器
+		clearInterval(timer);//添加一个定时器
+	}
+	oCarousel.onmouseout = function(){//鼠标移走时，再添加一个定时器
+		timer = setInterval(oRightBtn.onclick,3000);
+	}
 
-	},5000);
 
 </script>
 </html>
