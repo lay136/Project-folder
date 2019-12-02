@@ -113,15 +113,14 @@
 		for(var i =0;i < aLI.length;i++){
 			aLI[i].style.zIndex = '0';//通过更改zIndex的值，让图片显示出来
 			aBtns[i].className = '';//清除按钮的默认样式
-
 			aLI[i].style.opacity = '0';
-
 		}
 		aLI[now].style.zIndex = '20';
 		aBtns[now].className = 'active';
-
 		aLI[now].style.opacity = '1';//添加蒙板
 	}
+
+
 
 	//添加下一张图片的事件
 	oRightBtn.onclick = function(){
