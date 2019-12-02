@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>106-轮播图2.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		.carousel{
+			position: relative;
+			width: 1226px;
+			height: 460px;
+			margin:100px auto;
+		}
+		.carousel .carousel-imgs li{
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			transition: all 1s;
+		}
+		.carousel .carousel-imgs img{
+			width: 1226px;
+			height: 460px;
+		}
+		.carousel .btn{
+			position: absolute;
+			top: 230px;
+			margin-top: -35px;
+			width: 41px;
+			height: 69px;
+			line-height: 69px;
+			text-align: center;
+			font-size: 30px;
+			color:#757575;
+			cursor: pointer;
+			z-index: 999;
+			user-select: none;
+		}
+		.carousel .btn:hover{
+			background-color: rgba(0,0,0,0.6);
+			color:#fff;
+		}
+		.carousel .left-btn{
+			left: 0px;
+			border-top-right-radius: 3px;
+			border-bottom-right-radius: 3px;
+		}
+		.carousel .right-btn{
+			right: 0px;
+			border-top-left-radius: 3px;
+			border-bottom-left-radius: 3px;
+		}
+		.carousel .carousel-btns{
+			position: absolute;
+			bottom: 25px;
+			right: 35px;
+			z-index: 99;
+		}
+		.carousel .carousel-btns li{
+			float: left;
+			width: 10px;
+			height: 10px;
+			box-sizing: border-box;
+			border-radius: 50%;
+			background-color: #7b8a97;
+			margin-left: 10px;
+			border: 2px solid #a3adb6;
+			cursor: pointer;
+
+		}
+		.carousel .carousel-btns li:hover,
+		.carousel .carousel-btns li.active{
+			background-color: #e3f4fe;
+			border-color: #889298;
+		}
+	</style>
+</head>
+<body>
+	<div class="carousel">
+		<ul class="carousel-imgs" id="slider">
+			<li style="z-index: 2;"><a href="javascript:;"><img src="../CSS/img/001.jpg" alt="1.jpg" id="img"></a></li>
+			<li><a href="javascript:;"><img src="../CSS/img/002.jpg" alt=""></a></li>
+			<li><a href="javascript:;"><img src="../CSS/img/003.jpg" alt=""></a></li>
+			<li><a href="javascript:;"><img src="../CSS/img/004.jpg" alt=""></a></li>
+			<li><a href="javascript:;"><img src="../CSS/img/005.jpg" alt=""></a></li>
+			<li><a href="javascript:;"><img src="../CSS/img/006.jpg" alt=""></a></li>
+			<li><a href="javascript:;"><img src="../CSS/img/007.jpg" alt=""></a></li>
+		</ul>
+		<span class="left-btn btn"><i class="iconfont">&lt;</i></span>
+		<span class="right-btn btn"><i class="iconfont">&gt;</i></span>
+		<ul class="carousel-btns" id="ul" >
+			<li class="active"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+</body>
+<script>
+//获取元素
+	var oCarousel = document.querySelector('.carousel');
+	var slider = document.getElementById("slider");
+	var img = document.getElementById("img");
+	var ul = document.getElementById("ul");
+	var aLI = document.querySelectorAll('.carousel-imgs li');//选择li标签+
+	var oLeftBtn = document.querySelector('.left-btn');
+	var oRightBtn = document.querySelector('.right-btn');
+	var aBtns = document.querySelectorAll('.carousel-btns li');
+	var num = 0;
+    var timer = null;
+
+//图片切换函数
+	function changeImg() {
+		img.src = arrUrl[num];//改变图片src位置
+		for (var i = 0;i < aLI.length;i++){//改变原点样式
+			aBtns[i].className = "";//清除按钮的默认样式为空
+		}
+		aBtns[num].className = "active";//默认样式
+	}
+
+//图片位置
+	var arrUrl = ["../CSS/img/001.jpg","../CSS/img/002.jpg","../CSS/img/003.jpg","../CSS/img/004.jpg","../CSS/img/005.jpg","../CSS/img/006.jpg","../CSS/img/007.jpg"];
+	oLeftBtn.onclick = function (fn) {
+		num--;
+		if (num == -1){
+			num = arrUrl.length - 1;//如果到了第一张，返回最后一张
+		}
+		changeImg();
+	}
+
+	oRightBtn.onclick = function (fn) {
+		num++;
+		if (num == arrUrl.length){
+			num = 0;//如果是最后一张，则返回第一张
+		}
+		changeImg();
+	}
+
+//点击小圆点跳转到对应的图片
+	for (var i=0;i < arrUrl.length;i++){
+			aBtns[i].index = i;
+			aBtns[i].onclick = function (fn) {
+			num = this.index;
+				changeImg();
+			}
+	}
+	setTimeout(autoPlay(),1000);//延迟1秒执行自动切换
+	//鼠标移入清除定时器，鼠标移出恢复
+	oCarousel.onmouseover = function (fn) {
+		clearInterval(timer);//清除定时器
+	};
+	oCarousel.onmouseout = autoPlay;//自动播放事件
+
+//设置定时器
+	function autoPlay() {
+		timer = setInterval(function () {
+			num++;
+			num %= arrUrl.length;
+			changeImg();
+		},2000);
+	}
+</script>
+</html>
