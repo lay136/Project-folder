@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>110-document相关值.html</title>
+</head>
+<body>
+	
+</body>
+<script>
+	console.log("document.compatMode",document.compatMode);
+	//返回值是CSS1Compat
+	//当前浏览器的渲染模式标准模式,写DOCTYPE的页面按照标准模式解析,
+
+	// console.log("document.compatMode",document.compatMode);
+	//不写DOCTYPE的页面按照混杂模式解析,返回值是BackCompat混杂模式也叫怪异模式
+
+	console.log("document.documentElement",document.documentElement);
+	console.log("document.documentElement",document.documentElement = document.querySelector('html'));
+	//返回文档对象（document）的根元素的只读属性,通常指HTML文档的<html> 元素）
+	
+	console.log("document.body",document.body);
+	console.log("document.body",document.body = document.querySelector('body'));
+	//返回当前文档中的<body>元素
+
+	console.log("document.title",document.title);
+
+</script>
+
+</html>
