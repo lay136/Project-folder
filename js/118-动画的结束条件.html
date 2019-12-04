@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>117-决定速度的正负.html</title>
+	<title>118-动画的结束条件.html</title>
 	<style>
 		*{
 			margin: 0;
@@ -42,13 +42,19 @@
 			
 			var iSpeed = 0;
 			if(oBox.offsetLeft < 400){
-				iSpeed = 10;
+				iSpeed = 7;
 			}else{
-				iSpeed = -10;
+				iSpeed = -7;
 			}
 
-			if(oBox.offsetLeft == 400){
+			if( Math.abs(400 - oBox.offsetLeft) < Math.abs(iSpeed)){
+				//400 < 7
+
+				oBox.style.left = '400px';
+				//如果不到400，让oBox.style.left的值等于400px
+
 				clearInterval(timer);//关闭定时器
+				
 			}else{
 				oBox.style.left = oBox.offsetLeft + iSpeed +'px';
 			}

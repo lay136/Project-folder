@@ -2,57 +2,62 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>117-决定速度的正负.html</title>
+	<title>119-动画-透明度.html</title>
 	<style>
 		*{
 			margin: 0;
 			padding: 0;
 		}
-		#box{
-			position: absolute;
-			top: 50px;
-			left: 800px;
-			width: 100px;
-			height: 100px;
-			background-color: red;
+		.wrap{
+			margin-top: 200px;
+			margin-left: 800px;
 		}
-		#line{
-			position: absolute;
-			top: 0px;
-			left: 400px;
-			width: 1px;
-			height: 600px;
-			background-color: #000;
+		#box{
+			margin-top: 50px;
+			width: 400px;
+			height: 400px;
+			background: red;
+			opacity: 1;
 		}
 	</style>
 </head>
 <body>
-	<button id="btn">开始动画</button>
-	<div id="box"></div>
-	<div id="line"></div>
+	<div class="wrap">
+		<button id="btn">开始动画</button>
+		<div id="box"></div>
+	</div>
 </body>
 <script>
 	var oBtn = document.getElementById('btn');
 	var oBox = document.getElementById('box');
 	var timer = 0;
+	console.log(getComputedStyle(oBox,false),['opacity']);
 	oBtn.onclick = function(){
+
 		clearInterval(timer);//先关闭定时器
 		timer = setInterval(function(){//开启定时器
 			console.log('timer',timer,'is running');
 			
 			var iSpeed = 0;
 			if(oBox.offsetLeft < 400){
-				iSpeed = 10;
+				iSpeed = 7;
 			}else{
-				iSpeed = -10;
+				iSpeed = -7;
 			}
 
-			if(oBox.offsetLeft == 400){
+			if( Math.abs(400 - oBox.offsetLeft) < Math.abs(iSpeed)){
+				//400 < 7
+
+				oBox.style.left = '400px';
+				//如果不到400，让oBox.style.left的值等于400px
+
 				clearInterval(timer);//关闭定时器
+				
 			}else{
 				oBox.style.left = oBox.offsetLeft + iSpeed +'px';
 			}
 		},30);
 	}
+	
 </script>
 </html>
