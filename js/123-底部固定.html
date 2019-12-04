@@ -15,7 +15,6 @@
 		#box{
 			position: absolute;
 			bottom: 0px;
-			/*top:0px;*/
 			right: 0px;
 			width: 100px;
 			height: 100px;
@@ -26,16 +25,17 @@
 <body>
 	<div id="box"></div>
 </body>
-<script src="js/until.js"></script>
+<script src="js/Until.js"></script>
 <script>
 	var oBox = document.getElementById('box');
-	oBox.style.top = window.innerHeight - window.offsetHeight + 'px';
-	 window.onload =  function(){
+	//console.log(getScrollTop);//获取到滚动条的滚动距离	
+	window.onload = window.onscroll = window.onresize = function(){
+	//页面加载完毕后触发 = 拖动滚动条触发 = 窗口大小发生变化触发=function()函数
 		var iTop = window.innerHeight - oBox.offsetHeight + getScrollTop();
+			//innerHeight浏览器视口宽高(不包含浏览器的边框,如果有滚动条则包括)
+			//offsetHeight(垂直方向上边框+垂直方向上内边距+内容高+水平滚动条)
 		console.log(iTop);
-
-		animate(oBox,'top',iTop)
-
+		animate(oBox,'top',iTop);
 	 }
 </script>
 </html>

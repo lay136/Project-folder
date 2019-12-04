@@ -31,33 +31,26 @@
 	var oBtn = document.getElementById('btn');
 	var oBox = document.getElementById('box');
 	var timer = 0;
-	console.log(getComputedStyle(oBox,false),['opacity']);
+	// console.log(getComputedStyle(oBox,false),['opacity']);
 	oBtn.onclick = function(){
 
-		clearInterval(timer);//先关闭定时器
-		timer = setInterval(function(){//开启定时器
-			console.log('timer',timer,'is running');
-			
-			var iSpeed = 0;
-			if(oBox.offsetLeft < 400){
-				iSpeed = 7;
+		clearInterval(oBox.timer);
+		var iSpeed = 0;
+		oBox.timer = setInterval(function(){
+			var current = parseFloat(getComputedStyle(oBox,false)['opacity']);
+			current = Math.round(current * 100);
+			if(current < 100){
+				iSpeed = 3;
 			}else{
-				iSpeed = -7;
+				iSpeed = -3;
 			}
-
-			if( Math.abs(400 - oBox.offsetLeft) < Math.abs(iSpeed)){
-				//400 < 7
-
-				oBox.style.left = '400px';
-				//如果不到400，让oBox.style.left的值等于400px
-
-				clearInterval(timer);//关闭定时器
-				
+			if(Math.abs(100 - current) < Math.abs(iSpeed)){
+				oBox.style.opacity = '0.5';
+				clearInterval(oBox.timer);
 			}else{
-				oBox.style.left = oBox.offsetLeft + iSpeed +'px';
+				oBox.style.opacity = (current + iSpeed)/100;
 			}
 		},30);
 	}
-	
 </script>
 </html>

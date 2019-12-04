@@ -34,10 +34,58 @@
 <script>
 	var oFather = document.getElementById('wrap');
 	var oSon = document.getElementById('son');
-	var timer = 0;
-	oFather.onmuseover = function(){
-		
-	}
+	// console.log(oSon);
+	var timer;
+	oFather.onmouseover = function(){
+		// console.log(123);
+		clearInterval(timer);//先关闭定时器
+		timer = setInterval(function(){//开启定时器
+			console.log(oFather.offsetLeft)
+			var iSpeed = 0;
+			if(oFather.offsetLeft < 0){
+				iSpeed = 9;
+			}else{
+				iSpeed = -9;
+			}
+			if( Math.abs(0 - oFather.offsetLeft) < Math.abs(iSpeed)){
+				//  Math.abs绝对值   iSpeed自定义变速度
+				//400 < 7
+				oFather.style.left = '0';
+				//如果不到400，让oBox.style.left的值等于400px
 
+				clearInterval(timer);//关闭定时器
+
+			}else{
+				oFather.style.left = oFather.offsetLeft + iSpeed +'px';
+			}
+		},30);
+	}
+//事件要添加给盒子的父元素
+	oFather.onmouseout = function(){
+		// console.log(123);
+		clearInterval(timer);//clearInterval(ID)关闭循环型定时器
+
+		timer = setInterval(function(){//开启定时器
+			console.log(oFather.offsetLeft);
+			//offsetLeft,元素的左外边框和参考父元素左内边框的距离
+			
+			var iSpeed = 0;
+			if(oFather.offsetLeft < -300){
+				iSpeed = 9;
+			}else{
+				iSpeed = -9;
+			}
+			if( Math.abs(-300 - oFather.offsetLeft) < Math.abs(iSpeed)){
+				//400 < 7
+				oFather.style.left = '-300px';
+				//如果不到400，让oBox.style.left的值等于400px
+
+				clearInterval(timer);//关闭定时器
+			}else{
+				oFather.style.left = oFather.offsetLeft + iSpeed +'px';
+			}
+		},30);
+	}
+	
 </script>
 </html>
