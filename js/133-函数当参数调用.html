@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>函数当参数调用</title>
+	<script>
+		function aa(fn){
+			console.log('aa');
+			fn();
+		}
+		aa(function(){
+			console.log('bb');
+		});
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

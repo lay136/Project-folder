@@ -58,7 +58,9 @@ function animate(obj,attr,target){//animate函数里面写参数
 				obj.style[attr] = target + 'px';
 			}
 			clearInterval(obj.timer);//关闭定时器
-		}else{
+		}
+
+		else{
 			if(attr == 'opacity'){//改变样式
 				obj.style[attr] = (current + iSpeed) / 100;
 			}else{

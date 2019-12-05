@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>132-综合动画的封装2.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.father{
+			width: 100px;
+			margin: 50px auto;
+		}
+		.father div{
+			width: 100px;
+			height: 100px;
+			background: red;
+			line-height: 100px;
+			text-align:center;
+			margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="father">
+		<div id="box1">变宽</div>
+		<div id="box2">变高</div>
+		<div id="box3">变透明</div>
+	</div>
+</body>
+<script>
+	/*
+	obj 表示要修改的是那个DOM对象
+	attr 表示要修改的是哪个属性
+	target 表示目标值(就是将属性值修改到多少)
+	isLinear 表示动画是匀速还是减速执行(默认是匀速,true是匀速,false是减速)
+	*/
+	var oBox1 = document.getElementById('box1');
+	var oBox2 = document.getElementById('box2');
+	var oBox3 = document.getElementById('box3');
+	
+	function animate2(obj,attr,target,isLinear){
+		if(isLinear == undefined){
+			isLinear = true;
+		}
+		clearInterval(obj.timer);//关闭定时器
+		var iSpeed = 0;
+		var isStop = false;
+		obj.timer = setInterval(function(){
+			var current = parseFloat(getComputedStyle(obj,false)[attr]);
+			//getComputedStyle获取所有属性的值
+			if(attr == 'opacity'){
+				current = Math.round(current * 100);//针对透明度的设置
+			}
+			if (isLinear) {
+				//匀速动画速度
+				if(current < target){
+					iSpeed = 9;
+				}else{
+					iSpeed = -9;
+				}
+				//匀速动画的结束条件
+				if(Math.abs(target - current) < Math.abs(iSpeed)){
+					if(attr == 'opacity'){
+					//判断传进的值，如果是opacity除以100，否则不除，加长度单位
+						obj.style[attr] = target / 100;
+					}else{
+						obj.style[attr] = target + 'px';
+					}
+					isStop = true;//停止动画
+				}
+			}//isLinear结束括号
+			else{
+				var iSpeed = 0;
+				iSpeed = (target - current)/10;
+				iSpeed = iSpeed > 0 ? Math.ceil(iSpeed) : Math.floor(iSpeed);
+					if(!iSpeed){
+					isStop = true;//停止动画
+				}
+			}if(isStop){
+				clearInterval(obj.timer);//关闭定时器
+				}else{
+					if(attr == 'opacity'){//改变样式
+						obj.style[attr] = (current + iSpeed) / 100;
+					}else{
+						obj.style[attr] = current + iSpeed + 'px';
+					}
+				}
+
+			console.log(current,iSpeed);
+		},30);
+	}
+
+	var oBox1 = document.getElementById('box1');
+	var oBox2 = document.getElementById('box2');
+	var oBox3 = document.getElementById('box3');
+	// var timer;
+
+	//移入事件-移入匀速
+	oBox1.onmouseover = function(){
+		animate2(oBox1,'width',300,true);
+	}
+	oBox2.onmouseover = function(){
+		animate2(oBox2,'height',300,true);
+	}
+	oBox3.onmouseover = function(){
+		animate2(oBox3,'opacity',50,true);
+	}
+
+//移出动画-移出减速
+	oBox1.onmouseout = function(){
+	animate2(oBox1,'width',100,false);
+	}
+	oBox2.onmouseout = function(){
+		animate2(oBox2,'height',100,false);
+	}
+	oBox3.onmouseout = function(){
+		animate2(oBox3,'opacity',100,false);
+	}
+</script>
+</html>

@@ -3,7 +3,7 @@
 	attr 要改变的是那个属性
 	target 要将该属性的值改到多少
 */
-//匀速动画
+//匀速动画函数
 function animate(obj,attr,target){//animate函数里面写参数
 	clearInterval(obj.timer);//关闭定时器
 	var iSpeed = 0;
@@ -42,3 +42,39 @@ function animate(obj,attr,target){//animate函数里面写参数
 function getScrollTop(){//window渲染模式处理函数
 	return window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
 }
+
+
+
+//减速动画函数
+function animate(obj,attr,target){//animate函数里面写参数
+	clearInterval(obj.timer);//关闭定时器
+	var iSpeed = 0;
+	obj.timer = setInterval(function(){
+		var current = parseFloat(getComputedStyle(obj,false)[attr]);
+		//getComputedStyle获取所有属性的值
+		if(attr == 'opacity'){
+			current = Math.round(current * 100);//针对透明度的设置
+		}
+		//减速动画速度
+		var iSpeed = 0;
+		iSpeed = (target - current)/10;
+		iSpeed = iSpeed > 0 ? Math.ceil(iSpeed) : Math.floor(iSpeed);
+		//减速动画的结束条件
+		if(!iSpeed){
+			clearInterval(obj.timer);//关闭定时器
+		}else{
+			if(attr == 'opacity'){//改变样式
+				obj.style[attr] = (current + iSpeed) / 100;
+			}else{
+				obj.style[attr] = current + iSpeed + 'px';
+			}
+		}
+		console.log(current,iSpeed);//打印出变化数据
+	},30);
+}
+
+
+
+
+
+
