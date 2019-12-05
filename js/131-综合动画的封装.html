@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>131-综合动画的封装.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.father{
+			width: 100px;
+			margin: 50px auto;
+		}
+		.father div{
+			width: 100px;
+			height: 100px;
+			background: red;
+			line-height: 100px;
+			text-align:center;
+			margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="father">
+		<div id="box1">变宽</div>
+		<div id="box2">变高</div>
+		<div id="box3">变透明</div>
+	</div>
+</body>
+<script>
+	var oBox1 = document.getElementById('box1');
+	var oBox2 = document.getElementById('box2');
+	var oBox3 = document.getElementById('box3');
+	// var timer;
+	function animate2(obj,attr,target,isLinear){
+		
+		clearInterval(obj.timer);//关闭定时器
+		var iSpeed = 0;
+		obj.timer = setInterval(function(){
+			var current = parseFloat(getComputedStyle(obj,false)[attr]);
+			//getComputedStyle获取所有属性的值
+			if(attr == 'opacity'){
+				current = Math.round(current * 100);//针对透明度的设置
+			}
+
+			//匀速动画速度
+			if(current < target){
+				iSpeed = 9;
+			}else{
+				iSpeed = -9;
+			}
+			console.log(isLinear);
+		}
+	}
+</script>
+
+</html>

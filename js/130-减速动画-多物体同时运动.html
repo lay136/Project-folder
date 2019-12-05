@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>122-匀速动画封装.html</title>
+	<title>130-减速动画-多物体同时运动.html</title>
 	<style>
 		*{
 			margin: 0;
@@ -30,50 +30,45 @@
 	</div>
 </body>
 <script>
-//匀速动画
-function animate(obj,attr,target){//animate函数里面写参数
-	clearInterval(obj.timer);//关闭定时器
-	var iSpeed = 0;
-	obj.timer = setInterval(function(){
-		var current = parseFloat(getComputedStyle(obj,false)[attr]);
-		//getComputedStyle获取所有属性的值
-
-		if(attr == 'opacity'){
-			current = Math.round(current * 100);//针对透明度的设置
-		}
-
-		//匀速动画速度
-		if(current < target){
-			iSpeed = 9;
-		}else{
-			iSpeed = -9;
-		}
-
-		//匀速动画的结束条件
-		if(Math.abs(target - current) < Math.abs(iSpeed)){
+	
+	function animate(obj,attr,target){//animate函数里面写参数
+		clearInterval(obj.timer);//关闭定时器
+		var iSpeed = 0;
+		obj.timer = setInterval(function(){
+			var current = parseFloat(getComputedStyle(obj,false)[attr]);
+			//getComputedStyle获取所有属性的值
 			if(attr == 'opacity'){
-			//判断传进的值，如果是opacity除以100，否则不除，加长度单位
-				obj.style[attr] = target / 100;
-			}else{
-				obj.style[attr] = target + 'px';
+				current = Math.round(current * 100);//针对透明度的设置
 			}
-			clearInterval(obj.timer);//关闭定时器
-		}else{
-			if(attr == 'opacity'){//改变样式
-				obj.style[attr] = (current + iSpeed) / 100;
+			//减速动画速度
+			var iSpeed = 0;
+			iSpeed = (target - current)/10;
+			iSpeed = iSpeed > 0 ? Math.ceil(iSpeed) : Math.floor(iSpeed);
+			
+			//匀速动画
+			// if(current < target){
+			// 	iSpeed = 9;
+			// }else{
+			// 	iSpeed = -9;
+			// }
+			//减速动画的结束条件
+			if(!iSpeed){
+				clearInterval(obj.timer);//关闭定时器
 			}else{
-				obj.style[attr] = current + iSpeed + 'px';
+				if(attr == 'opacity'){//改变样式
+					obj.style[attr] = (current + iSpeed) / 100;
+				}else{
+					obj.style[attr] = current + iSpeed + 'px';
+				}
 			}
-		}
-			console.log(current,iSpeed);
-	},30);
-}
-	//获取变量
+			console.log(current,iSpeed);//打印出变化数据
+		},30);
+	}
 	var oBox1 = document.getElementById('box1');
 	var oBox2 = document.getElementById('box2');
 	var oBox3 = document.getElementById('box3');
-	// var timer = 0;
-	
+	// var timer;
+
 	//移入事件
 	oBox1.onmouseover = function(){
 		animate(oBox1,'width',300);
@@ -86,9 +81,11 @@ function animate(obj,attr,target){//animate函数里面写参数
 		animate(oBox3,'opacity',50);
 	}
 
-	移出事件
+
+	//移出事件
 	oBox1.onmouseout = function(){
 		animate(oBox1,'width',100);
+		//写函数里面参数对应的值
 	}
 	oBox2.onmouseout = function(){
 		animate(oBox2,'height',100);
@@ -96,5 +93,6 @@ function animate(obj,attr,target){//animate函数里面写参数
 	oBox3.onmouseout = function(){
 		animate(oBox3,'opacity',100);
 	}
+
 </script>
 </html>
