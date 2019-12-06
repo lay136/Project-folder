@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>139-随着鼠标移动的物体.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			width: 3000px;
+			height: 3000px;
+		}
+		#box{
+			position: absolute;
+			top: 100px;
+			left: 100px;
+			width: 100px;
+			height: 100px;
+			background: #000;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+	</div>
+</body>
+<script src="js/Until.js"></script>	
+<script>
+	var oBox = document.getElementById('box');
+	// console.log(oBox);
+	document.addEventListener('mousemove',function(ev){
+		// console.log(ev.clientX,ev.clientY);
+		oBox.style.top = ev.clientY + getScrollTop() + 'px';
+		oBox.style.left = ev.clientX + getScrollLeft() + 'px';
+	},false)
+
+</script>
+</html>

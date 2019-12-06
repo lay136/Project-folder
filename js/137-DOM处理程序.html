@@ -6,23 +6,29 @@
 </head>
 <body>
 	<input type="button" id="btn1" value="点我">
-	<input type="button" id="btn2" value="点我删除事件">
+	<!-- <input type="button" id="btn2" value="点我删除事件"> -->
 </body>
 <script>
-	var oBtn1 = document.getElementById('btn1');
-	var oBtn2 = document.getElementById('btn2');
-	oBtn1.onclick =function(){
+	var oBtn = document.getElementById('btn1');
+	// var oBtn2 = document.getElementById('btn2');
+	oBtn.onclick =function(){
 	 	alert('hihi');
 	 }
 	function show(){
 		alert('hellow');
 	}
 	
-	oBtn1.addEventListener('click',show,false);
-	oBtn1.addEventListener('click',show,false);
-
-
-
+	oBtn.addEventListener('click',show,false);
+	oBtn.addEventListener('click',function(){
+		alert('hahaha')
+	},false);
+	
+	oBtn.addEventListener('click',sayHi,false);
+	// oBtn.removeEventListener('click',show,false);
+	// oBtn.removeEventListener('click',sayHi,false);
+	// oBtn.removeEventListener('click',function(){
+	// 	alert('hahaha')
+	// },false);
 
 	
 </script>

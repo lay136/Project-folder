@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>140-随着鼠标移动的多个物体.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			width: 3000px;
+			height: 3000px;
+		}
+		div{
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 100px;
+			height: 100px;
+			background: #000;
+		}
+		.c1{
+			width: 100px;
+			height: 100px;
+			background: #eb0f29;
+			list-style: none;
+		}
+		.c2{
+			width: 100px;
+			height: 100px;
+			background: #ff6700;
+			list-style: none;
+		}
+		
+		.c3{
+			width: 100px;
+			height: 100px;
+			background: #ff00ff;
+			list-style: none;
+		}
+		.c4{
+			width: 100px;
+			height: 100px;
+			background: #fff100;
+			list-style: none;
+		}
+		.c5{
+			width: 100px;
+			height: 100px;
+			background: #00b7ee;
+			list-style: none;
+		}
+		.c6{
+			width: 100px;
+			height: 100px;
+			background: #0000ff;
+			list-style: none;
+		}
+		.c7{
+			width: 100px;
+			height: 100px;
+			background: #eb6100;
+			list-style: none;
+		}
+		.c8{
+			width: 100px;
+			height: 100px;
+			background: #00eb06;
+			list-style: none;
+		}
+
+	</style>
+</head>
+<body>
+	<div></div>
+	<div>
+		<li class="c1"></li>
+	</div>
+	<div>
+		<li class="c2"></li>
+	</div>
+	<div>
+		<li class="c3"></li>
+	</div>
+	<div>
+		<li class="c4"></li>	
+	</div>
+	<div>
+		<li class="c5"></li>	
+	</div>
+	<div>
+		<li class="c6"></li>
+	</div>
+	<div>
+		<li class="c7"></li>
+	</div>
+	<div>
+		<li class="c8"></li>
+	</div>
+</body>
+<script src="js/Until.js"></script>
+<script>
+	var aDiv = document.getElementsByTagName('div');
+	// console.log(aDiv);
+	document.addEventListener('mousemove',function(ev){
+		// console.log(ev.clientX,ev.clientY);
+		aDiv[0].style.top = ev.clientY + getScrollTop() + 'px';
+		aDiv[0].style.left = ev.clientX + getScrollLeft() + 'px';
+		
+		// for(var i=1;i<aDiv.length;i++){ //不灵活的多物体运动
+		// 	aDiv[i].style.top = aDiv[i-1].offsetTop + 10 + 'px';
+		// 	aDiv[i].style.left = aDiv[i-1].offsetLeft + 10 + 'px';
+		// }
+		for(var i = aDiv.length - 1; i > 0; i--){
+			aDiv[i].style.left = aDiv[i-1].offsetLeft + 15 + 'px'; 
+			aDiv[i].style.top = aDiv[i-1].offsetTop + 15 + 'px'; 
+		}
+		
+	},false);
+</script>
+</html>
+

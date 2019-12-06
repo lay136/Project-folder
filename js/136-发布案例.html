@@ -25,19 +25,26 @@
 		<input type="text" id="txt">
 		<input type="button" id="btn" value="发布">
 		<ul id="ul1">
-			<li></li>
+			<li>综合动画</li>
 		</ul>
 	</div>
 </body>
+<script src="js/Until.js"></script>
 <script>
 	var oTxt = document.getElementById('txt');
 	var oBtn = document.getElementById('btn');
 	var oUl = document.getElementById('ul1');
 	oBtn.onclick = function(){
-		var oLi = document.getElement('li');
-		
-		 
-
+		var oLi = document.createElement('li');
+		oLi.innerHTML = oTxt.value;
+		oUl.insertBefore(oLi,oUl.firstChild);
+		oTxt.value = '';
+		oLi.style.height = 0;
+		oLi.style.opacity = 0;
+		// animation(oLi,{height:40,opacity:100});
+		animation(oLi,{height:40},false,function(){
+			animation(oLi,{opacity:100})
+		})
 	}
 </script>
 </html>
