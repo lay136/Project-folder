@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>143-模仿桌面图标.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#box{
+			width: 200px;
+			height: 200px;
+			background: #000;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+	    	cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div id="box"></div>
+</body>
+<script>
+	var oBox = document.getElementById('box');
+	oBox.onmousedown = function(ev){
+		// console.log('aaa')
+		var disY = ev.clientY - oBox.offsetTop;
+		var disX = ev.clientX - oBox.offsetLeft;
+		// console.log(disX,disY);
+		document.onmousemove = function(ev){
+			
+			oBox.style.top = ev.clientY - disY + 'px';
+			oBox.style.left = ev.clientX - disX + 'px';
+			document.onmouseup = function(){
+				document.onmousemove = null;
+			s	document.onmouseup = null;
+			}
+		
+		}
+
+	}
+</script>
+</html>

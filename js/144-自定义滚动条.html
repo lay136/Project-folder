@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>144-自定义滚动条.htmls</title>
+
+</head>
+<body>
+<script>
+	var oBox = document.getElementById('box');
+	oBox.onmousedown = function(ev){
+		// console.log('aaa')
+		var disX = ev.clientX - oBox.offsetLeft;
+		// console.log(disX,disY);
+		document.onmousemove = function(ev){	
+			var l = ev.clientX - disX;
+			if (l < 0) {
+				l = 0;
+			}else if(l > ){
+
+			}
+
+			oBox.style.left = l + 'px';
+			oBox.style.left = ev.clientX - disX + 'px';
+			document.onmouseup = function(){
+				document.onmousemove = null;
+				document.onmouseup = null;
+			}
+		
+		}
+
+	}
+</script>
+</body>
+</html>
