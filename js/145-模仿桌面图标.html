@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>142-基础动画-视口限制.html</title>
+	<title>145-模仿桌面图标.html</title>
 	<style>
 		*{
 			margin: 0;
@@ -17,44 +17,25 @@
 			left: 0px;
 	    	cursor: pointer;
 		}
-		#father{
-			width: 600px;
-			height: 600px;
-			background: gray;
-			margin: 50px auto;
-			position: relative;
-		}
 	</style>
 </head>
 <body>
-	<div id="father">
-		<div id="box"></div>
-	</div>
-	
+	<div id="box"></div>
 </body>
 <script>
-	// var oFather = document.getElementById('father');
 	var oBox = document.getElementById('box');
 	oBox.onmousedown = function(ev){
 		// console.log('aaa')
 		var disY = ev.clientY - oBox.offsetTop;
 		var disX = ev.clientX - oBox.offsetLeft;
 		// console.log(disX,disY);
-		document.onmousemove = function(ev){	
-			var l = ev.clientX - disX;
-			var t = ev.clientY - disY;
-			if (l < 0) {
-				l = 0;
-			}else if () {}
-
-			oBox.style.left = l + 'px';
-			oBox.style.top = t + 'px';
-
+		document.onmousemove = function(ev){
+			
 			oBox.style.top = ev.clientY - disY + 'px';
 			oBox.style.left = ev.clientX - disX + 'px';
 			document.onmouseup = function(){
 				document.onmousemove = null;
-				document.onmouseup = null;
+			s	document.onmouseup = null;
 			}
 		
 		}

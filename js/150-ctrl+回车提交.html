@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>150-ctrl+回车提交.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			width: 400px;
+			margin:200px auto;
+		}
+		li{
+			list-style: none;
+			height: 40px;
+			line-height: 40px;
+			border-bottom: 1px dashed #000;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<input type="text" id="txt">
+		<input type="button" id="btn" value="发布">
+		<ul id="ul1">
+		</ul>
+	</div>
+</body>
+<script>
+	var oTxt = document.getElementById('txt');
+	var oBtn = document.getElementById('btn');
+	var oUl = document.getElementById('ul1');
+	oBtn.onclick = function(){
+		if(oTxt.value){
+			var oLi = document.createElement('li');
+			oLi.innerHTML = oTxt.value;
+			oUl.appendChild(oLi);
+			oTxt.value = '';
+		}
+		
+	}
+	oTxt.onkeydown = function(ev){
+		console.log(ev.ctrlKey)
+		if(ev.keyCode == 13 && ev.ctrlKey){
+			oBtn.onclick();
+		}
+	}	
+</script>
+</html>

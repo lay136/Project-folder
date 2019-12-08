@@ -17,13 +17,6 @@
 			left: 0px;
 	    	cursor: pointer;
 		}
-		#father{
-			width: 600px;
-			height: 600px;
-			background: gray;
-			margin: 50px auto;
-			position: relative;
-		}
 	</style>
 </head>
 <body>
@@ -33,24 +26,22 @@
 	
 </body>
 <script>
+	var oFather = document.getElementById('father');
 	var oBox = document.getElementById('box');
 	oBox.onmousedown = function(ev){
 		// console.log('aaa')
 		var disY = ev.clientY - oBox.offsetTop;
 		var disX = ev.clientX - oBox.offsetLeft;
 		// console.log(disX,disY);
-		document.onmousemove = function(ev){	
-			
-
-			oBox.style.top = ev.clientY - disY + 'px';
-			oBox.style.left = ev.clientX - disX + 'px';
+		document.onmousemove = function(ev){
+			// console.log('aaaa')
+				oBox.style.top = ev.clientY - disY + 'px';
+				oBox.style.left = ev.clientX - disX + 'px';
+			}
 			document.onmouseup = function(){
 				document.onmousemove = null;
 				document.onmouseup = null;
 			}
-		
 		}
-
-	}
 </script>
 </html>

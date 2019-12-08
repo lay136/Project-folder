@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>148-放大镜.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#wrap{
+			position: absolute;
+			top: 50px;
+			left: 50px;
+		}
+		#bigBox{
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 450px;
+			height: 450px;
+			border: 1px solid #000;
+		}
+		#list{
+			position: absolute;
+			top: 460px;
+			left: 0px;
+			width: 452px;
+			height: 60px;
+		}
+		#list li{
+			list-style: none;
+			float: left;
+			width: 54px;
+			height: 54px;
+			margin-right: 10px;
+			background:rgba(100,100,100,0.5);
+		}
+		#list li.active{
+			border: 2px solid #f00;
+		}
+		#largeBox{
+			position: absolute;
+			top: 0px;
+			left: 452px;
+			width: 600px;
+			height: 600px;
+			border: 1px solid #000;
+			overflow: hidden;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<div id="bigBox">
+			<img src="images/p_b_0001.jpg" alt="">
+		</div>
+		<ul id="list">
+			<li class="active">
+				<img src="images/p_s_0001.jpg" alt="">
+			</li>
+			<li>
+				<img src="images/p_s_0002.jpg" alt="">
+			</li>
+			<li>
+				<img src="images/p_s_0003.jpg" alt="">
+			</li>
+		</ul>
+		<div id="largeBox">
+			<img src="images/p_l_0001.jpg" alt="">
+		</div>
+	</div>
+</body>
+<script>
+	var oWrap = document.getElementById('wrap');
+	var oList = document.getElementById('list');
+	var oBImg = document.querySelector('#bigBox img');
+	var oLImg = document.querySelector('#list img');
+	var oBDiv = document.getElementById('bigBox');
+	var oLDiv = document.getElementById('largeBox');
+	for( var i = 0;i <oList.length;i++){
+		oList[i].onmouseover = function(){
+			oBImg.src = "images/p_b_000"+i+".jpg";
+			oLImg
+		}
+
+	}
+	
+
+
+
+</script>
+</html>
