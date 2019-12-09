@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>153-表单提交.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+	</style>
+</head>
+<body>
+<form id="form1">
+	<input type="text" id="txt">
+	<input type="submit" value="提交" id="sub">
+	<input type="reset" value="重置" id="res">
+	<p id="msg"></p>
+</form>
+</body>
+<script>
+	var oForm = document.getElementById('form1');
+	var oTxt = document.getElementById('txt');
+	var oSub = document.getElementById('sub');
+	var oRes = document.getElementById('res');
+	var oMsg = document.getElementById('msg');
+	var isSub = true;
+
+	oTxt.onfocus = function(){//获取输入框焦点
+		console.log('获取焦点');
+	}
+	
+	oTxt.onchange = function(){
+		console.log('页面有改动');
+	}
+	
+	oTxt.onblur = function(){
+		// console.log('失去焦点');
+		var len = oTxt.value.length;
+		if(len<3 || len >6){
+			oMsg.style.display = 'block';
+			oMsg.style.color = 'red';
+			oMsg.innerHTML = '用户名输入错误'
+			isSub = false;
+		}else{
+			oMsg.style.display = 'block';
+			oMsg.style.color = 'green';
+			oMsg.innerHTML = '用户名输入正确'
+			isSub = true;
+		}
+	}
+
+
+
+	oTxt.oninput = function(){
+		console.log('有输入内容');
+		var len = oTxt.value.length;
+		if(len<3 || len >6){
+			oMsg.style.display = 'block';
+			oMsg.style.color = 'red';
+			oMsg.innerHTML = '用户名输入错误'
+			isSub = false;
+		}else{
+			oMsg.style.display = 'block';
+			oMsg.style.color = 'green';
+			oMsg.innerHTML = '用户名输入正确'
+			isSub = true;
+		}
+	}
+
+	oForm.onreset = function(){
+		console.log('onreset......')
+	}
+	oSub.onclick = function(){
+		console.log('oSubclick........')
+		// if(!isSub){
+		// 	return false;
+		// }
+		// return false;
+
+	}
+	oRes.onclick = function(){
+		console.log('oResclick........')
+		// return false;
+		
+	}
+</script>	
+</html>

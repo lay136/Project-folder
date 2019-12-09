@@ -47,7 +47,7 @@
 
 	clearInterval(birdMoveTimer);
 	birdMoveTimer = setInterval(function(){
-		var iSpeed = 1;
+		iSpeed += 1;//
 		var t = oBird.offsetTop + iSpeed;
 		// oBird.style.top = oBird.offsetTop + iSpeed + 'px';
 		if(t < 0){
@@ -61,7 +61,7 @@
 	},30);
 
 	document.onkeydown = function(){
-		iSpeed -= 10;
+		iSpeed = -10;
 	}
 </script>
 </html>
