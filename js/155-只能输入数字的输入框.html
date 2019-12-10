@@ -23,16 +23,17 @@
 </body>
 <script>
 	var oTxt = document.getElementById('txt');
+	var keyCode;
 	oTxt.onkeydown = function(ev){
-		console.log(ev.keyCode)
+		console.log(ev.keyCode);
 		if((ev.keyCode < 48 || ev.keyCode >57)
 			&& (ev.keyCode < 96 || ev.keyCode >105)
 			&& keyCode != 8
 			&& keyCode != 37
 			&& keyCode != 39
 			){
-			// return false;
-			ev.preventDefault();
+			// return false;//方法1
+			ev.preventDefault();//方法2
 		}
 	}
 </script>

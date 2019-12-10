@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>169-new的作用.html</title>
+</head>
+<body>
+	
+</body>
+<script>
+
+	//函数会在一开始创建一个对象，并且这个对象就是this
+	//在函数的最后会把这个this对象返回出去
+	// function show(){
+	// 	//var obj = new Object();
+	// 	console.log(this);
+	// 	this.name = "tom";
+	// 	this.age = 18;
+	// 	this.sayHi = function(){
+	// 		console.log('hi...')
+	// 	}
+		// return {a:1,b:2}
+		// return 'a'
+	// 	return obj;
+	// }
+
+
+
+	// show();//window
+	// console.log(new show())
+	// var obj = new show();
+	// console.log('返回值',obj)
+	// obj.sayHi();
+
+
+
+	function Person(name,age){
+		this.name = name;
+		this.age = age;
+		this.showName = function(){
+			console.log("I am "+this.name);
+		}
+		this.showAge = function(){
+			console.log("I am "+this.age + " years old");	
+		}
+	}
+</script>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>158-currentTarget和target共同事件.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#father{
+			
+		}
+		#box{
+			width: 100px;
+			height: 100px;
+			background: #000;
+		}
+		
+	</style>
+</head>
+<body>
+	<ul id="father">
+		<div id="box"></div>
+	</ul>
+	
+</body>
+<script>
+	var oBox = document.getElementById('box');
+	oBox.onmouseover = function(ev){
+		console.log(ev.currentTarget);
+		console.log(ev.target);
+		console.log(ev.type);
+	}
+	oBox.onclick = function(ev){
+		console.log(ev.currentTarget);
+	}
+</script>
+</html>

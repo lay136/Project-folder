@@ -25,7 +25,6 @@
 	var oRes = document.getElementById('res');
 	var oMsg = document.getElementById('msg');
 	var isSub = true;
-
 	oTxt.onfocus = function(){//获取输入框焦点
 		console.log('获取焦点');
 	}
@@ -50,8 +49,6 @@
 		}
 	}
 
-
-
 	oTxt.oninput = function(){
 		console.log('有输入内容');
 		var len = oTxt.value.length;
@@ -67,7 +64,6 @@
 			isSub = true;
 		}
 	}
-
 	oForm.onreset = function(){
 		console.log('onreset......')
 	}

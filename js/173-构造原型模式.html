@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>173-构造原型模式.html</title>
+</head>
+<body>
+	
+</body>
+<script>
+	function Person(name,age){
+		this.name = name;
+		this.age = age;
+	}
+	
+	Person.prototype.showName = function(){
+		console.log("I am "+this.name+" , I have "+this.LEGS + " legs");
+	}
+
+	Person.prototype.showAge = function(){
+		console.log("I am "+this.age + " years old");
+	}
+
+</script>
+</html>

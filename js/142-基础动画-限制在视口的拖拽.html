@@ -32,14 +32,14 @@
 		document.onmousemove = function(ev){	
 			var l = ev.clientX - disX;
 			var t = ev.clientY - disY;
-			if(l<0){//控制宽度不超过
+			if(l<0){//控制不超过浏览器的宽度
 				l=0;
-			}else if(l>(window.innerWidth - oBox.offsetWidth)){
+			}else if(l > (window.innerWidth - oBox.offsetWidth)){
 				l = (window.innerWidth - oBox.offsetWidth);
 			}
-			if(t<0){//控制高度不超过
+			if(t<0){//控制不超过浏览器的高度
 				t=0;
-			}else if(t>(window.innerHeight - oBox.offsetHeight)){
+			}else if(t > (window.innerHeight - oBox.offsetHeight)){
 				t = (window.innerHeight - oBox.offsetHeight)
 			 }
 			console.log('aaaa');

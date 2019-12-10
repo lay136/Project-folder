@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>163-对象的特点-数组去重.html</title>
+</head>
+<body>
+	
+</body>
+<script>
+	var arr = ['11','33','55','22','88','55','99']
+	function uniqueArray(arr){//循环数组
+
+			var result = [];
+			var obj = {};
+
+			for(var i = 0;i < arr.length;i++){
+				// console.log(arr[i]);
+				obj[arr[i]] = "";
+			}
+			// console.log(obj);
+			for(var attr in obj){
+				result.push(attr);//添加到数组中去
+			}
+			return result;//退出循环
+		}
+
+		console.log(uniqueArray(arr));//打印结果
+</script>
+</html>

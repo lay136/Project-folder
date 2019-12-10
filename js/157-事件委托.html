@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>157-事件委托.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		li{
+			list-style: none;
+			margin-left: 20px;
+		}
+	</style>
+</head>
+<body>
+	<input type="text" id="txt">
+	<input type="button" id="btn" value="提交">
+	<ul id="ul1">
+		请添加一个元素：
+	</ul>
+</body>
+<script>
+	var oTxt = document.getElementById('txt');
+	var aA = document.getElementsByTagName('a');
+	var oBtn = document.getElementById('btn');
+	var oUl = document.getElementById('ul1');
+
+	// for(var i=0;i<aA.length;i++){
+	// 	aA[i].onclick = function(){
+	// 		oUl.removeChild(this.parentNode);
+	// 	}
+	// }
+
+	oUl.onclick = function(ev){
+		// alert('aaa');
+		// console.log(ev.target);
+		// console.log(ev.currentTarget);
+		if(ev.target.className == 'del'){
+			oUl.removeChild(ev.target.parentNode);
+		}
+	}
+
+
+
+	oBtn.onclick  = function(){
+		var oLi = document.createElement('li');
+		var oA = document.createElement('a');
+		oA.innerHTML = '删除';
+		oA.className = 'del';
+		oA.href = "javascript:;"
+		oLi.innerHTML = oTxt.value;
+
+
+		oLi.appendChild(oA);
+		oUl.appendChild(oLi);
+		oTxt.value = '';
+	}
+</script>
+</html>

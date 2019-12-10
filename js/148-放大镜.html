@@ -7,87 +7,132 @@
 		*{
 			margin: 0;
 			padding: 0;
+			list-style: none;
 		}
 		#wrap{
-			position: absolute;
-			top: 50px;
-			left: 50px;
+			position: relative;
+			top: 100px;
+			left: 600px;
 		}
-		#bigBox{
+		#bImg{
 			position: absolute;
 			top: 0px;
 			left: 0px;
 			width: 450px;
 			height: 450px;
-			border: 1px solid #000;
+			border: 1px solid #ccc;
 		}
-		#list{
+		#mask{
+			display: none;
 			position: absolute;
-			top: 460px;
+			top: 0px;
 			left: 0px;
-			width: 452px;
-			height: 60px;
+			width: 200px;
+			height: 200px;
+			background:rgba(100,100,100,0.5);
+			cursor: move;
 		}
-		#list li{
-			list-style: none;
+		#sImgs{
+			position: absolute;
+			top: 472px;
+			left: 0px;
+			width: 450px;
+			height: 54px;
+		}
+		#sImgs li{
 			float: left;
+			margin-right: 50px;
 			width: 54px;
 			height: 54px;
-			margin-right: 10px;
-			background:rgba(100,100,100,0.5);
+			border: 2px solid transparent;
 		}
-		#list li.active{
+		#sImgs li.active{
 			border: 2px solid #f00;
 		}
-		#largeBox{
+		#lImg{
+			display: none;
+			width: 600px;
+			height: 600px;
 			position: absolute;
 			top: 0px;
 			left: 452px;
-			width: 600px;
-			height: 600px;
-			border: 1px solid #000;
+			border: 1px solid #ccc;
 			overflow: hidden;
 		}
+		#lImg img{
+			position: absolute;
+			top:0px;
+			left: 0px;
+
+		}
+
 	</style>
 </head>
 <body>
 	<div id="wrap">
-		<div id="bigBox">
+		<div id="bImg">
 			<img src="images/p_b_0001.jpg" alt="">
+			<div id="mask"></div>
 		</div>
-		<ul id="list">
-			<li class="active">
-				<img src="images/p_s_0001.jpg" alt="">
-			</li>
-			<li>
-				<img src="images/p_s_0002.jpg" alt="">
-			</li>
-			<li>
-				<img src="images/p_s_0003.jpg" alt="">
-			</li>
+		<ul id="sImgs">
+			<li class="active"><img src="images/p_s_0001.jpg" alt=""></li>
+			<li><img src="images/p_s_0002.jpg" alt=""></li>
+			<li><img src="images/p_s_0003.jpg" alt=""></li>
 		</ul>
-		<div id="largeBox">
+		<div id="lImg">
 			<img src="images/p_l_0001.jpg" alt="">
 		</div>
 	</div>
 </body>
 <script>
 	var oWrap = document.getElementById('wrap');
-	var oList = document.getElementById('list');
-	var oBImg = document.querySelector('#bigBox img');
-	var oLImg = document.querySelector('#list img');
-	var oBDiv = document.getElementById('bigBox');
-	var oLDiv = document.getElementById('largeBox');
-	for( var i = 0;i <oList.length;i++){
-		oList[i].onmouseover = function(){
-			oBImg.src = "images/p_b_000"+i+".jpg";
-			oLImg
+	var aSImgsLi = document.getElementById('sImgs').children;
+	var oBImg = document.querySelector('#bImg img');
+	var oLImg = document.querySelector('#lImg img');
+	var oBDiv = document.getElementById('bImg');
+	var oLDiv = document.getElementById('lImg');
+	var oMask = document.getElementById('mask');
+	console.log(aSImgsLi);
+	for(var i=0;i<aSImgsLi.length;i++){
+		aSImgsLi[i].index = i;
+		aSImgsLi[i].onmouseover = function(){
+			for(var j=0;j<aSImgsLi.length;j++){
+				aSImgsLi[j].className = '';
+			}
+			this.className = 'active';
+			oBImg.src = "images/p_b_000"+(this.index+1)+".jpg";
+			oLImg.src = "images/p_l_000"+(this.index+1)+".jpg";
 		}
-
 	}
-	
+	oBDiv.onmouseover = function(){
+		oLDiv.style.display = 'block';
+		oMask.style.display = 'block';
+		oBDiv.onmousemove = function(ev){
+			var l = ev.clientX - oMask.offsetWidth *0.5 - oWrap.offsetLeft;
+			var t = ev.clientY- oMask.offsetHeight *0.5 - oWrap.offsetTop;
+			if(t < 0){
+				t = 0;
+			}else if(t > ( oBDiv.offsetHeight - oMask.offsetHeight )){
+				t = ( oBDiv.offsetHeight - oMask.offsetHeight )
+			}
+			if(l < 0){
+				l = 0;
+			}else if(l > ( oBDiv.offsetWidth - oMask.offsetWidth )){
+				l = ( oBDiv.offsetWidth - oMask.offsetWidth )
+			}
+			oMask.style.top = t + 'px';
+			oMask.style.left = l + 'px';
 
-
-
+			var scaleX = l / (oBDiv.offsetWidth - oMask.offsetWidth);
+			var scaleY = t / (oBDiv.offsetHeight - oMask.offsetHeight);
+			// console.log(scaleX)
+			oLImg.style.left = (oLDiv.offsetWidth - oLImg.offsetWidth )*scaleX + 'px';
+			oLImg.style.top = (oLDiv.offsetHeight - oLImg.offsetHeight )*scaleY + 'px';
+		}
+	}
+	oBDiv.onmouseout = function(){
+		oLDiv.style.display = 'none';
+		oMask.style.display = 'none';
+	}
 </script>
 </html>
