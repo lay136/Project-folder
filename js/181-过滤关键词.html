@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>181-过滤关键词.html</title>
+<style>
+		*{
+			margin: 0;
+			padding: 0;
+			margin: 20PX;
+		}
+	</style>
+</head>
+<body>
+	<input type="text" id="txt">
+	<input type="button" id="btn" value="发布">
+	<ul id="ul1"></ul>
+</body>
+<script>
+	var oTxt = document.getElementById('txt');
+	var oBtn = document.getElementById('btn');
+	var oUl = document.getElementById('ul1');
+	oBtn.onclick = function(){
+		var oLi = document.createElement('li');
+		var reg = /SB|大爷/g;
+		oLi.innerHTML = oTxt.value.replace(reg,"*");
+		oUl.appendChild(oLi)
+		oTxt.value = '';
+	}
+</script>
+</html>

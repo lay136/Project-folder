@@ -25,11 +25,19 @@
 	var Event = new Event('test');
 	//1.创建事件对象: var 事件对象 = new Event(自定义事件类型)
 
-		oBox.addEventListener('test',function(){
-			console.log('aa');
-		});
-		//2.监听事件 dom.addEventListener(自定义事件类型,function(){})
+	oBox.addEventListener('test',function(){
+		console.log('aa');
+	});
+	//2.监听事件 dom.addEventListener(自定义事件类型,function(){})
+	
 
+	/*不能这样写
+	oBox.ontest = function(){
+	console.log('test...')
+	}
+	*/
+
+	
 	oBox.dispatchEvent(Event);
 	//3.触发事件dom.dispatchEvent(事件对象)
 </script>

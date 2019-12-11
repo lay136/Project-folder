@@ -34,15 +34,35 @@
 
 
 
-	function Person(name,age){
-		this.name = name;
-		this.age = age;
-		this.showName = function(){
-			console.log("I am "+this.name);
+	// function Person(name,age){
+	// 	this.name = name;
+	// 	this.age = age;
+	// 	this.showName = function(){
+	// 		console.log("I am "+this.name);
+	// 	}
+	// 	this.showAge = function(){
+	// 		console.log("I am "+this.age + " years old");	
+	// 	}
+	// }
+
+
+	function show(){
+		//var obj = new Object();
+		console.log(this);
+		this.name = "tom";
+		this.age = 18;
+		this.sayHi = function(){
+			console.log('hi...')
 		}
-		this.showAge = function(){
-			console.log("I am "+this.age + " years old");	
-		}
+		// return {a:1,b:2}
+		return 'aaa'
+		//return obj;
 	}
+	show();//window
+	// console.log(new show())
+	var obj = new show();
+	console.log('返回值',obj)
+	obj.sayHi();
+	
 </script>
 </html>
