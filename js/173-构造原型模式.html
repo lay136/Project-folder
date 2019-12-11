@@ -12,7 +12,7 @@
 		this.name = name;
 		this.age = age;
 	}
-	
+
 	Person.prototype.showName = function(){
 		console.log("I am "+this.name+" , I have "+this.LEGS + " legs");
 	}
@@ -20,6 +20,9 @@
 	Person.prototype.showAge = function(){
 		console.log("I am "+this.age + " years old");
 	}
-
+	var person = new Person('tom',18);
+	console.log(person);
+	person.showName();
+	person.showAge();
 </script>
 </html>
