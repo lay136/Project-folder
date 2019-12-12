@@ -6,12 +6,12 @@
 	<style>
 		*{
 			margin: 0;
-			padding: 0;
+			padding: 0px;
 			list-style: none;
 		}
 		body{
-			margin-top: 200px;
 			margin-left: 800px;
+			margin-top: 200px;
 		}
 		.btn-list{
 			overflow: hidden;
@@ -37,17 +37,18 @@
 			text-align: center;
 			font-size: 40px;
 			display: none;
+
 		}
 	</style>
 </head>
 <body>
-	<ul class="btn-list">
+	<ul id="btn-list" class="btn-list">
 		<li class="active">热门</li>
 		<li>电视</li>
 		<li>音响</li>
 		<li>电脑</li>
 	</ul>
-	<ul class="content-list">
+	<ul id="content-list" class="content-list">
 		<li style="display: block;">1</li>
 		<li>2</li>
 		<li>3</li>
@@ -71,6 +72,37 @@
 	// 	 	aContent[this.index].style.display = 'block'; //在这得到的i值是之前保存的i值，这里用index来表示
 	// 	 }
 	// }
+	function Tab(listSelector,contentSelector){
+		//罗列属性
+		this.aBtn = document.querySelectorAll(listSelector);;
+		this.aContent = document.querySelectorAll(contentSelector);
+		//添加/绑定事件
+		this.bindEvent();
+	}
+	Tab.prototype.bindEvent = function(){
+		// console.log(this)
+		var _this = this;
+		for(var i=0;i<this.aBtn.length;i++){
+			this.aBtn[i].index = i;
+			this.aBtn[i].onclick = function(){
+				// console.log(this);
+				_this.fnClick(this)
+			}
+		}
+	}
+	Tab.prototype.fnClick = function(oBtn){
+		// console.log(this)
+		// console.log(oBtn)
+		for(var i=0;i<this.aBtn.length;i++){
+			this.aBtn[i].className = '';
+			this.aContent[i].style.display = 'none';
+		}
+		oBtn.className = 'active';
+		this.aContent[oBtn.index].style.display = 'block';
+	}
+	new Tab('#btn-list li','#content-list li');
+	new Tab('#btn-list1 li','#content-list1 li');
+	new Tab('#btn-list2 li','#content-list2 li');
 
 	
 </script>

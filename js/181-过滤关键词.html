@@ -22,8 +22,10 @@
 	var oUl = document.getElementById('ul1');
 	oBtn.onclick = function(){
 		var oLi = document.createElement('li');
-		var reg = /SB|大爷/g;
+
+		var reg = /SB|大爷|小辉/g;//过滤关键词并替换
 		oLi.innerHTML = oTxt.value.replace(reg,"*");
+
 		oUl.appendChild(oLi)
 		oTxt.value = '';
 	}

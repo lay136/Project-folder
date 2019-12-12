@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>189-邮箱校验.html</title>
+</head>
+<body>
+	<input type="text" id="txt">
+	<input type="button" id="btn" value="验证">
+</body>
+<script>
+	var oTxt = document.getElementById('txt');
+	var oBtn = document.getElementById('btn');
+	oBtn.onclick = function(){
+		var val = oTxt.value;
+		var reg = /^\w+@\w{2,6}\.[a-z]{2,5}$/;
+		// \w 是任意数字,字母,下划线
+		// console.log(reg.test(val))
+		if(reg.test(val)){
+			alert('合法');
+		}else{
+			alert('不合法');
+		}
+
+	}
+</script>
+</html>
