@@ -9,12 +9,25 @@
 </body>
 <script>
 	// 内置构造函数都是有特定功能的
-	var person = new Array();
-	person.name = 'Tom';
-	person.age = 18;
-	person.sayHi = function() {
-		console.log("Hello");
+	var obj = new Object();
+	var obj1 = new Object();
+	console.log(obj);
+	obj.name = "tom";
+	obj.age = 18;
+	obj.sayHi = function(){
+		console.log('hi...')
 	}
+	console.log(obj);
+	console.log(obj1);
+
+
+
+	obj1.name = "leo";
+	obj1.age = 78;
+	obj1.sayHi = function(){
+		console.log('hi...')
+	}
+	console.log(obj1);
 	//用内置构造函数来创建自定义的对象
 	//会存在把内置构造函数生成的对象自带的方法和属性覆盖掉的风险
 </script>	
