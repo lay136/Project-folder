@@ -6,12 +6,14 @@
 </head>
 <body>
 <script>
+
 	var str = 'ABFad@ e3 f5 g!';
 	var reg1 = /[a-z](?=assert)/g;
 	var reg2 = /[a-z]((?!assert))/g;
 	console.log(str);
 	console.log(str.replace(reg1,"*"));
 	console.log(str.replace(reg2,"*"));
+	
 </script>
 </body>
 </html>
