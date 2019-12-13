@@ -39,14 +39,24 @@
 	</div>
 </body>
 <script>
-	var oBtn = document.getElementById('btn1');
+	var oBtn1 = document.getElementById('btn1');
+	var oBtn2 = document.getElementById('btn2');
 	var oMask = document.getElementById('mask');
 	var oLogin = document.getElementById('login');
-	var oBtn2 = document.getElementById('btn2');
-
-	
-
-
-	
+	oBtn1.onclick = function(ev){
+		oMask.style.display = 'block';
+		oLogin.style.display = 'block';
+		ev.stopPropagation();
+	}
+	document.onclick = function(){
+		oMask.style.display = 'none';
+		oLogin.style.display = 'none';
+	}
+	oLogin.onclick = function(ev){
+		ev.stopPropagation();
+	}
+	oBtn2.onclick = function(){
+		window.location = 'https://www.baidu.com/';
+	}
 </script>
 </html>
