@@ -12,6 +12,8 @@ function setOk(oMsg,oInput){
         oMsg.innerHTML = '';
         oInput.className = '';
     }
+
+    
 	var oForm = document.forms[0];
 	var oUsername = oForm.username;
     var oPhone = oForm.phone;
@@ -81,6 +83,7 @@ function init(){
     }
 }
 	
+
 //验证用户名
 function checkUsername(){
     oUsername.onblur = function(){
@@ -219,7 +222,6 @@ function checkPwd(){
             bPwd = true;
         }
     }
-
     oPwd.onfocus = function(){
         oPwdChecklist.style.display = 'block';
         aMsg[2].className = 'msg';
@@ -298,6 +300,5 @@ function checkSubmit(){
         if(bUsername && bPhone && bPwd && bVerify && oAgree.checked){
             oForm.submit();
         }
-
     }
 }
