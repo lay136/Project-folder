@@ -1,19 +1,20 @@
 function getLength(str){
         return str.replace(/[\u4e00-\u9fa5]/g,"aa").length;
     }
+
 function setError(oMsg,sMsg,oInput){
         console.log('aaaa')
         oMsg.className = 'err';
         oMsg.innerHTML = sMsg;
         oInput.className = 'input-err';
     }
+    
 function setOk(oMsg,oInput){
         oMsg.className = 'ok';
         oMsg.innerHTML = '';
         oInput.className = '';
     }
 
-    
 	var oForm = document.forms[0];
 	var oUsername = oForm.username;
     var oPhone = oForm.phone;
