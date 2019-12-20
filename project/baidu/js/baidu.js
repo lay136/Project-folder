@@ -29,8 +29,6 @@ function setOk(oMsg,oInput){
     
     var bUsername = false,bPhone = false,bPwd = false,bVerify = false;
 
-
-
     init();
     checkUsername();
     checkPhone();
@@ -53,6 +51,7 @@ function init(){
             oCancel.style.display = 'none';
         }
     }
+    
     //给所有的取消按钮绑定点击事件(运用了事件代理)
     oForm.onclick = function(ev){
         var oCancel = ev.target;
