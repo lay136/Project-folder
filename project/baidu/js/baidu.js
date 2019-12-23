@@ -12,6 +12,8 @@ function setOk(oMsg,oInput){
         oMsg.innerHTML = '';
         oInput.className = '';
     }
+
+    
 	var oForm = document.forms[0];
 	var oUsername = oForm.username;
     var oPhone = oForm.phone;

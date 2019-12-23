@@ -295,14 +295,22 @@
     </div>
 </body>
 <script>
-    //公共样式-中文字符转为英文
+    //公共样式
     function getLength(str){
         return str.replace(/[\u4e00-\u9fa5]/g,"aa").length;
     }
     function setError(oMsg,sMsg,oInput){
-
-
+        console.log('aaa');
+        oMsg.className = 'err';
+        oMsg.innerHTML = sMsg;
+        oInput.className = 'input-err';
     }
+    function setOk(oMsg,oInput){
+        oMsg.className = 'ok';
+        oMsg.innerHTML = '';
+        oInput.className = '';
+    }
+
 
 
 	var oForm = document.forms[0];
