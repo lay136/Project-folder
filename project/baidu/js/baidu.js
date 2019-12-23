@@ -92,7 +92,6 @@ function checkUsername(){
         //不能时纯数字
         var reg3 = /^[0-9]+$/;
         if(sVal == ''){
-            aMsg[0].className = 'msg';
             bUsername = false;
         }else if(reg1.test(sVal)){
             oUsername.value = '';
