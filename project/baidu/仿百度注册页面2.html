@@ -318,50 +318,5 @@
     var aMsg = document.querySelectorAll('.msg');
     // console.log(oUsername);
 
-    init();
-    checkUsername();
-
-    //初始焦点
-    function init(){
-        oUsername.focus();
-        aMsg[0].className = 'tiptext';
-        aMsg[0].innerHTML = '设置后不可更改<br>中英文均可，最长14个英文或7个汉字';
-        oForm.oninput = function(ev){
-            var sVal = ev.target.value;
-            var oCancel = ev.target.nextElementSibling;
-            if(sVal.length > 0){
-                oCancel.style.display = 'block';
-            }else{
-                oCancel.style.display = 'none';
-            }
-        }
-    oForm.onclick = function(ev){
-        var oCancel = ev.target;
-        var oInput = oCancel.previousElementSibling;
-        if(oCancel.className == 'cancel'){
-            oInput.value = '';
-            oCancel.style.display = 'none';
-            oInput.focus();
-        }
-    }
-
-    //显示清除按钮
-    oForm.oninput = function(ev){
-        var sVal = ev.target.value;
-        var oCancel = ev.target.nextElementSibling;
-        if(sVal.length > 0){
-            oCancel.style.display = 'block';
-        }else{
-            oCancel.style.display = 'none';
-        }
-    }
-
-// 失去焦点的时候 输入框变成红色 提示错误按钮和信息
-function checkUsername(){
-    oUsername.onfocus = function(){
-        aMsg[0].className = 'tiptext';
-        aMsg[0].innerHTML = '设置后不可更改<br>中英文均可，最长14个英文或7个汉字';
-    }
-}
 </script>
 </html>
