@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>仿百度注册页面</title>
+	<title>仿百度注册页面2</title>
     <style>
         * {
             margin: 0;
@@ -300,23 +300,313 @@
         return str.replace(/[\u4e00-\u9fa5]/g,"aa").length;
     }
     function setError(oMsg,sMsg,oInput){
-        console.log('aaa');
-        oMsg.className = 'err';
-        oMsg.innerHTML = sMsg;
-        oInput.className = 'input-err';
-    }
+            // console.log('aaaa')
+            oMsg.className = 'err';
+            oMsg.innerHTML = sMsg;
+            oInput.className = 'input-err';
+        }
     function setOk(oMsg,oInput){
-        oMsg.className = 'ok';
-        oMsg.innerHTML = '';
-        oInput.className = '';
-    }
+            oMsg.className = 'ok';
+            oMsg.innerHTML = '';
+            oInput.className = '';
+        }
 
 
-
+//1.获取元素
 	var oForm = document.forms[0];
     var oUsername = oForm.username;
     var aMsg = document.querySelectorAll('.msg');
+    var oPwd = oForm.password;
+    var oPhone = oForm.phone;
+    var oVerify = oForm.verify;
+    var aMsg = document.querySelectorAll('.msg');
+    var oPwdChecklist = document.getElementById('pwdChecklist');
+    var aPwdCheckli = oPwdChecklist.querySelectorAll('li');
+    var aCancel = document.querySelectorAll('.cancel');
+    var oSmsBtn = document.getElementById('smsBtn');
+    var oSubBtn = document.getElementById('subBtn');
     // console.log(oUsername);
+    var bUsername = false,bPhone = false,bPwd = false,bVerify = false;
+
+//2.初始化处理
+    init();
+    checkUsername();
+    checkPhone();
+    checkPwd();
+    checkVerify();
+    
+
+//初始化页面
+function init(){
+        //1.设置默认
+        oUsername.focus();
+        //2.设置默认的提示信息
+        aMsg[0].className = 'tiptext';
+        aMsg[0].innerHTML = '设置后不可更改<br>中英文均可，最长14个英文或7个汉字';
+//所有输入框输入时(运用了事件代理)
+    oForm.oninput = function(ev){
+        var sVal = ev.target.value;
+        var oCancel = ev.target.nextElementSibling;
+        if(sVal.length > 0){
+            oCancel.style.display = 'block';
+        }else{
+            oCancel.style.display = 'none';
+        }
+    }
+//给所有的取消按钮绑定点击事件(运用了事件代理)
+    oForm.onclick = function(ev){
+        var oCancel = ev.target;
+        var oInput = oCancel.previousElementSibling;
+        /*
+        if(oCancel.className == 'cancel'){
+            oInput.value = '';
+            oCancel.style.display = 'none';
+            oInput.focus();
+        }
+        */
+        if(oCancel.className == 'cancel'){
+            if(oInput.name){
+                switch(oInput.name){
+                    case 'username':
+                    case 'phone':
+                    case 'password':
+                    case 'verify':
+                    oInput.value = '';
+                    oCancel.style.display = 'none';
+                    oInput.focus();
+                    break;
+                } 
+            }
+        }     
+    }
+}
+
+//3.监听事件 处理需求
+    // 1处理用户名的
+function checkUsername(){
+    oUsername.onblur = function(){
+        var sVal = oUsername.value;
+        //全空正则
+        var reg1 = /^\s+$/;
+        //用户名仅支持中英文、数字和下划线
+        var reg2 = /[^\u4e00-\u9fa50-9a-z_]/ig;
+        //不能时纯数字
+        var reg3 = /^[0-9]+$/;
+        if(sVal == ''){
+            // setError(aMsg[0],'请输入用户名',oUsername);
+        }else if(reg1.test(sVal)){
+            // oUsername.value = '';
+            // aMsg[0].className = 'msg';
+            // aCancel[0].style.display = 'none';
+            setError(oUsername,aMsg[0],'请输入用户名');
+        }else if(getLength(sVal) > 14){
+            setError(aMsg[0],'用户名不能超过7个汉字或14个字符',oUsername);
+        }else if(reg2.test(sVal) || reg3.test(sVal)){
+        //用户名支持中文 下划线 不能为纯数字
+            setError(aMsg[0],'用户名仅支持中英文、数字和下划线,且不能为纯数字',oUsername);
+        }else{
+            setOk(aMsg[0],oUsername);
+        }
+    }
+    //获取焦点时状态的变化
+    oUsername.onfocus = function(){
+        aMsg[0].className = 'tiptext';
+        aMsg[0].innerHTML = '设置后不可更改<br>中英文均可，最长14个英文或7个汉字';
+    }
+}
+
+
+//手机号码验证
+function checkPhone(){
+    oPhone.onblur = function(){
+        var sVal = oPhone.value;
+        //全空正则
+        var reg1 = /^\s+$/;
+        //正确的手机号格式
+        var reg2 = /^1[35789]\d{9}$/;
+        if(sVal == ''){
+            aMsg[1].className = 'msg';
+            bPhone = false;
+        }else if(reg1.test(sVal)){
+            oPhone.value = '';
+            aMsg[1].className = 'msg';
+            aCancel[1].style.display = 'none';
+            bPhone = false;
+        }else if(!reg2.test(sVal)){
+            setError(aMsg[1],'手机号码格式不正确',oPhone);
+            bPhone = false;
+        }else{
+            setOk(aMsg[1],oPhone);
+            bPhone = true;
+        }
+    }
+
+    oPhone.onfocus = function(){
+        aMsg[1].className = 'tiptext';
+        aMsg[1].innerHTML = '请输入中国大陆手机号,其他用户不可见';
+    }
+    
+    oPhone.onkeydown = function(ev){
+        var sVal = oPhone.value;
+        console.log(ev.keyCode);
+    if(//输入限制
+        (ev.keyCode < 48 || ev.keyCode > 57 ||
+        sVal.length > 10)
+         && ev.keyCode != 8 
+         && ev.keyCode != 37 
+         && ev.keyCode != 39
+        ){
+            return false;
+        }
+    }
+}
+
+
+// 密码验证
+function checkPwd(){
+    var bPwd1 = false,bPwd1 = false,bPwd2 = false,bPwd3 = false;
+    oPwd.oninput = function(){
+        var sVal = oPwd.value;
+        var pwdChecklistError = 'pwd-checklist-item pwd-checklist-item-error';
+        var pwdChecklistOk = 'pwd-checklist-item pwd-checklist-item-success';
+        //长度为8~14个字符
+        var reg1 = /^.{8,14}$/;
+
+        //支持数字，大小写字母和标点符号
+        var reg2 = /[^0-9_a-z\.\!\@\s]/i;
+
+        //不允许有空格
+        var reg3 = /\s/g;
+
+        //当输入内容长度为零时，让后面面板内容重置
+        if(sVal.length == 0){
+            aPwdCheckli[0].className = 'pwd-checklist-item';
+            aPwdCheckli[1].className = 'pwd-checklist-item';
+            aPwdCheckli[2].className = 'pwd-checklist-item';
+        //当输入内容长度大于1时，再进行判断
+        }else{
+             if(!reg1.test(sVal)){
+                aPwdCheckli[0].className = pwdChecklistError;
+                bPwd1 = false;
+            }else{
+                aPwdCheckli[0].className = pwdChecklistOk;
+                bPwd1 = true;
+            }
+            if(reg2.test(sVal)){
+                aPwdCheckli[1].className = pwdChecklistError;
+                bPwd2 = false;
+            }else{
+                aPwdCheckli[1].className = pwdChecklistOk;
+                bPwd2 = true;
+            }
+            if(reg3.test(sVal)){
+                aPwdCheckli[2].className = pwdChecklistError;
+                bPwd3 = false;
+            }else{
+                aPwdCheckli[2].className = pwdChecklistOk;
+                bPwd3 = true;
+            }
+        }
+    }
+
+    //当点击密码的取消按钮时，需要将后面面板重置
+    aCancel[2].onclick = function(){
+        aPwdCheckli[0].className = 'pwd-checklist-item';
+        aPwdCheckli[1].className = 'pwd-checklist-item';
+        aPwdCheckli[2].className = 'pwd-checklist-item';
+    }
+
+
+    oPwd.onblur = function(){
+        var sVal = oPwd.value;
+        var reg = /^\s+$/;     
+        if(sVal == ''){
+            oPwdChecklist.style.display = 'none'
+            bPwd = false;
+        }
+
+        else if(reg.test(sVal)){
+            oPwd.value = '';
+            oPwdChecklist.style.display = 'none'
+            aCancel[2].style.display = 'none';
+            bPwd = false;
+        //条件都成功,代表密码验证全部成功
+        }
+
+        else if(bPwd1 && bPwd2 && bPwd3){
+            oPwdChecklist.style.display = 'none';
+            aMsg[2].className = 'ok';
+            bPwd = true;
+        }
+    }
+
+    oPwd.onfocus = function(){
+        oPwdChecklist.style.display = 'block';
+        // aMsg[2].className = 'msg';
+    }
+
+}
+
+//验证验证码
+function checkVerify(){
+    oSmsBtn.onclick = function(){
+        if(oPhone.value == ''){
+            setError(aMsg[1],'请您输入手机号',oPhone)
+            return false;
+        }
+        if(!bPhone){
+            return false;
+        }
+        alert('发送短信');
+    }
+
+
+    oVerify.onblur = function(){
+        var sVal = oVerify.value;
+        var reg1 = /^\s+$/;
+        //全空正则
+        var reg2 = /[a-z0-9]{6}/i;
+        //26个字母和纯数字
+        if(sVal == ''){
+            aMsg[3].className = 'msg';
+            bVerify = false;
+        }else if(reg1.test(sVal)){
+            oVerify.value = '';
+            aMsg[3].className = 'msg';
+            aCancel[3].style.display = 'none';
+            bVerify = false;
+        }else if(!reg2.test(sVal)){
+            setError(aMsg[3],'请输入正确的验证码',oVerify)
+            bVerify = false;
+        }else{
+            setOk(aMsg[3],oVerify);
+            bVerify = true;
+        }
+    }
+
+    oVerify.onkeydown = function(ev){
+        var sVal = oVerify.value;
+        var oEvent = ev || event;
+        // 只能输入数字且只能输入6位
+        if(//输入限制
+            (ev.keyCode < 48 || ev.keyCode > 57 ||
+            sVal.length > 5)
+             && ev.keyCode != 8 
+             && ev.keyCode != 37 
+             && ev.keyCode != 39
+            ){
+            return false;
+        }
+    }
+
+    // 清除图标
+    oVerify.onfocus = function(){
+        aMsg[3].className = 'msg';
+    }
+}
+
+
+
 
 </script>
 </html>
