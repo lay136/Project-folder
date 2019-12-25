@@ -35,26 +35,71 @@
 	<div id="nav">nav</div>
 	<div class="main"></div>
 </body>
-<script src="js/Until.js"></script>
+<!-- <script src="js/Until.js"></script> -->
 <script>
+//封装window渲染模式处理函数
+function getScrollTop(){
+	return window.pageYOffset ||  
+	document.documentElement.scrollTop || 
+	document.body.scrollTop;
+}
+
+//封装匀速动画函数
+function animate(obj,attr,target){//animate函数里面写参数
+	clearInterval(obj.timer);//关闭定时器
+	var iSpeed = 0;
+	obj.timer = setInterval(function(){
+		var current = parseFloat(getComputedStyle(obj,false)[attr]);
+		//getComputedStyle获取所有属性的值
+		if(attr == 'opacity'){
+			current = Math.round(current * 100);//针对透明度的设置
+		}
+		if(current < target){//匀速动画速度
+			iSpeed = 9;
+		}else{
+			iSpeed = -9;
+		}
+		//匀速动画的结束条件
+		if(Math.abs(target - current) < Math.abs(iSpeed)){
+			if(attr == 'opacity'){
+			//判断传进的值，如果是opacity除以100，否则不除，加长度单位
+				obj.style[attr] = target / 100;
+			}else{
+				obj.style[attr] = target + 'px';
+			}
+			clearInterval(obj.timer);//关闭定时器
+		}else{
+			if(attr == 'opacity'){//改变样式
+				obj.style[attr] = (current + iSpeed) / 100;
+			}else{
+				obj.style[attr] = current + iSpeed + 'px';
+			}
+		}
+		// console.log(current)
+	},30);
+}
+
+
 	var oNav = document.getElementById('nav');
 	// console.log(oTop);
 	var isShow = false;//定义变量判断动画有
 	window.onscroll = function(){
 		if(getScrollTop() >= 100){
-		//window渲染模式处理函数
+		//引用封装的window渲染模式处理函数
 			if(!isShow){//取非，没有出现动画
-				// console.log('aaa')
+				// console.log('aaa');
 				animate(oNav,'height',100);
+				//引用封装的匀速动画函数animate(参数1,参数2,参数3); 
 				isShow= true;//将值改为true，就是停止定时的意思
 			}
 		}else{
 			if(isShow){//如果向上滑  则会消失
-				// console.log('bbb')
+				// console.log('bbb');
 				animate(oNav,'height',0);
 				isShow = false;//关闭循环定时
 			}
 		}
 	}
+
 </script>
 </html>

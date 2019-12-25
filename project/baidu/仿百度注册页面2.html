@@ -287,7 +287,6 @@
                 <div class="subBtn">
                     <input type="button" value="注册" id="subBtn">
                 </div>
-
             </form>
             <div class='copy-box'>2019&nbsp;©Baidu</div>
         </div>
@@ -326,6 +325,7 @@
     var oSmsBtn = document.getElementById('smsBtn');
     var oSubBtn = document.getElementById('subBtn');
     // console.log(oUsername);
+    var oAgree = oForm.isAgree;
     var bUsername = false,bPhone = false,bPwd = false,bVerify = false;
 
 //2.初始化处理
@@ -464,21 +464,17 @@ function checkPhone(){
 
 
 // 密码验证
+//验证密码
 function checkPwd(){
     var bPwd1 = false,bPwd1 = false,bPwd2 = false,bPwd3 = false;
     oPwd.oninput = function(){
         var sVal = oPwd.value;
-        var pwdChecklistError = 'pwd-checklist-item pwd-checklist-item-error';
-        var pwdChecklistOk = 'pwd-checklist-item pwd-checklist-item-success';
         //长度为8~14个字符
         var reg1 = /^.{8,14}$/;
-
         //支持数字，大小写字母和标点符号
         var reg2 = /[^0-9_a-z\.\!\@\s]/i;
-
         //不允许有空格
         var reg3 = /\s/g;
-
         //当输入内容长度为零时，让后面面板内容重置
         if(sVal.length == 0){
             aPwdCheckli[0].className = 'pwd-checklist-item';
@@ -487,28 +483,29 @@ function checkPwd(){
         //当输入内容长度大于1时，再进行判断
         }else{
              if(!reg1.test(sVal)){
-                aPwdCheckli[0].className = pwdChecklistError;
+                aPwdCheckli[0].className = 'pwd-checklist-item pwd-checklist-item-error';
                 bPwd1 = false;
             }else{
-                aPwdCheckli[0].className = pwdChecklistOk;
+                aPwdCheckli[0].className = 'pwd-checklist-item pwd-checklist-item-success';
                 bPwd1 = true;
             }
             if(reg2.test(sVal)){
-                aPwdCheckli[1].className = pwdChecklistError;
+                aPwdCheckli[1].className = 'pwd-checklist-item pwd-checklist-item-error';
                 bPwd2 = false;
             }else{
-                aPwdCheckli[1].className = pwdChecklistOk;
+                aPwdCheckli[1].className = 'pwd-checklist-item pwd-checklist-item-success';
                 bPwd2 = true;
             }
             if(reg3.test(sVal)){
-                aPwdCheckli[2].className = pwdChecklistError;
+                aPwdCheckli[2].className = 'pwd-checklist-item pwd-checklist-item-error';
                 bPwd3 = false;
             }else{
-                aPwdCheckli[2].className = pwdChecklistOk;
+                aPwdCheckli[2].className = 'pwd-checklist-item pwd-checklist-item-success';
                 bPwd3 = true;
             }
         }
     }
+
 
     //当点击密码的取消按钮时，需要将后面面板重置
     aCancel[2].onclick = function(){
@@ -520,21 +517,17 @@ function checkPwd(){
 
     oPwd.onblur = function(){
         var sVal = oPwd.value;
-        var reg = /^\s+$/;     
+        var reg = /^\s+$/;
         if(sVal == ''){
             oPwdChecklist.style.display = 'none'
             bPwd = false;
-        }
-
-        else if(reg.test(sVal)){
+        }else if(reg.test(sVal)){
             oPwd.value = '';
             oPwdChecklist.style.display = 'none'
             aCancel[2].style.display = 'none';
             bPwd = false;
-        //条件都成功,代表密码验证全部成功
-        }
-
-        else if(bPwd1 && bPwd2 && bPwd3){
+        //代表密码验证全部成功
+        }else if(bPwd1 && bPwd2 && bPwd3){
             oPwdChecklist.style.display = 'none';
             aMsg[2].className = 'ok';
             bPwd = true;
@@ -543,7 +536,7 @@ function checkPwd(){
 
     oPwd.onfocus = function(){
         oPwdChecklist.style.display = 'block';
-        // aMsg[2].className = 'msg';
+        aMsg[2].className = 'msg';
     }
 
 }
@@ -605,9 +598,34 @@ function checkVerify(){
     }
 }
 
-
+//提交按钮
 function checkSubmit(){
-
+    oSubBtn.onclick = function(){
+        //输入值为空时的处理
+        if(oUsername.value == ''){
+            setError(aMsg[0],'请您输入用户名',oUsername);
+        }
+        if(oPhone.value == ''){
+            setError(aMsg[1],'请您输入手机号',oPhone);
+        }
+        if(oPwd.value == ''){
+            console.log('错误！！！');
+            setError(aMsg[2],'请您输入密码',oPwd);
+        }else{
+            setOk(aMsg[2],oPwd);
+        }
+        if(oVerify.value == ''){
+            setError(aMsg[3],'请您输入验证码',oVerify);
+        }
+        if(!oAgree.checked){
+            aMsg[4].style.display = 'inline';
+        }else{
+            aMsg[4].style.display = 'none';
+        }
+        if(bUsername && bPhone && bPwd && bVerify && oAgree.checked){
+            oForm.submit();
+        }
+    }
  }
 
 
