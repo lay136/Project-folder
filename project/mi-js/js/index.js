@@ -77,8 +77,6 @@ function handleNavContent(){
 
 	function loadData(index){
 		console.log(index);
-
 	}
-
 
 }
