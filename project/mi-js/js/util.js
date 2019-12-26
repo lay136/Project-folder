@@ -1,17 +1,3 @@
-/*
-* @Author: TomChen
-* @Date:   2018-12-09 17:11:35
-* @Last Modified by:   TomChen
-* @Last Modified time: 2018-12-11 20:48:46
-*/
-
-
-/**
- * @param  {object} obj    [DOM节点对象]
- * @param  {object} options   [属性和目标值的对象]
- * @param  {boolean} isLinear [是否是匀速动画]
- * @param  {function} fnEnd [动画结束时执行的函数]
- */
 //匀速动画
 function animate(obj,attr,target){
 	clearInterval(obj.timer);
