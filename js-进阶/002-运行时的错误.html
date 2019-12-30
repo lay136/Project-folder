@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>002-运行时的错误.html</title>
+</head>
+<body>
+	
+</body>
+<script>
+	// JS无语法错误,在运行时发生的错误
+
+
+	// ReferenceError变量引用异常触发的错误,变量a未定义
+	// console.log(a);
+
+
+	//TypeError 类型使用时错误
+	// var a = 1; a();
+
+
+	// RangeError 递归爆栈时触发，只能自己调用自己十次
+	function fn(){fn()};fn();
+
+	
+</script>
+</html>

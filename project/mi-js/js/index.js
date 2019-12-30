@@ -4,6 +4,8 @@ handleNavContent();
 handleCarousel();
 handleCate();
 handleTimeDown();
+handleFlashPart();
+handleElecPart();
 
 //购物车交互功能
 function handleCart(){
@@ -176,5 +178,89 @@ function handleTimeDown(){
 
 }
 
-//闪购商品的切换
+//处理闪购部分
+function handleFlashPart(){
+	var aSpan = document.querySelectorAll('.flash .move span');
+	var oFlashBox = document.querySelector('.flash .bd .bd-right');
+	var oProdcutList = document.querySelector('.flash .bd .product-list');
+	aSpan[0].onclick = function(){
+		oProdcutList.style.marginLeft = '0px';
+	}
+	aSpan[1].onclick = function(){
+		oProdcutList.style.marginLeft = '-978px';
+	}
+}
 
+
+//家电切换部分
+function handleElecPart(){
+	var aTabItem = document.querySelectorAll('.elec .tab .tab-item');
+	var oTabContent = document.querySelector('.elec .bd .bd-list .product-list');
+	// console.log(aTabItem);
+	//页面一加载就让第一页默认显示
+	loadData(0);
+	for(var i=0;i<aTabItem.length;i++){
+		aTabItem[i].index = i;
+		aTabItem[i].onmouseenter = function(){
+			for(var j=0;j<aTabItem.length;j++){
+				aTabItem[j].className = 'tab-item';
+			}
+			this.className = 'tab-item active';
+			//加载数据
+			loadData(this.index);
+		}
+	}
+	function loadData(index){
+		var data = aTabContentData[index];
+		var html = '';
+		for(var i=0;i<data.length-1;i++){
+			html +=' <li class="product-item product-item-m transition-box">';
+			html +='	<a href="'+data[i].url+'" class="item-ctr">';
+			html +='		<img  class="product-img" src="'+data[i].img+'" alt="">';
+			html +='		<p class="product-name">'+data[i].name+'</p>';
+			html +='	</a>';
+			html +='	<p class="product-desc">'+data[i].desc+'</p>';
+			html +='	<p class="product-price">';
+			html +='		<span>'+data[i].price+'元</span>';
+			html +='		<del>'+data[i].del+'元</del>';
+			html +='	</p>';
+			if(data[i].flag){
+				html +='	<span class="flag '+data[i].flag.name+'">'+data[i].flag.content+'</span>';
+			}
+			if(data[i].comment){
+				html +='	<div class="comment">';
+				html +='		<p class="comment-content">'+data[i].comment.content+'</p>';
+				html +='		<p class="comment-author">来自于 <span>'+data[i].comment.author+'</span> 的评价</p>';
+				html +='	</div>';
+			}
+			html += '</li>';
+		}
+		var lastData = data[data.length-1];
+			html += '<li class="product-item product-item-s transition-box">';
+			html += '	<div class="product-item-s-desc">';
+			html += '		'+lastData.top.desc+'';
+			html += '		<p><span>'+lastData.top.price+'</span>元</p>';
+			html += '	</div>';
+			html += '	<div class="product-item-s-img">';
+			html += '		<a href="'+lastData.top.url+'">';
+			html += '			<img src="'+lastData.top.img+'" alt="">';
+			html += '		</a>';
+			html += '	</div>';
+			html += '</li>';
+			html += '<li class="product-item product-item-s transition-box">';
+			html += '	<div class="product-item-s-more">';
+			html += '		浏览更多';
+			html += '		<p>'+lastData.bottom.name+'</p>';
+			html += '	</div>';
+			html += '	<div class="product-item-s-img">';
+			html += '		<a href="'+lastData.bottom.url+'">';
+			html += '			<img src="'+lastData.bottom.img+'" alt="">';
+			html += '		</a>';
+			html += '	</div>';
+			html += '</li>';
+		oTabContent.innerHTML = html;
+	}
+
+
+
+}

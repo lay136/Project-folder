@@ -31,21 +31,27 @@
 .hd .more.move>span:first-child{
 	border-right: none;
 	color: #e5e2e0;
+	cursor: pointer;
+
 }
 .hd .more.move>span:last-child{
 	color:#b4b0b0;
+	cursor: pointer;
 }
 .hd .more.view span{
 	/*line-height: 60px;*/
 	display: inline-block;
 	font-size: 16px;
 	color:#424242;
+	cursor: pointer;
+
 }
 .hd .more.view span:hover{
 	color:#ff6700;
 }
 .hd .more.view span:hover i{
 	background-color: #ff6700;
+
 }
 .hd .more.view span i{
 	width: 20px;
