@@ -210,6 +210,7 @@ function handleElecPart(){
 			loadData(this.index);
 		}
 	}
+	
 	function loadData(index){
 		var data = aTabContentData[index];
 		var html = '';
@@ -258,9 +259,7 @@ function handleElecPart(){
 			html += '		</a>';
 			html += '	</div>';
 			html += '</li>';
-		oTabContent.innerHTML = html;
+		aTabContentData.innerHTML = html;
 	}
-
-
 
 }
