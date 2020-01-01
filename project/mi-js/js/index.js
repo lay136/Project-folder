@@ -211,7 +211,6 @@ function handleElecPart(){
 		}
 	}
 	
-	
 	function loadData(index){
 		var data = aTabContentData[index];
 		var html = '';
