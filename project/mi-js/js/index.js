@@ -261,7 +261,4 @@ function handleElecPart(){
 			html += '</li>';
 		aTabContentData.innerHTML = html;
 	}
-
-
-
 }
