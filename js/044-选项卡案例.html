@@ -36,20 +36,24 @@
 	</style>
 </head>
 <body>
+
 	<ul class="btn-list">
 		<li class="active">热门</li>
 		<li>电视</li>
 		<li>音响</li>
 		<li>电脑</li>
 	</ul>
+
 	<ul class="content-list">
 		<li style="display: block;">1</li>
 		<li>2</li>
 		<li>3</li>
 		<li>4</li>
 	</ul>
+
 </body>
 <script>
+
 	var aBtn = document.querySelectorAll('.btn-list li');
 	var aContent = document.querySelectorAll('.content-list li');
 	// console.log(aBtn);
@@ -66,5 +70,6 @@
 		 	aContent[this.index].style.display = 'block'; //在这得到的i值是之前保存的i值，这里用index来表示
 		 }
 	}
+	
 </script>
 </html>
