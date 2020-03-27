@@ -5,6 +5,7 @@
 	<title>073-通过类名获取元素函数.html</title>
 </head>
 <body>
+
 	<ul id="ul1">
 		<li>1</li>
 		<li>2</li>
@@ -26,6 +27,7 @@
 		<div>7</div>
 		<div class="box1">8</div>
 	</div>
+
 </body>
 <script>
 
@@ -43,16 +45,18 @@
 			}
 			return result;//return result出去的结果要用一个变量来接收
 	} 
-// 获取ul的类名
-	var oUl = document.getElementById('ul1');
-	var aBoxs = getElementsByClass(oUl,'box');
-	console.log(oUl);
-	console.log(aBoxs);
+	
+	// 获取ul的类名
+		var oUl = document.getElementById('ul1');
+		var aBoxs = getElementsByClass(oUl,'box');
+		console.log(oUl);
+		console.log(aBoxs);
 
-//获取div的类名
-	var oDiv = document.getElementById('div1');
-	var aBox1s = getElementsByClass(div1,'box1');
-	console.log(oDiv);
-	console.log(aBox1s);
-</script>
+	//获取div的类名
+		var oDiv = document.getElementById('div1');
+		var aBox1s = getElementsByClass(div1,'box1');
+		console.log(oDiv);
+		console.log(aBox1s);
+	</script>
+
 </html>
