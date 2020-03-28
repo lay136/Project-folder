@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>075-获取父节点.html</title>
+	
 	<style>
 		*{
 			margin: 0;
@@ -27,21 +28,24 @@
 			/*position: relaive;*/
 		}
 	</style>
+
 </head>
 <body>
+
 	<div class="father">
 		<div id="son"></div>
 	</div>
+
 </body>
+
 <script>
+
 	var oSon = document.getElementById('son');
 	console.log(oSon);//获取子元素son
 	console.log(oSon.parentNode);
 	//通过.parentNode方法获取son的父元素，任何时间都son的父元素
 	console.log(oSon.offsetParent);//获取的是body，因为son及逆行的绝对定位
-	//通过.offsetParent方法获取son的父元素，当进行绝对定位的时候，参考上一个父元素是谁 获取到的就是谁
-
-	
+	//通过.offsetParent方法获取son的父元素，当进行绝对定位的时候，参考上一个父元素是谁 获取到的就是谁.
 
 
 </script>
