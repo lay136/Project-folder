@@ -4,40 +4,46 @@
 	<meta charset="UTF-8">
 	<title>085-九宫格.html</title>
 	<style>
-	*{
-		margin: 0;
-		padding: 0;
-	}
-	#box{
-		position: relative;
-		margin-left: 100px;
-		margin-top: 20px;
-	}
-	input{
-		margin-left: 100px;
-		/*margin-bottom: 50px;*/
-	}
-	.son{
-		width: 100px;
-		height: 100px;
-		background-color: red;
-		position: absolute;
-	}	
+		
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#box{
+		    position: relative;
+		    margin-left: 100px;
+		    margin-top: 20px;
+	    }
+	    input{
+		    margin-left: 100px;
+		    /*margin-bottom: 50px;*/
+	    }
+	    .son{
+		    width: 100px;
+		    height: 100px;
+		    background-color: red;
+		    position: absolute;
+	    }	
+
 	</style>
 </head>
 <body>
+
 	<input type="button" id="btn" value="动态添加">
+	
 	<div id="box">
 		<div class="son"></div>
 	</div>
+
 </body>
 <script>
+
 	var oBox = document.getElementById('box');
 	var oBtn = document.getElementById('btn');
 	var oSon = document.getElementsByClassName('son');// 选择所有匹配的节点
 	var iHeight = 100;
 	var iWidth = 100;
-	var iMargin = 15;//
+	var iMargin = 15;
 	var allCol = 3;
 	// console.log(aDiv)
 	oBtn.onclick = function(){//添加点击事件
@@ -50,5 +56,6 @@
 			oSon[i].style.left = iCol * (iWidth + iMargin) +'px';//设置marge值
 		}
 	}
+	
 </script>
 </html>
