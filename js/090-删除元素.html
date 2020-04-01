@@ -5,6 +5,7 @@
 	<title>090-删除元素.html</title>
 </head>
 <body>
+
 	<ul id="ul1">
 		<li>1</li>
 		<li>2</li>
@@ -13,14 +14,18 @@
 		<li>5</li>
 		<li>6</li>
 	</ul>
+
 	<input type="button" value="删除元素" id="btn">
+
 </body>
 <script>	
+
 	var oUl1 = document.getElementById('ul1');
 	var oBtn = document.getElementById('btn');
 	var aLi = oUl1.children;//返回一个数组, 包含父节点中的所有元素节点
 	oBtn.onclick = function(){
 		oUl1.removeChild(aLi[0]);//删除下标为0的元素
 	}
+	
 </script>
 </html>
