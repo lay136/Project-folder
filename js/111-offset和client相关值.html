@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>111-offset和client相关值.html</title>
 	<style>
+		
 		*{
 			margin: 0;
 			padding: 0;
@@ -20,15 +21,19 @@
 			width: 100px;
 			height: 100px;
 			border: 10px solid #ff6700;
-		}	
+		}
+
 	</style>
 </head>
 <body>
+
 	<div class="father">
 		<div class="son"></div>
 	</div>
+
 </body>
 <script>
+
 	var oSon = document.querySelector('.son');
 	console.log('offsetLeft',oSon.offsetLeft);
 	//相对定位时的参考元素的是father
@@ -50,5 +55,6 @@
 	
 	console.log('clientHeight',oSon.clientWidth);
 	//元素的客户区高(垂直方向上内边距+内容高),不包括滚动条
+	
 </script>
 </html>
