@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>112-client获取视口大小.html</title>
 	<style>
+		
 		*{
 			margin: 0;
 			padding: 0;
@@ -12,12 +13,14 @@
 			width: 3000px;
 			height: 3000px;
 		}
+
 	</style>
 </head>
 <body>
 	
 </body>
 <script>
+
 	var w =0,h=0;
 	if(document.compatMode == 'CSS1Compat'){
 		w = document.documentElement.clientWidth;
@@ -26,7 +29,6 @@
 		w = document.body.clientWidth;
 		h = document.body.clientHeight;		
 	}
-
 
 
 
@@ -39,8 +41,6 @@
 //混杂模式用:
 	console.log("document.body.clientWidth",document.body.clientWidth);
 	console.log("document.body.clientHeight",document.body.clientHeight);
-
-
 
 
 </script>
