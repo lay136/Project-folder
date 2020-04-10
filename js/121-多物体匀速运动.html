@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>121-多物体匀速运动.html</title>
 	<style>
+		
 		*{
 			margin: 0;
 			padding: 0;
@@ -20,16 +21,20 @@
 			text-align:center;
 			margin-top: 20px;
 		}
+
 	</style>
 </head>
 <body>
+
 	<div class="father">
 		<div id="box1">变宽</div>
 		<div id="box2">变高</div>
 		<div id="box3">变透明</div>
 	</div>
+
 </body>
 <script>
+	
 	var oBox1 = document.getElementById('box1');
 	var oBox2 = document.getElementById('box2');
 	var oBox3 = document.getElementById('box3');
@@ -52,6 +57,7 @@
 		},30);	
 	}
 
+
 	oBox2.onmouseover = function(){
 		clearInterval(oBox2.timer);
 		var iSpeed = 0;
@@ -69,6 +75,7 @@
 			}
 		},30);		
 	}
+
 
 	oBox3.onmouseover = function(){
 		clearInterval(oBox3.timer);
@@ -90,5 +97,7 @@
 		},30);		
 				
 	}
+
+	
 </script>
 </html>
