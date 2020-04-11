@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>123-底部固定.html</title>
 	<style>
+		
 		*{
 			margin: 0;
 			padding: 0;
@@ -20,12 +21,17 @@
 			height: 100px;
 			background: red;
 		}
+
 	</style>
 </head>
 <body>
+	
 	<div id="box"></div>
+
 </body>
+
 <script src="js/Until.js"></script>
+
 <script>
 	var oBox = document.getElementById('box');
 	//console.log(getScrollTop);//获取到滚动条的滚动距离	
@@ -37,5 +43,6 @@
 		console.log(iTop);
 		animate(oBox,'top',iTop);
 	 }
+	 
 </script>
 </html>

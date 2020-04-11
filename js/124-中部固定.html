@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>124-中部固定.html</title>
 	<style>
+		
 		*{
 			margin: 0;
 			padding: 0;
@@ -20,13 +21,19 @@
 			height: 100px;
 			background: red;
 		}
+
 	</style>
 </head>
 <body>
+
 	<div id="box"></div>
+
 </body>
+
 <script src="js/Until.js"></script>
+
 <script>
+
 	var oBox = document.getElementById('box');
 	window.onload = window.onscroll = window.onresize = function(){
 	//将高度的值除以2
@@ -34,5 +41,6 @@
 		console.log(iTop)
 		animate(oBox,'top',iTop)
 	}
+	
 </script>
 </html>
