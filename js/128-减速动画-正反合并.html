@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>128-减速动画-正反合并.html</title>
 	<style>
+		
 		*{
 			margin: 0;
 			padding: 0;
@@ -24,14 +25,18 @@
 			height: 600px;
 			background-color: #000;
 		}
+
 	</style>
 </head>
 <body>
+
 	<button id="btn">开始动画</button>
 	<div id="box"></div>
 	<div id="line"></div>
+
 </body>
 <script>
+
 	var oBtn = document.getElementById('btn');
 	var oBox = document.getElementById('box');
 	var timer;
@@ -40,6 +45,7 @@
 		
 		timer = setInterval(function(){
 			var iSpeed = 0;
+			
 			/*
 			if(oBox.offsetLeft < 400){
 				iSpeed = 10;
@@ -47,7 +53,9 @@
 				iSpeed = -10;
 			}
 			*/
+
 			iSpeed = (400 - oBox.offsetLeft)/10;
+			
 			/*
 			if(iSpeed>0){
 				iSpeed = Math.ceil(iSpeed)
@@ -55,6 +63,7 @@
 				iSpeed = Math.floor(iSpeed);
 			}
 			*/
+
 			iSpeed = iSpeed >0 ? Math.ceil(iSpeed) : Math.floor(iSpeed);
 			if(!iSpeed){
 				clearInterval(timer);
@@ -64,5 +73,7 @@
 			console.log(oBox.offsetLeft,iSpeed);
 		},30)
 	}
+
+
 </script>
 </html>
