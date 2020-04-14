@@ -6,19 +6,23 @@
 	 
 </head>
 <body>
+	
 	<div class="father">
 		<div id="box1">变宽</div>
 		<div id="box2">变高</div>
 		<div id="box3">变透明</div>
 	</div>
+
 </body>
 <script>
+
 	/*
 	obj 表示要修改的是那个DOM对象
 	attr 表示要修改的是哪个属性
 	target 表示目标值(就是将属性值修改到多少)
 	isLinear 表示动画是匀速还是减速执行(默认是匀速,true是匀速,false是减速)
 	*/
+
 	var oBox1 = document.getElementById('box1');
 	var oBox2 = document.getElementById('box2');
 	var oBox3 = document.getElementById('box3');
@@ -100,7 +104,7 @@
 	// 	animate2(oBox3,'opacity',50,true);
 	// }
 
-//移出动画-移出减速
+	//移出动画-移出减速
 	oBox1.onmouseout = function(){
 		animate2(oBox1,'width',100,false);
 	}
@@ -110,5 +114,6 @@
 	oBox3.onmouseout = function(){
 		animate2(oBox3,'opacity',100,false);
 	}
+	
 </script>
 </html>
