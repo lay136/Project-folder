@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>148-放大镜.html</title>
 	<style>
+		
 		*{
 			margin: 0;
 			padding: 0;
@@ -69,22 +70,29 @@
 	</style>
 </head>
 <body>
+	
 	<div id="wrap">
+		
 		<div id="bImg">
 			<img src="images/p_b_0001.jpg" alt="">
 			<div id="mask"></div>
 		</div>
+
 		<ul id="sImgs">
 			<li class="active"><img src="images/p_s_0001.jpg" alt=""></li>
 			<li><img src="images/p_s_0002.jpg" alt=""></li>
 			<li><img src="images/p_s_0003.jpg" alt=""></li>
 		</ul>
+
 		<div id="lImg">
 			<img src="images/p_l_0001.jpg" alt="">
 		</div>
+
 	</div>
+
 </body>
 <script>
+
 	var oWrap = document.getElementById('wrap');
 	var aSImgsLi = document.getElementById('sImgs').children;
 	var oBImg = document.querySelector('#bImg img');
@@ -104,6 +112,7 @@
 			oLImg.src = "images/p_l_000"+(this.index+1)+".jpg";
 		}
 	}
+
 	oBDiv.onmouseover = function(){
 		oLDiv.style.display = 'block';
 		oMask.style.display = 'block';
@@ -130,9 +139,11 @@
 			oLImg.style.top = (oLDiv.offsetHeight - oLImg.offsetHeight )*scaleY + 'px';
 		}
 	}
+
 	oBDiv.onmouseout = function(){
 		oLDiv.style.display = 'none';
 		oMask.style.display = 'none';
 	}
+	
 </script>
 </html>
