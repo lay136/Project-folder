@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>149-键盘属性.html</title>
 	<style>
+		
 		*{
 			margin: 0;
 			padding: 0;
@@ -20,9 +21,12 @@
 	</style>
 </head>
 <body>
+
 	<div id="box"></div>
+
 </body>
 <script>
+
 	var oBox = document.getElementById('box');
 	document.onkeydown = function(ev){
 		// console.log(ev.keyCode)
@@ -32,5 +36,6 @@
 			oBox.style.left = oBox.offsetLeft + 10 +'px';
 		}
 	}
+	
 </script>
 </html>
