@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<style>
+		
 		*{
 			margin: 0;
 			padding: 0;
@@ -43,16 +44,22 @@
 			width: 30px;
 			background-color: green;
 		}
+
 	</style>
 </head>
 <body>
+
 	<div id="wrap">
+
 		<div id="bird">
 			<img src="images/bird.jpg" alt="">
 		</div>
+
 	</div>
+
 </body>
 <script>
+
 	function checkBump(obj1,obj2){
 		if((obj1.offsetLeft + obj1.offsetWidth) > obj2.offsetLeft
 			&& (obj1.offsetTop + obj1.offsetHeight) > obj2.offsetTop
@@ -64,6 +71,7 @@
 			return false;
 		}
 	}
+
 	function getRandom(min,max){
 		return Math.round(min+(max-min)*Math.random());
 	}
@@ -88,6 +96,7 @@
 		}
 		oBird.style.top = t + 'px';
 	},30);
+
 	function die(){
 		clearInterval(birdMoveTimer);
 		clearInterval(lineAddTimer);
@@ -130,11 +139,14 @@
 			}
 		}
 	},50);
+
 	document.onkeydown = function(){
 		if(isDie){
 			return false;
 		}
 		iSpeed = -10;
 	}
+
+	
 </script>
 </html>
