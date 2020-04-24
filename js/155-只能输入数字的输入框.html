@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>155-只能输入数字的输入框.html</title>
 	<style>
+		
 		*{
 			margin: 0;
 			padding: 0;
@@ -13,15 +14,19 @@
 			height: 100px;
 			margin: 200px auto;
 		}
+
 	</style>
 </head>
 <body>
+
 	<form action="">
 		请输入手机号码:
 		<input type="text" id="txt">
 	</form>
+
 </body>
 <script>
+
 	var oTxt = document.getElementById('txt');
 	var keyCode;
 	oTxt.onkeydown = function(ev){
@@ -36,5 +41,6 @@
 			ev.preventDefault();//方法2
 		}
 	}
+	
 </script>
 </html>
