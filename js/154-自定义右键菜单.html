@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>154-自定义右键菜单.html</title>
 	<style>
+		
 		*{
 			margin: 0;
 			padding: 0;
@@ -16,14 +17,17 @@
 			width: 200px;
 			height: 400px;
 			background-color: #ccc;
-
 		}
+
 	</style>
 </head>
 <body>
+
 	<div id="box"></div>
+
 </body>
 <script>
+
 	var oBox = document.getElementById('box');
 	document.oncontextmenu = function(ev){
 		oBox.style.display = 'block';//显示出来
@@ -31,9 +35,8 @@
 		oBox.style.left = ev.clientX + 'px';
 		return false;//阻止默认行为
 		// ev.preventDefault();
-
-
 	}
+	
 	//阻止时间冒泡
 	oBox.onclick = function(ev){
 		ev.stopPropagation();
