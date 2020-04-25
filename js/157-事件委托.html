@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>157-事件委托.html</title>
 	<style>
+		
 		*{
 			margin: 0;
 			padding: 0;
@@ -12,16 +13,21 @@
 			list-style: none;
 			margin-left: 20px;
 		}
+
 	</style>
 </head>
 <body>
+
 	<input type="text" id="txt">
 	<input type="button" id="btn" value="提交">
+	
 	<ul id="ul1">
 		请添加一个元素：
 	</ul>
+
 </body>
 <script>
+
 	var oTxt = document.getElementById('txt');
 	var aA = document.getElementsByTagName('a');
 	var oBtn = document.getElementById('btn');
@@ -57,5 +63,7 @@
 		oUl.appendChild(oLi);
 		oTxt.value = '';
 	}
+
+	
 </script>
 </html>

@@ -3,7 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>156-碰撞检测.html</title>
-<style>
+	<style>
+		
 		*{
 			margin: 0;
 			padding: 0px;
@@ -26,13 +27,17 @@
 			cursor: pointer;
 			background-color: #ccc;
 		}
+
 	</style>
 </head>
 <body>
+
 	<div id="box"></div>
 	<div id="box1"></div>
+
 </body>
 <script>
+
 	function checkBump(obj1,obj2){
 		if((obj1.offsetLeft + obj1.offsetWidth) > obj2.offsetLeft
 			&& (obj1.offsetTop + obj1.offsetHeight) > obj2.offsetTop
@@ -45,6 +50,7 @@
 			return false;
 		}
 	}
+
 	var oBox = document.getElementById('box');
 	var oBox1 = document.getElementById('box1');
 	var disX=0,disY=0;
@@ -66,5 +72,7 @@
 			document.onmouseup = null;
 		}
 	}
+
+	
 </script>
 </html>
