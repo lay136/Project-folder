@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>160-蒙版效果.html</title>
 	<style>
+		
 		*{
 			margin: 0;
 			padding: 0;
@@ -28,17 +29,21 @@
 			background-color: #fff;
 			display: none;
 		}
+
 	</style>
 </head>
 <body>
+
 	<input type="button" value="登陆" id="btn1">
 	<div id="mask"></div>
 	<div id="login">
 		<input type="text">
 		<button id="btn2">登陆</button>
 	</div>
+
 </body>
 <script>
+
 	var oBtn1 = document.getElementById('btn1');
 	var oBtn2 = document.getElementById('btn2');
 	var oMask = document.getElementById('mask');
@@ -58,5 +63,6 @@
 	oBtn2.onclick = function(){
 		window.location = 'https://www.baidu.com/';
 	}
+	
 </script>
 </html>
