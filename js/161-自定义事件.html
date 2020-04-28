@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>161-自定义事件.html</title>
 	<style>
+		
 		*{
 			margin: 0;
 			padding: 0;
@@ -13,12 +14,16 @@
 			height: 100px;
 			background-color: red;
 		}
+
 	</style>
 </head>
 <body>
-	<div id="box"></div>	
+
+	<div id="box"></div>
+
 </body>
 <script>
+
 	var oBox = document.getElementById('box');
 	
 
@@ -29,7 +34,6 @@
 		console.log('aa');
 	});
 	//2.监听事件 dom.addEventListener(自定义事件类型,function(){})
-	
 
 	/*不能这样写
 	oBox.ontest = function(){
@@ -39,6 +43,8 @@
 
 	
 	oBox.dispatchEvent(Event);
-	//3.触发事件dom.dispatchEvent(事件对象)
+	//3.触发事件dom.dispatchEvent(事件对象);
+
+	
 </script>
 </html>
