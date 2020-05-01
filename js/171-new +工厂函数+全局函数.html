@@ -8,18 +8,22 @@
 	
 </body>
 <script>
+	
 	function sayName(){
 		console.log('I am '+this.name);
 	}
+
 	function sayAge(){
 		console.log('I am '+this.age+' years old' );
 	}
+
 	function createPerson(name,age){
 		this.name = name;
 		this.age = age;
 		this.sayName = sayName;
 		this.sayAge= sayAge;
 	}
+
 	var person1 = new createPerson('tom',18);
 	console.log(person1);
 	person1.sayName();
@@ -29,10 +33,12 @@
 	person2.sayName();
 	person2.sayAge();
 	console.log(person1.sayName == person2.sayName);
+	
 	/*
 	function sayName(){
 		console.log('I am king');
 	}
 	*/
+
 </script>
 </html>
