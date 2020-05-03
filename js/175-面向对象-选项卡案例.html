@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>175-面向对象-选项卡案例.html</title>
 	<style>
+		
 		*{
 			margin: 0;
 			padding: 0px;
@@ -39,23 +40,28 @@
 			display: none;
 
 		}
+
 	</style>
 </head>
 <body>
+	
 	<ul id="btn-list" class="btn-list">
 		<li class="active">热门</li>
 		<li>电视</li>
 		<li>音响</li>
 		<li>电脑</li>
 	</ul>
+
 	<ul id="content-list" class="content-list">
 		<li style="display: block;">1</li>
 		<li>2</li>
 		<li>3</li>
 		<li>4</li>
 	</ul>
+
 </body>
 <script>
+
 	// var aBtn = document.querySelectorAll('.btn-list li');
 	// var aContent = document.querySelectorAll('.content-list li');
 	// // console.log(aBtn);
@@ -72,6 +78,7 @@
 	// 	 	aContent[this.index].style.display = 'block'; //在这得到的i值是之前保存的i值，这里用index来表示
 	// 	 }
 	// }
+
 	function Tab(listSelector,contentSelector){
 		//罗列属性
 		this.aBtn = document.querySelectorAll(listSelector);;
@@ -79,6 +86,7 @@
 		//添加/绑定事件
 		this.bindEvent();
 	}
+	
 	Tab.prototype.bindEvent = function(){
 		// console.log(this)
 		var _this = this;
@@ -90,6 +98,7 @@
 			}
 		}
 	}
+
 	Tab.prototype.fnClick = function(oBtn){
 		// console.log(this)
 		// console.log(oBtn)

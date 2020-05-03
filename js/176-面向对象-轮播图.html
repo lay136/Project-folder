@@ -4,58 +4,61 @@
 	<meta charset="UTF-8">
 	<title>176-面向对象-轮播图.html</title>
 	<style>
-	*{
-		margin: 0;
-		padding: 0;
-		list-style: none;
-	}
-	body{
-		margin-left: 600px;
-		margin-top: 100px;
-	}
-	.arrow{
-		position: absolute;
-		top: 50%;
-		margin-top: -30px;
-		width: 30px;
-		height: 60px;
-		background-color: rgba(0,0,0,0.5);
-		color: #fff;
-		font-size: 30px;
-		line-height: 60px;
-		text-align: center;
-		cursor: pointer;
-		user-select: none;
-	}
-	.leftArrow{
-		left: 0px;
-	}
-	.rightArrow{
-		right: 0px;			
-	}
-	.bottomBtn{
-		position: absolute;
-		bottom: 10px;
-		left: 50%;
-	}
-	.bottomBtn li{
-		width: 20px;
-		height: 20px;
-		background-color: rgba(0,0,0,0.5);
-		float: left;
-		border-radius: 50%;
-		margin-right: 10px;
-	}
-	.bottomBtn li.active{
-		background-color: #ff6700;
-	}
+		*{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		body{
+			margin-left: 600px;
+			margin-top: 100px;
+		}
+		.arrow{
+			position: absolute;
+			top: 50%;
+			margin-top: -30px;
+			width: 30px;
+			height: 60px;
+			background-color: rgba(0,0,0,0.5);
+			color: #fff;
+			font-size: 30px;
+			line-height: 60px;
+			text-align: center;
+			cursor: pointer;
+			user-select: none;
+		}
+		.leftArrow{
+			left: 0px;
+		}
+		.rightArrow{
+			right: 0px;			
+		}
+		.bottomBtn{
+			position: absolute;
+			bottom: 10px;
+			left: 50%;
+		}
+		.bottomBtn li{
+			width: 20px;
+			height: 20px;
+			background-color: rgba(0,0,0,0.5);
+			float: left;
+			border-radius: 50%;
+			margin-right: 10px;
+		}
+		.bottomBtn li.active{
+			background-color: #ff6700;
+		}
+
 </style>
 </head>
 <body>
-	<div id="box1">
-	</div>
+
+	<div id="box1"></div>
+
 </body>
 <script>
+
 	function Carousel(options){
 		//罗列属性
 		this.oBox = document.getElementById(options.id);
@@ -78,6 +81,7 @@
 			this.auto();
 		}
 	}
+
 	Carousel.prototype.init = function(){
 		//给大盒子设置样式
 		this.oBox.style.position = 'relative';
@@ -142,6 +146,7 @@
 		//让底部按钮水平居中
 		this.oBtnUl.style.marginLeft = - this.oBtnUl.offsetWidth*0.5 + 'px';
 	}
+
 	Carousel.prototype.bindEvent = function(){
 		// console.log(this);
 		var _this = this;
@@ -192,6 +197,7 @@
 			timer = setInterval(_this.oRightArrow.onclick,_this.playDuration);
 		}
 	}
+	
 	// new Carousel('box1',['images/carousel-1.jpg','images/carousel-2.webp','images/carousel-3.webp'],);
 	new Carousel({
 		id:'box1',
@@ -207,6 +213,8 @@
 		height:560,
 		playDuration:3000
 	})
+
+
 </script>
 
 </html>
