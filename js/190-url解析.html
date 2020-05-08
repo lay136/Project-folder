@@ -5,12 +5,16 @@
 	<title>190-url解析.html</title>
 </head>
 <body>
+	
 	<input type="text" id="txt">
 	<input type="button" id="btn" value="验证">
+
 </body>
 <script>
+
 	var oTxt = document.getElementById('txt');
 	var oBtn = document.getElementById('btn');
+	
 	oBtn.onclick = function(){
 		var val = oTxt.value;
 		// https://github.com/lay136
@@ -24,5 +28,6 @@
 			alert('不合法');
 		}
 	}
+
 </script>
 </html>

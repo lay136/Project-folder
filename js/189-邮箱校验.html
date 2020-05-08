@@ -5,12 +5,16 @@
 	<title>189-邮箱校验.html</title>
 </head>
 <body>
+	
 	<input type="text" id="txt">
 	<input type="button" id="btn" value="验证">
+
 </body>
 <script>
+
 	var oTxt = document.getElementById('txt');
 	var oBtn = document.getElementById('btn');
+
 	oBtn.onclick = function(){
 		var val = oTxt.value;
 		var reg = /^\w+@\w{2,6}\.[a-z]{2,5}$/;
@@ -23,5 +27,7 @@
 		}
 
 	}
+
+	
 </script>
 </html>
