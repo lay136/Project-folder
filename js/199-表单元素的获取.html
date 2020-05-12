@@ -5,17 +5,23 @@
 	<title>199-表单元素的获取.html</title>
 </head>
 <body>
+
 	<form action="" id="form1">
 		<input type="text" id="txt" name="username">
 		<input type="password" id="password" name="password">
+		
 		<div>
 			<input type="radio" name="sex">男
 			<input type="radio" name="sex">女
 		</div>
+
 		<input type="submit" name="submit" value="提交">
+
 	</form>
+
 </body>
 <script>
+	
 	var oForm = document.getElementById('form1');
 	console.log(oForm);
 	var oForm = document.forms[0];
