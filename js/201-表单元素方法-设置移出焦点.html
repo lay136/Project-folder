@@ -8,15 +8,18 @@
 	</script>
 </head>
 <body>
+
 	用户名:<input type="text" id="txt" name="username">
 	密码：<input type="text" id="txt" name="username">
 
 </body>
 <script>
+
 	var oBtn1 = document.getElementById('btn1');
 	var oBtn2 = document.getElementById('btn2');
 	var oForm = document.forms[0];
 	console.log(oForm);	
+
 	oForm.onsubmit = function(){
 		console.log('on submit....');
 		return false;
@@ -31,6 +34,7 @@
 	oBtn2.onclick = function(){
 		oForm.reset();
 	}
+	
 </script>
 	
 </html>

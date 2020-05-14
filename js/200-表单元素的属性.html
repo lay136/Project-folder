@@ -5,6 +5,7 @@
 	<title>200-表单元素的属性.html</title>
 </head>
 <body>
+
 	<form action="https://www.baidu.com" id="form1">
 		<div>
 			用户名：
@@ -15,6 +16,7 @@
 			密码：
 			<input type="password" id="password" name="password">
 		</div>
+
 		<div>
 			性别：
 			<input type="radio" name="sex">男
@@ -40,6 +42,7 @@
 			<input type="button" value="测试" id="btn">
 		</div>
 	</form>
+
 </body>
 <script>
 	
@@ -64,23 +67,27 @@
 	oBtn.onclick = function(){
 	
 		for(var i=0;i<aHobby.length;i++){
-			console.log(aHobby[i].checked)
+			console.log(aHobby[i].checked);
 		}
 		
 		for(var i=0;i<aSex.length;i++){
-			console.log(aSex[i].checked)
+			console.log(aSex[i].checked);
 		}
 	}
 	*/
+
+
 	/*
 	oBtn.onclick = function(){
-	
 		for(var i=0;i<oSelect.options.length;i++){
-			console.log(oSelect.options[i].selected)
+			console.log(oSelect.options[i].selected);
 		}
 	}
 	*/
+
 	oUsername.focus();
 	oUsername.blur(); 
+
+	
 </script>
 </html>
