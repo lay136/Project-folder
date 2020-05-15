@@ -10,6 +10,7 @@
 <body>
 
 	用户名:<input type="text" id="txt" name="username">
+
 	密码：<input type="text" id="txt" name="username">
 
 </body>
@@ -24,16 +25,20 @@
 		console.log('on submit....');
 		return false;
 	}
+
 	oBtn1.onclick = function(){
 		// console.log(oForm.submit);
 		oForm.submit();
 	}
+
 	oForm.onreset = function(){
 		console.log('on reset....');
 	}
+
 	oBtn2.onclick = function(){
 		oForm.reset();
 	}
+	
 	
 </script>
 	
