@@ -7,7 +7,8 @@
 		function sum(num){
 			try{
 				if(isNaN(parseInt(num))){
-					throw new Error('not a number');
+					//抛出异常--有可能出现异常的代码
+					throw new Error('is not Error');
 				}
 				var result = 0;
 				for(var i=0;i<=num;i++){
@@ -16,9 +17,10 @@
 				return result;
 			}catch(e){
 				//处理异常
-				console.log(e)
+				console.log(e);
 			}finally{
-				console.log('finally....')
+				console.log('finally....');
+				//不管有没有异常都会处理,例如清理工作
 			}
 			
 		}
@@ -26,9 +28,9 @@
 			return num*10;
 		}
 		console.log('111');
-		var target = sum('a');
+		var target = sum(3);
 		console.log('222');
-		console.log(sum1(target))
+		console.log(sum1(target));
 		console.log('333');
 	</script>
 </head>
