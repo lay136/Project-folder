@@ -8,26 +8,28 @@
 		function Person(name,age){
 			this.name = name;
 			this.age = age;
-		}
+		};
 		Person.prototype.sayName = function(){
 			console.log(this.name);
 		};
 		Person.prototype.sayAge = function(){
 			console.log(this.age);
-		}
+		};
 		Person.prototype.LEGS = 2;
 		Object.defineProperty(Person.prototype,'EYES',{
 			value:2
 		})
-		console.log('Person.prototype',Person.prototype)
+		console.log('Person.prototype',Person.prototype);
 		function Student(name,age,major){
 			Person.call(this,name,age);
 			this.major = major;
-		}
+		};
+
 		/*
 		Student.prototype.sayName = function(){
 			console.log(this.name);
 		};
+
 		Student.prototype.sayAge = function(){
 			console.log(this.age);
 		}

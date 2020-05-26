@@ -8,13 +8,13 @@
 		function Person(name,age){
 			this.name = name;
 			this.age = age;
-		}
+		};
 		Person.prototype.sayName = function(){
 			console.log(this.name);
 		};
 		Person.prototype.sayAge = function(){
 			console.log(this.age);
-		}
+		};
 		Person.prototype.LEGS = 2;
 
 
@@ -26,7 +26,7 @@
 			//属性的继承
 			Person.call(this,name,age);
 			this.major = major;
-		}
+		};
 		/*
 		Student.prototype.sayName = function(){
 			console.log(this.name);
@@ -36,7 +36,7 @@
 		}
 		*/
 
-		
+
 		//方法的继承
 		Student.prototype = Person.prototype;
 		Student.prototype.sayMajor = function(){
