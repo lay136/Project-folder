@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>036-单例模式-皇帝上朝.html</title>
+	<title>036-单例模式.html</title>
 	<script>
+		
 		(function(w){
 			var king = null;
 			function King(name){
@@ -18,14 +19,14 @@
 			King.prototype = {
 				constructor:King,
 				work:function(){
-					console.log(this.name + this.id+'说：有事早奏，无事退朝')
+					console.log(this.name + this.id+'说：有事说')；
 				}
 			}
 
 			w.King = King;
 		})(window);
 		for(var i=0;i<5;i++){
-			new King('康熙').work();
+			new King('小辉').work();
 		}
 		
 	</script>
